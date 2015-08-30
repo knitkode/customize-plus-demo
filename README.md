@@ -1,6 +1,8 @@
 # Customize Plus Theme [![by PlusWP](https://img.shields.io/badge/by-PlusWP-blue.svg?style=social)]()
-[![Gratipay](https://img.shields.io/gratipay/PlusWP.svg)]()
-[![Build Status](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/badges/build.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/build-status/master) [![Quality](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/?branch=master) [![License](https://img.shields.io/badge/license-GPL--2.0%2B-red.svg)](https://github.com/PlusWP/customize-plus--theme/blob/master/license.txt)
+
+[![Build Status](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/badges/build.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/build-status/master)
+[![Codacy Badge](https://api.codacy.com/project/badge/a824e462393041c1997a794d23c74623)](https://www.codacy.com/app/kuus/customize-plus--theme)
+[![Quality](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/?branch=master) [![License](https://img.shields.io/badge/license-GPL--2.0%2B-red.svg)](https://github.com/PlusWP/customize-plus--theme/blob/master/license.txt)
 
 > A theme starter, or a demo for the [Customize Plus](https://github.com/PlusWP/customize-plus/) plugin.
 
@@ -25,6 +27,10 @@ There are various ways you can contribute:
 2. Send a [Pull Request](https://help.github.com/articles/creating-a-pull-request/) with your bug fixes and/or new features
 4. Provide feedback and suggestions on [enhancements](https://github.com/PlusWP/customize-plus--theme/issues?direction=desc&labels=Enhancement&page=1&sort=created&state=open)
 
+
+Donate
+---------------
+[![Gratipay](https://img.shields.io/gratipay/PlusWP.svg)]()
 
 
 License
