@@ -1,0 +1,74 @@
+# Project specific ignores
+# ----------------------
+
+# Build (on its own branch)
+build
+
+# Docs (on its own branch)
+docs
+
+# Vendor
+# vendor
+
+# PHP doc cache
+phpdoc-cache*
+
+# Minified assets
+*.min.js
+*.min.css
+
+# Private config
+.env.json
+
+### Generic
+# ----------------------
+
+# Generic front-end related folders
+node_modules
+bower_components
+.sass-cache
+.tmp
+.publish
+composer.lock
+
+# OS and other
+.DS_Store
+/.project
+*.scssc
+.fuse_hidden*
+
+# Logs and temporary files
+logs
+*.log
+*.tmp
+
+# GitEye
+/.project
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+
+### WordPress
+# @link(https://github.com/github/gitignore/blob/master/WordPress.gitignore)
+# ----------------------
+*.log
+.htaccess
+sitemap.xml
+sitemap.xml.gz
+wp-config.php
+wp-content/advanced-cache.php
+wp-content/backup-db/
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/wp-cache-config.php
+wp-content/plugins/hello.php
+
+/readme.html
+/license.txt
+
+wp-config-local.php
