@@ -2,7 +2,7 @@
 
 [![Build Status](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/badges/build.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/build-status/master)
 [![Codacy Badge](https://api.codacy.com/project/badge/a824e462393041c1997a794d23c74623)](https://www.codacy.com/app/kuus/customize-plus--theme)
-[![Quality](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/?branch=master) [![License](https://img.shields.io/badge/license-GPL--2.0%2B-blue.svg)](https://github.com/PlusWP/customize-plus--theme/blob/master/license.txt)
+[![Quality](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/?branch=master)
 
 > A theme starter, or a demo for the [Customize Plus](https://github.com/PlusWP/customize-plus/) plugin.
 
@@ -35,7 +35,8 @@ Donate
 
 License
 ---------------
-[GPLv2+](http://www.gnu.org/licenses/gpl-2.0.html) © [PlusWP](http://pluswp.com)
+ [![License](https://img.shields.io/badge/license-GPL--2.0%2B-blue.svg)](https://github.com/PlusWP/customize-plus--theme/blob/master/license.txt) [![PlusWP](https://img.shields.io/badge/%C2%A9PlusWP-2015-blue.svg)](http://pluswp.com)
+
 
 ---------------
 :registered: PlusWP 2015 :link: [pluswp.com](http://pluswp.com) :email: dev@pluswp.com
