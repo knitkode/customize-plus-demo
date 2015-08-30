@@ -1,7 +1,7 @@
 # Customize Plus Theme
 [![Build Status](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/badges/build.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/build-status/master) [![Quality](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/?branch=master) [![License](https://img.shields.io/badge/license-GPL--2.0%2B-red.svg)](https://github.com/PlusWP/customize-plus--theme/blob/master/license.txt)
 
-![PlusWP](https://raw.githubusercontent.com/PlusWP/roots/master/design/common/favicons/android-chrome-72x72.png) A theme starter, or a demo for the [Customize Plus](https://github.com/PlusWP/customize-plus/) plugin.
+> A theme starter, or a demo for the [Customize Plus](https://github.com/PlusWP/customize-plus/) plugin.
 
 
 Bugs
