@@ -39,4 +39,4 @@ License
 
 
 ---------------
-:registered: PlusWP 2015 :link: [pluswp.com](http://pluswp.com) :email: dev@pluswp.com
+:registered: PlusWP 2015 | [pluswp.com](http://pluswp.com) | dev@pluswp.com
