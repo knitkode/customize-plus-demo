@@ -1,4 +1,5 @@
-# Customize Plus Theme
+# Customize Plus Theme [![by PlusWP](https://img.shields.io/badge/by-PlusWP-blue.svg?style=social)]()
+[![Gratipay](https://img.shields.io/gratipay/PlusWP.svg)]()
 [![Build Status](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/badges/build.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/build-status/master) [![Quality](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/?branch=master) [![License](https://img.shields.io/badge/license-GPL--2.0%2B-red.svg)](https://github.com/PlusWP/customize-plus--theme/blob/master/license.txt)
 
 > A theme starter, or a demo for the [Customize Plus](https://github.com/PlusWP/customize-plus/) plugin.
