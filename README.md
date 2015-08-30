@@ -25,7 +25,7 @@ There are various ways you can contribute:
 
 1. Raise an [issue](https://github.com/PlusWP/customize-plus--theme/issues) on GitHub
 2. Send a [Pull Request](https://help.github.com/articles/creating-a-pull-request/) with your bug fixes and/or new features
-4. Provide feedback and suggestions on [enhancements](https://github.com/PlusWP/customize-plus--theme/issues?direction=desc&labels=Enhancement&page=1&sort=created&state=open)
+3. Provide feedback and suggestions on [enhancements](https://github.com/PlusWP/customize-plus--theme/issues?direction=desc&labels=Enhancement&page=1&sort=created&state=open)
 
 
 Donate
