@@ -34,7 +34,7 @@ There are various ways you can contribute:
 
 Donate
 ---------------
-[![Gratipay](https://img.shields.io/gratipay/PlusWP.svg)]()
+[![Gratipay](https://img.shields.io/gratipay/PlusWP.svg)](https://gratipay.com/PlusWP)
 
 
 License
