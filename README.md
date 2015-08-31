@@ -1,8 +1,8 @@
 # Customize Plus Theme [![by PlusWP](https://img.shields.io/badge/by-PlusWP-blue.svg?style=social)]()
 
 [![Build Status](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/badges/build.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/build-status/master)
-[![Codacy Badge](https://api.codacy.com/project/badge/a824e462393041c1997a794d23c74623)](https://www.codacy.com/app/kuus/customize-plus--theme)
 [![Quality](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/?branch=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/a824e462393041c1997a794d23c74623)](https://www.codacy.com/app/kuus/customize-plus--theme)
 
 > A theme starter, or a demo for the [Customize Plus](https://github.com/PlusWP/customize-plus/) plugin.
 
