@@ -31,6 +31,68 @@ return array(
 	),
 	array(
 		'subject' => 'section',
+		'id' => 'section-options-apis',
+		'title' => __( 'Options APIs', 'textDomain' ),
+		'type' => 'pwpcp_section',
+		'dashicon' => 486,
+		'fields' => array(
+			'api-theme_mod' => array(
+				'setting' => array(
+					'default' => 'I am managed by the Theme Mods API',
+					'transport' => 'postMessage',
+				),
+				'control' => array(
+					'label' => __( 'Theme mods API', 'i18n' ),
+					'description' => __( 'This is used by default. Check the [WordPress codex](https://codex.wordpress.org/Theme_Modification_API).', 'i18n' ),
+					'type' => 'pwpcp_text',
+					'guide' => array(
+						'title' => __( 'See Code', 'i18n' ),
+						'text' => "```php
+'an-id' => array(
+	'setting' => array(
+		'default' => 'I am managed by the Theme Mods API',
+		'type' => 'setting',
+		'transport' => 'postMessage',
+	),
+	'control' => array(
+		'type' => 'pwpcp_text'
+	),
+),
+```",
+					),
+				),
+			),
+			'api-setting' => array(
+				'setting' => array(
+					'default' => 'I am managed by the Settings API',
+					'type' => 'option',
+					'transport' => 'postMessage',
+				),
+				'control' => array(
+					'label' => __( 'Settings API', 'i18n' ),
+					'description' => __( "Use `'type' => 'option'` in the setting's args, as with the normal WordPress API, to use the [Settings API](https://codex.wordpress.org/Settings_API) for a specific setting.", 'i18n' ),
+					'type' => 'pwpcp_text',
+					'guide' => array(
+						'title' => __( 'See Code', 'i18n' ),
+						'text' => "```php
+'an-id' => array(
+	'setting' => array(
+		'default' => 'I am managed by the Settings API',
+		'type' => 'setting',
+		'transport' => 'postMessage',
+	),
+	'control' => array(
+		'type' => 'pwpcp_text'
+	),
+),
+```",
+					),
+				),
+			),
+		)
+	),
+	array(
+		'subject' => 'section',
 		'id' => 'section-colors',
 		'title' => __( 'Color controls', 'textDomain' ),
 		'type' => 'pwpcp_section',
