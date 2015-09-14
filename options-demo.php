@@ -291,7 +291,7 @@ return array(
 			'color-dynamic-active' => array(
 				'setting' => array(
 					'default' => '#f40030',
-					'transport' => 'recompileAndPost',
+					'transport' => 'recompilePost',
 				),
 				'control' => array(
 					'label' => __( 'Dynamic Color', 'i18n' ),
@@ -303,7 +303,7 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => '#f40030',
-		'transport' => 'recompileAndPost',
+		'transport' => 'recompilePost',
 	),
 	'control' => array(
 		'label' => __( 'Dynamic Color', 'i18n' ),
@@ -317,7 +317,7 @@ return array(
 			'color-dynamic-passive' => array(
 				'setting' => array(
 					'default' => 'fadeout(@color-dynamic-active,30)',
-					'transport' => 'recompileAndPost',
+					'transport' => 'recompilePost',
 				),
 				'control' => array(
 					'label' => __( 'Dynamic Color', 'i18n' ),
@@ -329,7 +329,7 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 'fadeout(@color-dynamic-active,30)',
-		'transport' => 'recompileAndPost',
+		'transport' => 'recompilePost',
 	),
 	'control' => array(
 		'label' => __( 'Dynamic Color', 'i18n' ),
@@ -343,7 +343,7 @@ return array(
 			'color-dynamic-hidetab-active' => array(
 				'setting' => array(
 					'default' => '#29BD57',
-					'transport' => 'recompileAndPost',
+					'transport' => 'recompilePost',
 				),
 				'control' => array(
 					'label' => __( 'Dynamic Color (hide dynamic tab)', 'i18n' ),
@@ -356,7 +356,7 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => '#29BD57',
-		'transport' => 'recompileAndPost',
+		'transport' => 'recompilePost',
 	),
 	'control' => array(
 		'label' => __( 'Dynamic Color (hide dynamic tab)', 'i18n' ),
@@ -372,7 +372,7 @@ return array(
 			'color-dynamic-hidetab-passive' => array(
 				'setting' => array(
 					'default' => 'lighten(@color-dynamic-hidetab-active,30)',
-					'transport' => 'recompileAndPost',
+					'transport' => 'recompilePost',
 				),
 				'control' => array(
 					'label' => __( 'Dynamic Color (hide dynamic tab)', 'i18n' ),
@@ -385,7 +385,7 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 'lighten(@color-dynamic-hidetab-active,30)',
-		'transport' => 'recompileAndPost',
+		'transport' => 'recompilePost',
 	),
 	'control' => array(
 		'label' => __( 'Dynamic Color (hide dynamic tab)', 'i18n' ),
@@ -540,7 +540,7 @@ return array(
 			'size-dynamic-active' => array(
 				'setting' => array(
 					'default' => '14px',
-					'transport' => 'recompileAndPost',
+					'transport' => 'recompilePost',
 				),
 				'control' => array(
 					'label' => __( 'Size Dynamic 1', 'i18n' ),
@@ -552,7 +552,7 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => '14px',
-		'transport' => 'recompileAndPost',
+		'transport' => 'recompilePost',
 	),
 	'control' => array(
 		'label' => __( 'Size Dynamic 1', 'i18n' ),
@@ -566,7 +566,7 @@ return array(
 			'size-dynamic-passive' => array(
 				'setting' => array(
 					'default' => '@size-dynamic-active',
-					'transport' => 'recompileAndPost',
+					'transport' => 'recompilePost',
 				),
 				'control' => array(
 					'label' => __( 'Size Dynamic 2', 'i18n' ),
@@ -579,7 +579,7 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => '@size-dynamic-active',
-		'transport' => 'recompileAndPost',
+		'transport' => 'recompilePost',
 	),
 	'control' => array(
 		'label' => __( 'Size Dynamic 2', 'i18n' ),
@@ -594,7 +594,7 @@ return array(
 			'size-dynamic-hidetab-active' => array(
 				'setting' => array(
 					'default' => '40px',
-					'transport' => 'recompileAndPost',
+					'transport' => 'recompilePost',
 				),
 				'control' => array(
 					'label' => __( 'Size Dynamic (hide dynamic tab) 3', 'i18n' ),
@@ -607,7 +607,7 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => '40px',
-		'transport' => 'recompileAndPost',
+		'transport' => 'recompilePost',
 	),
 	'control' => array(
 		'label' => __( 'Size Dynamic (hide dynamic tab)  3', 'i18n' ),
@@ -622,7 +622,7 @@ return array(
 			'size-dynamic-hidetab-passive' => array(
 				'setting' => array(
 					'default' => '@size-dynamic-hidetab-active',
-					'transport' => 'recompileAndPost',
+					'transport' => 'recompilePost',
 				),
 				'control' => array(
 					'label' => __( 'Size Dynamic (hide dynamic tab) 4', 'i18n' ),
@@ -635,7 +635,7 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => '@size-dynamic-hidetab-active',
-		'transport' => 'recompileAndPost',
+		'transport' => 'recompilePost',
 	),
 	'control' => array(
 		'label' => __( 'Size Dynamic (hide dynamic tab) 4', 'i18n' ),
