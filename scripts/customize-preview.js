@@ -1,3 +1,6 @@
+/* global jQuery, _, wp, PWPcp */
+/* jshint unused: false */
+
 (function (window, $, wp, api) {
   'use strict';
 
@@ -53,6 +56,8 @@
 
   var settingsToText = [
     // Customize Plus controls
+    'api-theme_mod',
+    'api-setting',
     'radio',
     'buttonset',
     'buttonset-three',

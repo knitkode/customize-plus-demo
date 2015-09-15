@@ -1,5 +1,7 @@
 <?php $settings_keys = array(
   // Customize Plus controls
+  'api-theme_mod',
+  'api-setting',
   'color',
   'color-no-transparent',
   'color-alpha',
