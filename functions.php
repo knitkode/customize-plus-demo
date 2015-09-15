@@ -44,6 +44,7 @@ class Customize_Plus_Demo {
 		add_action( 'after_setup_theme', array( __CLASS__, 'add_theme_supports' ) );
 		add_action( 'PWPcp/theme/is_configured', array( __CLASS__, 'set_settings_defaults' ), 10, 1 );
 		add_action( 'PWPcp/customize/register_custom_classes', array( __CLASS__, 'register_custom_classes' ), 20, 1 );
+		add_action( 'PWPcp/component/info/add_view', array( __CLASS__, 'add_contacts_to_customize' ) );
 		add_action( 'customize_register', array( __CLASS__, 'remove_wp_defaults' ), 10, 1 );
 		add_action( 'customize_controls_print_footer_scripts' , array( __CLASS__, 'customize_enqueue_js_admin' ) );
 		add_action( 'customize_preview_init' , array( __CLASS__, 'customize_enqueue_js_preview' ) );
@@ -176,6 +177,19 @@ class Customize_Plus_Demo {
 	public static function get_customize_tree() {
 		$customize_tree_theme = (array) require( get_stylesheet_directory() . '/options-demo.php' );
 		return $customize_tree_theme;
+	}
+
+	/**
+	 * Add contact details to Customize screen (info component)
+	 *
+	 * @since  0.0.1
+	 */
+	public static function add_contacts_to_customize () {
+		?>
+		<h3><?php _e( 'Contact and Social' ); ?></h3>
+		<p><?php _e( 'Website' ); ?>: <b><a href="http://pluswp.com" target="_blank">pluswp.com</a></b><br>
+			<?php _e( 'Mail' ); ?>: <b><a href="mailto:dev@pluswp.com" title="Contact the author" target="_blank">dev@pluswp.com</a></b></p>
+		<?php
 	}
 
 	/**
