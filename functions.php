@@ -44,7 +44,7 @@ class Customize_Plus_Demo {
 		add_action( 'after_setup_theme', array( __CLASS__, 'add_theme_supports' ) );
 		add_action( 'PWPcp/theme/is_configured', array( __CLASS__, 'set_settings_defaults' ), 10, 1 );
 		add_action( 'PWPcp/customize/register_custom_classes', array( __CLASS__, 'register_custom_classes' ), 20, 1 );
-		add_action( 'PWPcp/component/info/add_view', array( __CLASS__, 'add_contacts_to_customize' ) );
+		add_action( 'PWPcp/info/add_to_view', array( __CLASS__, 'add_contacts_to_customize' ) );
 		add_action( 'customize_register', array( __CLASS__, 'remove_wp_defaults' ), 10, 1 );
 		add_action( 'customize_controls_print_footer_scripts' , array( __CLASS__, 'customize_enqueue_js_admin' ) );
 		add_action( 'customize_preview_init' , array( __CLASS__, 'customize_enqueue_js_preview' ) );
