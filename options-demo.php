@@ -2483,7 +2483,7 @@ You can use WordPress default controls as you can see in the demo, in this case 
 				),
 				'control' => array(
 					'label' => __( 'WP Cropped Image', 'i18n' ),
-					'type' => 'cropped-image',
+					'type' => 'cropped_image',
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
 						'text' => "```php
@@ -2494,7 +2494,7 @@ You can use WordPress default controls as you can see in the demo, in this case 
 	),
 	'control' => array(
 		'label' => __( 'WP Cropped Image', 'i18n' ),
-		'type' => 'cropped-image',
+		'type' => 'cropped_image',
 	),
 ),
 ```",

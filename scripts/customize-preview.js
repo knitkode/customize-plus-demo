@@ -10,14 +10,18 @@
   var $body = $('body');
   var $toScroll = $('html, body');
 
-  $.fn.flash = function(duration) {
+  $.fn.flash = function (duration) {
+    var offset = this.offset();
+    if (!offset) {
+      return this;
+    }
     this.addClass('flash');
     setTimeout(function () {
       this.removeClass('flash');
     }.bind(this), 300);
 
     $toScroll.animate({
-      scrollTop: this.offset().top -100
+      scrollTop: offset.top -100
     }, 300);
 
     return this;
@@ -115,10 +119,34 @@
     'wp-header'
   ].concat(settingsToColor, settingsToWidth);
 
+  /**
+   * Ids of the settings managed by the Settings API instead of Theme Mods one
+   * @type {Array}
+   */
+  var settingsApiKeys = [
+    'api-setting'
+  ];
+
+  /**
+   * Replace
+   * @@todo, move this to API, like isSettingsApi ? and api.isThemeModAPI
+   * @param  {[type]} var i             [description]
+   * @return {[type]}     [description]
+   */
+  for (var i = settingsApiKeys.length - 1; i >= 0; i--) {
+    var idToChange = settingsApiKeys[i];
+    var indexInSettingsToText = settingsToText.indexOf(idToChange);
+    if (indexInSettingsToText !== -1) {
+      var idChanged = api.getOptionId(idToChange);
+      settingsToText.splice(indexInSettingsToText, 0, idChanged);
+    }
+  }
+
   _.each(settingsToText, function (setting) {
     wpApi(setting, function (value) {
       value.bind(function (to) {
-        $('#' + setting).text(to).flash();
+        var el = document.getElementById(setting);
+        $(el).text(to).flash();
       });
     });
   });

@@ -20,7 +20,7 @@ class Customize_Plus_Demo {
 	/**
 	 * Theme prefix constant
 	 */
-	const PREFIX = 'CPDemo';
+	const PREFIX = 'cpdemo';
 
 	/**
 	 * Theme docs base url
@@ -232,8 +232,9 @@ class Customize_Plus_Demo {
 	}
 
 	/**
-	 * Safe get theme mod with default fallback
+	 * Safe `get_theme_mod` with default fallback
 	 *
+	 * This is the same as using the global function `pwp_get_theme_mod`
 	 *
 	 * @since  0.0.1
 	 * @param string $opt_name
@@ -244,6 +245,27 @@ class Customize_Plus_Demo {
 			return get_theme_mod( $opt_name, self::$settings_defaults[ $opt_name ] );
 		} else {
 			return get_theme_mod( $opt_name );
+		}
+	}
+
+	/**
+	 * Safe `get_option` with default fallback
+	 *
+	 * This is the same as using the global function `pwp_get_option`
+	 *
+	 * @since  0.0.1
+	 * @param string $opt_name
+	 * @return ?
+	 */
+	public static function get_option( $opt_name ) {
+		$full_id = self::PREFIX . '[' . $opt_name . ']';
+		$option_array = get_option( self::PREFIX );
+		if ( $option_array && isset( $option_array[ $opt_name ] ) ) {
+			return $option_array[ $opt_name ];
+		} else if ( isset( self::$settings_defaults[ $full_id ] ) ) {
+			return self::$settings_defaults[ $full_id ];
+		} else {
+			return null; // @@tocheck \\
 		}
 	}
 
