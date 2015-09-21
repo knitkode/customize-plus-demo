@@ -32,7 +32,7 @@ return array(
 	array(
 		'subject' => 'section',
 		'id' => 'section-options-apis',
-		'title' => __( 'Options APIs', 'textDomain' ),
+		'title' => __( 'Settings APIs', 'textDomain' ),
 		'type' => 'pwpcp_section',
 		'dashicon' => 486,
 		'fields' => array(
