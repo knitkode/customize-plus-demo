@@ -31,7 +31,7 @@ return array(
 	),
 	array(
 		'subject' => 'section',
-		'id' => 'section-options-apis',
+		'id' => 'section-settings-apis',
 		'title' => __( 'Settings APIs', 'textDomain' ),
 		'type' => 'pwpcp_section',
 		'dashicon' => 486,
