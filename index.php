@@ -1,7 +1,7 @@
 <?php $settings_keys = array(
   // Customize Plus controls
   'api-theme_mod',
-  'api-setting',
+  'api-option',
   'color',
   'color-no-transparent',
   'color-alpha',
@@ -117,7 +117,7 @@
       <div class="row">
       <?php
         foreach ( $settings_keys as $key ) {
-          $settings_api_keys = array( 'api-setting' );
+          $settings_api_keys = array( 'api-option' );
           if ( in_array( $key, $settings_api_keys ) ) {
             // $value = Customize_Plus_Demo::get_option( $key );
             $value = pwp_get_option( $key );

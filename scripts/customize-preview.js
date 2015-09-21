@@ -61,7 +61,7 @@
   var settingsToText = [
     // Customize Plus controls
     'api-theme_mod',
-    'api-setting',
+    'api-option',
     'radio',
     'buttonset',
     'buttonset-three',
@@ -124,7 +124,7 @@
    * @type {Array}
    */
   var settingsApiKeys = [
-    'api-setting'
+    'api-option'
   ];
 
   /**
