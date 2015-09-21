@@ -120,7 +120,7 @@
   ].concat(settingsToColor, settingsToWidth);
 
   /**
-   * Ids of the settings managed by the Settings API instead of Theme Mods one
+   * Ids of the settings managed by the Options API instead of Theme Mods one
    * @type {Array}
    */
   var settingsApiKeys = [
@@ -129,7 +129,7 @@
 
   /**
    * Replace
-   * @@todo, move this to API, like isSettingsApi ? and api.isThemeModAPI
+   * @@todo, move this to API, like isOptionsApi ? and api.isThemeModsAPI
    * @param  {[type]} var i             [description]
    * @return {[type]}     [description]
    */

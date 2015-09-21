@@ -64,20 +64,20 @@ return array(
 			),
 			'api-setting' => array(
 				'setting' => array(
-					'default' => 'I am managed by the Settings API',
+					'default' => 'I am managed by the Options API',
 					'type' => 'option',
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Settings API', 'i18n' ),
-					'description' => __( "Use `'type' => 'option'` in the setting's args, as with the normal WordPress API, to use the [Settings API](https://codex.wordpress.org/Settings_API) for a specific setting.", 'i18n' ),
+					'label' => __( 'Options API', 'i18n' ),
+					'description' => __( "Use `'type' => 'option'` in the setting's args, as with the normal WordPress API, to use the [Options API](https://codex.wordpress.org/Options_API) for a specific setting.", 'i18n' ),
 					'type' => 'pwpcp_text',
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
-		'default' => 'I am managed by the Settings API',
+		'default' => 'I am managed by the Options API',
 		'type' => 'setting',
 		'transport' => 'postMessage',
 	),
