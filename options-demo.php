@@ -62,7 +62,7 @@ return array(
 					),
 				),
 			),
-			'api-setting' => array(
+			'api-option' => array(
 				'setting' => array(
 					'default' => 'I am managed by the Options API',
 					'type' => 'option',
