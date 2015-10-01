@@ -2,7 +2,7 @@
 <html>
   <head><?php wp_head(); ?></head>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-  <body>
+  <body <?php body_class(); ?>>
      <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
