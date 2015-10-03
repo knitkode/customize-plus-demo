@@ -1007,7 +1007,7 @@ return array(
 			),
 			'multicheck' => array(
 				'setting' => array(
-					'default' => json_encode( array( 'grape', 'cherry' ) ),
+					'default' => wp_json_encode( array( 'grape', 'cherry' ) ),
 					'transport' => 'postMessage',
 				),
 				'control' => array(
@@ -1026,7 +1026,7 @@ return array(
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
-		'default' => json_encode( array( 'grape', 'cherry' ) ),
+		'default' => wp_json_encode( array( 'grape', 'cherry' ) ),
 		'transport' => 'postMessage',
 	),
 	'control' => array(
@@ -1047,7 +1047,7 @@ return array(
 			),
 			'multicheck-sortable' => array(
 				'setting' => array(
-					'default' => json_encode( array( 'facebook', 'twitter', 'google' ) ),
+					'default' => wp_json_encode( array( 'facebook', 'twitter', 'google' ) ),
 					'transport' => 'postMessage',
 				),
 				'control' => array(
@@ -1070,7 +1070,7 @@ return array(
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
-		'default' => json_encode( array( 'facebook', 'twitter', 'google' ) ),
+		'default' => wp_json_encode( array( 'facebook', 'twitter', 'google' ) ),
 		'transport' => 'postMessage',
 	),
 	'control' => array(
@@ -1723,7 +1723,7 @@ return array(
 			),
 			'select-selectize-more-items' => array(
 				'setting' => array(
-					'default' => json_encode( array( 'IT', 'UK' ) ),
+					'default' => wp_json_encode( array( 'IT', 'UK' ) ),
 					'transport' => 'postMessage',
 				),
 				'control' => array(
@@ -1746,7 +1746,7 @@ return array(
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
-		'default' => json_encode( array( 'IT', 'UK' ) ),
+		'default' => wp_json_encode( array( 'IT', 'UK' ) ),
 		'transport' => 'postMessage',
 	),
 	'control' => array(
@@ -1772,7 +1772,7 @@ return array(
 			),
 			'select-selectize-tags-plugins' => array(
 				'setting' => array(
-					'default' => json_encode( array( 'IT', 'NL', 'UK' ) ),
+					'default' => wp_json_encode( array( 'IT', 'NL', 'UK' ) ),
 					'transport' => 'postMessage',
 				),
 				'control' => array(
@@ -1797,7 +1797,7 @@ return array(
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
-		'default' => json_encode( array( 'IT', 'NL', 'UK' ) ),
+		'default' => wp_json_encode( array( 'IT', 'NL', 'UK' ) ),
 		'transport' => 'postMessage',
 	),
 	'control' => array(
@@ -1971,7 +1971,7 @@ return array(
 		'fields' => array(
 			'sortable' => array(
 				'setting' => array(
-					'default' => json_encode( array( 'lemon', 'cherry', 34, 'mango', 'grape' ) ),
+					'default' => wp_json_encode( array( 'lemon', 'cherry', 34, 'mango', 'grape' ) ),
 					'transport' => 'postMessage',
 				),
 				'control' => array(
@@ -1990,7 +1990,7 @@ return array(
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
-		'default' => json_encode( array( 'lemon', 'cherry', 34, 'mango', 'grape' ) ),
+		'default' => wp_json_encode( array( 'lemon', 'cherry', 34, 'mango', 'grape' ) ),
 		'transport' => 'postMessage',
 	),
 	'control' => array(
@@ -2013,7 +2013,7 @@ return array(
 			// @@note this would be the same as selectize tags
 			// 'sortable-editable' => array(
 			// 	'setting' => array(
-			// 		'default' => json_encode( array( 'lemon', 'cherry', 'pineapple', 'mango', 'grape' ) ),
+			// 		'default' => wp_json_encode( array( 'lemon', 'cherry', 'pineapple', 'mango', 'grape' ) ),
 			// 		'transport' => 'postMessage',
 			// 	),
 			// 	'control' => array(
