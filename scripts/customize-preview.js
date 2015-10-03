@@ -20,9 +20,10 @@
       this.removeClass('flash');
     }.bind(this), 300);
 
-    $toScroll.animate({
-      scrollTop: offset.top -100
-    }, 300);
+    // @@doubt, scroll or not in preview \\
+    // $toScroll.animate({
+    //   scrollTop: offset.top -100
+    // }, 300);
 
     return this;
   };

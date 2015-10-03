@@ -16,6 +16,10 @@ body {
   overflow-y: scroll;
 }
 
+body.admin-bar .navbar-fixed-top {
+  top: 32px;
+}
+
 .setting-name {
   overflow: hidden;
   white-space: nowrap;
