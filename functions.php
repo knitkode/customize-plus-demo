@@ -121,6 +121,9 @@ class Customize_Plus_Demo {
 			'screenpreview' => array(
 				'required' => true,
 			),
+			'reset' => array(
+				'activate_on_theme_switch' => true,
+			),
 			'resizer' => array(
 				'activate_on_theme_switch' => true,
 			),
