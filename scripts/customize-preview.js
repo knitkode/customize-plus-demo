@@ -8,18 +8,22 @@
   var _toCSS = api.toCSS;
 
   var $body = $('body');
-  var $toScroll = $('html, body');
+  var $row = $('.row');
+  // var $toScroll = $('html, body');
 
   $.fn.flash = function (duration) {
-    var offset = this.offset();
-    if (!offset) {
-      return this;
-    }
+
+    this.parent().prependTo($row);
+
     this.addClass('flash');
     setTimeout(function () {
       this.removeClass('flash');
     }.bind(this), 300);
 
+    // var offset = this.offset();
+    // if (!offset) {
+    //   return this;
+    // }
     // @@doubt, scroll or not in preview \\
     // $toScroll.animate({
     //   scrollTop: offset.top -100
