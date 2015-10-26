@@ -2323,7 +2323,7 @@ You can use WordPress default controls as you can see in the demo, in this case 
 		'subject' => 'section',
 		'id' => 'section-wordpress',
 		'title' => __( 'WordPress controls', 'textDomain' ),
-		'type' => 'pwpcp_section',
+		// 'type' => 'pwpcp_section',
 		'dashicon' => 120,
 		'fields' => array(
 			'wp-text' => array(
