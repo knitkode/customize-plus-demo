@@ -107,42 +107,22 @@ class Customize_Plus_Demo {
 					'version' => self::VERSION,
 					'path_uncompiled' => '/styles/theme.less',
 				),
+			),
+			// *** Customize Plus Premium ***
+			'components', array(
+				'compiler' => 'required',
+				'advanced' => 'required',
+				'screenpreview' => 'required',
+				'reset' => 'optional',
+				'resizer' => 'optional',
+				'search' => 'optional',
+				'import' => 'optional',
+				'export' => 'optional',
+				'editor' => 'silent',
+				'info' => 'optional',
 			)
 		) );
 
-		// *** Customize Plus Premium ***
-		add_theme_support( 'PWPcp-components', array(
-			'compiler' => array(
-				'required' => true,
-			),
-			'advanced' => array(
-				'required' => true,
-			),
-			'screenpreview' => array(
-				'required' => true,
-			),
-			'reset' => array(
-				'activate_on_theme_switch' => true,
-			),
-			'resizer' => array(
-				'activate_on_theme_switch' => true,
-			),
-			'search' => array(
-				'activate_on_theme_switch' => true,
-			),
-			'import' => array(
-				'activate_on_theme_switch' => true,
-			),
-			'export' => array(
-				'activate_on_theme_switch' => true,
-			),
-			'editor' => array(
-				'activate_on_theme_switch' => true,
-			),
-			'info' => array(
-				'activate_on_theme_switch' => true,
-			),
-		) );
 	}
 
 	/**
