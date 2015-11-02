@@ -113,13 +113,13 @@ class Customize_Plus_Demo {
 				'compiler' => 'required',
 				'advanced' => 'required',
 				'screenpreview' => 'required',
-				'reset' => 'optional',
-				'resizer' => 'optional',
-				'search' => 'optional',
-				'import' => 'optional',
-				'export' => 'optional',
-				'editor' => 'silent',
-				'info' => 'optional',
+				'reset' => 'recommended',
+				'resizer' => 'recommended',
+				'search' => 'recommended',
+				'import' => 'blocked',
+				'export' => 'recommended',
+				'editor' => 'optional',
+				'info' => 'recommended',
 			)
 		) );
 
