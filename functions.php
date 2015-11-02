@@ -109,7 +109,7 @@ class Customize_Plus_Demo {
 				),
 			),
 			// *** Customize Plus Premium ***
-			'components', array(
+			'components' => array(
 				'compiler' => 'required',
 				'advanced' => 'required',
 				'screenpreview' => 'required',
