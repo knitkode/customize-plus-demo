@@ -184,8 +184,8 @@ class Customize_Plus_Demo {
 	 * @param {WP_Customize_Manager} $wp_customize Theme Customizer object
 	 */
 	public static function remove_wp_defaults( $wp_customize ) {
-		$wp_customize->remove_panel( 'nav_menus' );
-		$wp_customize->remove_panel( 'widgets' );
+		// $wp_customize->remove_panel( 'nav_menus' ); // @@todo \\
+		// $wp_customize->remove_panel( 'widgets' ); // @@todo \\
 		$wp_customize->remove_section( 'colors' );
 		$wp_customize->remove_section( 'static_front_page' );
 		$wp_customize->remove_section( 'title_tagline' );

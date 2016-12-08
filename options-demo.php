@@ -2248,7 +2248,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Dummy', 'i18n' ),
 					'description' => __( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam consequatur sit fugit mollitia magni similique, nesciunt culpa maxime cupiditate debitis sed, facere odit, optio officiis architecto, ab veritatis id omnis.', 'i18n' ),
-					'type' => 'pwpcp_dummy',
+					'type' => 'pwpcp_content',
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
 						'text' => "```php
@@ -2256,7 +2256,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Dummy default', 'i18n' ),
 		'description' => __( 'Some text as you like', 'i18n' ),
-		'type' => 'pwpcp_dummy',
+		'type' => 'pwpcp_content',
 	),
 ),
 ```",
@@ -2265,7 +2265,7 @@ return array(
 			),
 			'pwpcp-dummy-markdown' => array(
 				'control' => array(
-					'type' => 'pwpcp_dummy',
+					'type' => 'pwpcp_content',
 					'markdown' => "
 # Image
 
@@ -2309,7 +2309,7 @@ You can use WordPress default controls as you can see in the demo, in this case 
 						'text' => "```php
 'pwpcp-dummy' => array(
 	'control' => array(
-		'type' => 'pwpcp_dummy',
+		'type' => 'pwpcp_content',
 		'markdown' => 'a lot of text and markdown.'
 	),
 ),
