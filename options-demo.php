@@ -1195,7 +1195,7 @@ return array(
 				),
 				'control' => array(
 					'label' => __( 'Text URL', 'i18n' ),
-					'description' => __( '', 'i18n' ),
+					'description' => __( 'It accepts only a valid url.', 'i18n' ),
 					'type' => 'pwpcp_text',
 					'input_attrs' => array(
 						'type' => 'url',
@@ -1228,7 +1228,7 @@ return array(
 				),
 				'control' => array(
 					'label' => __( 'Text Email', 'i18n' ),
-					'description' => __( '', 'i18n' ),
+					'description' => __( 'It accepts only a valid email address.', 'i18n' ),
 					'type' => 'pwpcp_text',
 					'input_attrs' => array(
 						'type' => 'email',
@@ -1261,10 +1261,11 @@ return array(
 				),
 				'control' => array(
 					'label' => __( 'Textarea', 'i18n' ),
-					'description' => __( '', 'i18n' ),
+					'description' => __( 'The output and the value in database will be escaped.', 'i18n' ),
 					'type' => 'pwpcp_textarea',
 					'input_attrs' => array(
 						'maxlength' => 300,
+						'placeholder' => 'E.g. <h2>Ciao</h2> will be escaped to &lt;h2&gt;Ciao&lt;/h2&gt;.'
 					),
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
