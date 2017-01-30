@@ -1,6 +1,6 @@
 /* jshint unused: false */
 
-(function (window, document, $, _, wp, api, validator) {
+(function (window, document, $, _, wp, api) {
   'use strict';
 
   /** @type {Object} */
@@ -25,4 +25,4 @@
     }
   });
 
-})(window, document, jQuery, _, wp, PWPcp, validator);
+})(window, document, jQuery, _, wp, PWPcp);
