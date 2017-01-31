@@ -112,7 +112,7 @@ class Customize_Plus_Demo {
 			'components' => array(
 				'compiler' => 'required',
 				'advanced' => 'required',
-				'screenpreview' => 'required',
+				'screenpreview' => 'recommended',
 				'reset' => 'recommended',
 				'resizer' => 'recommended',
 				'search' => 'recommended',
