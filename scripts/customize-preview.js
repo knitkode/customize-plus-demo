@@ -100,6 +100,7 @@
     'sortable',
     'font-family',
     'font-weight',
+    'dashicons',
     // Customize Plus Premium controls
     'knob',
     'knob-options',

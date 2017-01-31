@@ -49,6 +49,7 @@
 	'textarea-html',
 	'textarea-wp_editor',
 	'textarea-wp_editor-options',
+	'dashicons',
 	// Customize Plus Premium controls
 	'color-dynamic-active',
 	'color-dynamic-passive',

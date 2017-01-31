@@ -2094,6 +2094,43 @@ return array(
 	),
 	array(
 		'subject' => 'section',
+		'id' => 'section-icon',
+		'title' => __( 'Icons controls', 'textDomain' ),
+		'type' => 'pwpcp_section',
+		'dashicon' => 163,
+		'fields' => array(
+			'dashicons' => array(
+				'setting' => array(
+					'default' => 'dashboard',
+					'transport' => 'postMessage',
+				),
+				'control' => array(
+					'label' => __( 'Dashicon', 'i18n' ),
+					'description' => __( '', 'i18n' ),
+					'type' => 'pwpcp_icon',
+					'choices' => 'dashicons',
+					'guide' => array(
+						'title' => __( 'See Code', 'i18n' ),
+						'text' => "```php
+'an-id' => array(
+	'setting' => array(
+		'default' => 'dashboard',
+		'transport' => 'postMessage',
+	),
+	'control' => array(
+		'label' => __( 'Icon', 'i18n' ),
+		'type' => 'pwpcp_icon',
+		'choices' => 'dashicons',
+	),
+),
+```",
+					),
+				),
+			),
+		)
+	),
+	array(
+		'subject' => 'section',
 		'id' => 'section-others',
 		'title' => __( 'Other controls', 'textDomain' ),
 		'type' => 'pwpcp_section',
