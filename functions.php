@@ -25,7 +25,7 @@ class Customize_Plus_Demo {
 	/**
 	 * Theme docs base url
 	 */
-	const DOCS_BASE_URL = 'http://pluswp.com/docs/';
+	const DOCS_BASE_URL = 'httpS://pluswp.com/docs/';
 
 	/**
 	 * Settings default values
@@ -170,7 +170,7 @@ class Customize_Plus_Demo {
 	public static function add_contacts_to_customize () {
 		?>
 		<h3><?php _e( 'Contact and Social' ); ?></h3>
-		<p><?php _e( 'Website' ); ?>: <b><a href="http://pluswp.com" target="_blank">pluswp.com</a></b><br>
+		<p><?php _e( 'Website' ); ?>: <b><a href="httpS://pluswp.com" target="_blank">pluswp.com</a></b><br>
 			<?php _e( 'Mail' ); ?>: <b><a href="mailto:dev@pluswp.com" title="Contact the author" target="_blank">dev@pluswp.com</a></b></p>
 		<?php
 	}

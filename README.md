@@ -39,8 +39,8 @@ Donate
 
 License
 ---------------
- [![License](https://img.shields.io/badge/license-GPL--2.0%2B-blue.svg)](https://github.com/PlusWP/customize-plus--theme/blob/master/license.txt) [![PlusWP](https://img.shields.io/badge/%C2%A9PlusWP-2015-blue.svg)](http://pluswp.com)
+ [![License](https://img.shields.io/badge/license-GPL--2.0%2B-blue.svg)](https://github.com/PlusWP/customize-plus--theme/blob/master/license.txt) [![PlusWP](https://img.shields.io/badge/%C2%A9PlusWP-2015-blue.svg)](httpS://pluswp.com)
 
 
 ---------------
-:registered: PlusWP 2015 | [pluswp.com](http://pluswp.com) | dev@pluswp.com
+:registered: PlusWP 2015 | [pluswp.com](httpS://pluswp.com) | dev@pluswp.com
