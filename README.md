@@ -1,8 +1,8 @@
 # Customize Plus Theme [![by PlusWP](https://img.shields.io/badge/by-PlusWP-blue.svg?style=social)]()
 
 [![Build Status](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/badges/build.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/build-status/master)
-[![Quality](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/?branch=master)
-[![Codacy Badge](https://api.codacy.com/project/badge/a824e462393041c1997a794d23c74623)](https://www.codacy.com/app/kuus/customize-plus--theme)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/?branch=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a436c992e0314cd28ae0288e6f317061)](https://www.codacy.com/app/PlusWP/customize-plus--theme?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PlusWP/customize-plus--theme&amp;utm_campaign=Badge_Grade)
 
 > A theme starter, or a demo for the [Customize Plus](https://github.com/PlusWP/customize-plus/) plugin.
 
@@ -39,8 +39,8 @@ Donate
 
 License
 ---------------
- [![License](https://img.shields.io/badge/license-GPL--2.0%2B-blue.svg)](https://github.com/PlusWP/customize-plus--theme/blob/master/license.txt) [![PlusWP](https://img.shields.io/badge/%C2%A9PlusWP-2015-blue.svg)](https://pluswp.com)
+ [![License](https://img.shields.io/badge/license-GPL--2.0%2B-blue.svg)](https://github.com/PlusWP/customize-plus--theme/blob/master/license.txt) [![PlusWP](https://img.shields.io/badge/%C2%A9PlusWP-2017-blue.svg)](https://pluswp.com)
 
 
 ---------------
-:registered: PlusWP 2015 | [pluswp.com](https://pluswp.com) | dev@pluswp.com
+:registered: PlusWP 2017 | [pluswp.com](https://pluswp.com) | dev@pluswp.com
