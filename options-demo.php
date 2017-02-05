@@ -1866,11 +1866,12 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Tags removable', 'i18n' ),
+					'label' => __( 'Tags removable (max 4 items)', 'i18n' ),
 					'description' => __( 'Tags can be removed clicking the x button close to each of them.', 'i18n' ),
 					'type' => 'pwpcp_tags',
 					'selectize' => array(
-						'plugins' => array( 'restore_on_backspace', 'remove_button' )
+						'plugins' => array( 'restore_on_backspace', 'remove_button' ),
+						'maxItems' => 4,
 					),
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
@@ -1885,7 +1886,8 @@ return array(
 		'description' => __( '', 'i18n' ),
 		'type' => 'pwpcp_tags',
 		'selectize' => array(
-			'plugins' => array( 'restore_on_backspace', 'remove_button' )
+			'plugins' => array( 'restore_on_backspace', 'remove_button' ),
+			'maxItems' => 4,
 		),
 	),
 ),
