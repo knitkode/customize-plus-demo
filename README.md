@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/26ab76a064ea4c4b9053496cde0adc0e)](https://www.codacy.com/app/pluswpress/customize-plus--theme?utm_source=github.com&utm_medium=referral&utm_content=PlusWP/customize-plus--theme&utm_campaign=badger)
 # Customize Plus Theme [![by PlusWP](https://img.shields.io/badge/by-PlusWP-blue.svg?style=social)]()
 
 [![Build Status](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/badges/build.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/customize-plus--theme/build-status/master)
