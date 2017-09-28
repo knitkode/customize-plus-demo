@@ -1223,7 +1223,7 @@ return array(
 			),
 			'text-email' => array(
 				'setting' => array(
-					'default' => 'dev@pluswp.com',
+					'default' => 'dev@knitkode.com',
 					'transport' => 'postMessage',
 				),
 				'control' => array(
@@ -1238,7 +1238,7 @@ return array(
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
-		'default' => 'dev@pluswp.com',
+		'default' => 'dev@knitkode.com',
 		'transport' => 'postMessage',
 	),
 	'control' => array(

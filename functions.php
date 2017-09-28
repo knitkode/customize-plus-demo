@@ -25,7 +25,7 @@ class Customize_Plus_Demo {
 	/**
 	 * Theme docs base url
 	 */
-	const DOCS_BASE_URL = 'https://pluswp.com/docs/';
+	const DOCS_BASE_URL = 'https://knitkode.com/docs/';
 
 	/**
 	 * Settings default values
@@ -170,8 +170,8 @@ class Customize_Plus_Demo {
 	public static function add_contacts_to_customize () {
 		?>
 		<h3><?php _e( 'Contact and Social' ); ?></h3>
-		<p><?php _e( 'Website' ); ?>: <b><a href="https://pluswp.com" target="_blank">pluswp.com</a></b><br>
-			<?php _e( 'Mail' ); ?>: <b><a href="mailto:dev@pluswp.com" title="Contact the author" target="_blank">dev@pluswp.com</a></b></p>
+		<p><?php _e( 'Website' ); ?>: <b><a href="https://knitkode.com" target="_blank">knitkode.com</a></b><br>
+			<?php _e( 'Mail' ); ?>: <b><a href="mailto:dev@knitkode.com" title="Contact the author" target="_blank">dev@knitkode.com</a></b></p>
 		<?php
 	}
 
