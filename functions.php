@@ -42,9 +42,9 @@ class Customize_Plus_Demo {
 		require_once dirname( __FILE__ ) . '/vendor/tgm/plugin-activation/class-tgm-plugin-activation.php';
 		add_action( 'tgmpa_register', array( __CLASS__, 'register_plugins' ) );
 		add_action( 'after_setup_theme', array( __CLASS__, 'add_theme_supports' ) );
-		add_action( 'PWPcp/theme/is_configured', array( __CLASS__, 'set_settings_defaults' ), 10, 1 );
-		add_action( 'PWPcp/customize/register_custom_classes', array( __CLASS__, 'register_custom_classes' ), 20, 1 );
-		add_action( 'PWPcp/info/add_to_view', array( __CLASS__, 'add_contacts_to_customize' ) );
+		add_action( 'KKcp/theme/is_configured', array( __CLASS__, 'set_settings_defaults' ), 10, 1 );
+		add_action( 'KKcp/customize/register_custom_classes', array( __CLASS__, 'register_custom_classes' ), 20, 1 );
+		add_action( 'KKcp/info/add_to_view', array( __CLASS__, 'add_contacts_to_customize' ) );
 		add_action( 'customize_register', array( __CLASS__, 'remove_wp_defaults' ), 10, 1 );
 		add_action( 'customize_controls_print_footer_scripts' , array( __CLASS__, 'customize_enqueue_js_admin' ) );
 		add_action( 'customize_preview_init' , array( __CLASS__, 'customize_enqueue_js_preview' ) );
@@ -94,7 +94,7 @@ class Customize_Plus_Demo {
 	public static function add_theme_supports() {
 
 		// Customize Plus settings
-		add_theme_support( 'PWPcp-customize', array(
+		add_theme_support( 'KKcp-customize', array(
 			'prefix' => self::PREFIX,
 			'customize_tree' => self::get_customize_tree(),
 			'images_base_url' => get_stylesheet_directory_uri() . '/images/',
@@ -140,13 +140,13 @@ class Customize_Plus_Demo {
 	 * to the Customize (we extend Customize Plus, so we use its hook).
 	 *
 	 * @since  0.0.1
-	 * @param $customize_plus {PWPcp_Customize} Customize Plus Customize instance
+	 * @param $customize_plus {KKcp_Customize} Customize Plus Customize instance
 	 */
 	public static function register_custom_classes( $customize_plus ) {
 		// require_once( get_stylesheet_directory() . '/class-customize-classes.php' );
 		// $customize_plus::register_custom_types( array(
 		// 	'controls' => array(
-		// 		'pwppbs_layout_columns' => 'PWPpbs_Customize_Control_Layout_Columns',
+		// 		'kkcpt_layout_columns' => 'KKcpt_Customize_Control_Layout_Columns',
 		// 	)
 		// ) );
 	}
@@ -201,8 +201,8 @@ class Customize_Plus_Demo {
 	 * @since  0.0.1
 	 */
 	public static function customize_enqueue_js_admin() {
-		wp_enqueue_style( self::PREFIX . '-customize', get_template_directory_uri() . '/styles/customize.css', array( 'PWPcp-customize', 'PWPcpp-customize' ), self::VERSION, false );
-		wp_enqueue_script( self::PREFIX . '-customize', get_template_directory_uri() . '/scripts/customize.js', array( 'PWPcp-customize', 'PWPcpp-customize' ), self::VERSION, false );
+		wp_enqueue_style( self::PREFIX . '-customize', get_template_directory_uri() . '/styles/customize.css', array( 'KKcp-customize', 'KKcpp-customize' ), self::VERSION, false );
+		wp_enqueue_script( self::PREFIX . '-customize', get_template_directory_uri() . '/scripts/customize.js', array( 'KKcp-customize', 'KKcpp-customize' ), self::VERSION, false );
 	}
 
 	/**
@@ -211,13 +211,13 @@ class Customize_Plus_Demo {
 	 * @since  0.0.1
 	 */
 	public static function customize_enqueue_js_preview() {
-		wp_enqueue_script( self::PREFIX . '-customize', get_template_directory_uri() . '/scripts/customize-preview.js', array( 'PWPcp-customize-preview' ), self::VERSION, true );
+		wp_enqueue_script( self::PREFIX . '-customize', get_template_directory_uri() . '/scripts/customize-preview.js', array( 'KKcp-customize-preview' ), self::VERSION, true );
 	}
 
 	/**
 	 * Safe `get_theme_mod` with default fallback
 	 *
-	 * This is the same as using the global function `pwp_get_theme_mod`
+	 * This is the same as using the global function `kk_get_theme_mod`
 	 *
 	 * @since  0.0.1
 	 * @param string $opt_name
@@ -234,7 +234,7 @@ class Customize_Plus_Demo {
 	/**
 	 * Safe `get_option` with default fallback
 	 *
-	 * This is the same as using the global function `pwp_get_option`
+	 * This is the same as using the global function `kk_get_option`
 	 *
 	 * @since  0.0.1
 	 * @param string $opt_name

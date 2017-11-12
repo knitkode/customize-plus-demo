@@ -1,4 +1,4 @@
-/* global jQuery, _, wp, PWPcp */
+/* global jQuery, _, wp, KKcp */
 /* jshint unused: false */
 
 (function (window, $, wp, api) {
@@ -171,4 +171,4 @@
   });
 
 
-})(window, jQuery, wp, PWPcp);
+})(window, jQuery, wp, KKcp);

@@ -18,13 +18,13 @@ return array(
 		'title' => __( 'Example panel', 'textDomain' ),
 		'description' => __( 'Layout generic options, globally change the look and feel', 'textDomain' ),
 		// 'dashicon' => 309,
-		'type' => 'pwpcp_panel',
+		'type' => 'kkcp_panel',
 		'sections' => array(
 			array(
 				'id' => 'layout-generic',
 				'title' => __( 'Example section (empty)', 'textDomain' ),
 				'description' => __( 'Just an empty section.', 'textDomain' ),
-				'type' => 'pwpcp_section',
+				'type' => 'kkcp_section',
 				'fields' => array()
 			),
 		)
@@ -33,7 +33,7 @@ return array(
 		'subject' => 'section',
 		'id' => 'section-settings-apis',
 		'title' => __( 'Settings APIs', 'textDomain' ),
-		'type' => 'pwpcp_section',
+		'type' => 'kkcp_section',
 		'dashicon' => 486,
 		'fields' => array(
 			'api-theme_mod' => array(
@@ -44,7 +44,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Theme mods API', 'i18n' ),
 					'description' => __( 'This is used by default. Check the [WordPress codex](https://codex.wordpress.org/Theme_Modification_API).', 'i18n' ),
-					'type' => 'pwpcp_text',
+					'type' => 'kkcp_text',
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
 						'text' => "```php
@@ -55,7 +55,7 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'type' => 'pwpcp_text'
+		'type' => 'kkcp_text'
 	),
 ),
 ```",
@@ -71,7 +71,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Options API', 'i18n' ),
 					'description' => __( "Use `'type' => 'option'` in the setting's args, as with the normal WordPress API, to use the [Options API](https://codex.wordpress.org/Options_API) for a specific setting.", 'i18n' ),
-					'type' => 'pwpcp_text',
+					'type' => 'kkcp_text',
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
 						'text' => "```php
@@ -82,7 +82,7 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'type' => 'pwpcp_text'
+		'type' => 'kkcp_text'
 	),
 ),
 ```",
@@ -95,7 +95,7 @@ return array(
 		'subject' => 'section',
 		'id' => 'section-colors',
 		'title' => __( 'Color controls', 'textDomain' ),
-		'type' => 'pwpcp_section',
+		'type' => 'kkcp_section',
 		'dashicon' => 309,
 		'fields' => array(
 			'color' => array(
@@ -106,7 +106,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Color', 'i18n' ),
 					'description' => __( '', 'i18n' ),
-					'type' => 'pwpcp_color',
+					'type' => 'kkcp_color',
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
 						'text' => "```php
@@ -117,7 +117,7 @@ return array(
 		),
 		'control' => array(
 			'label' => __( 'Color', 'i18n' ),
-			'type' => 'pwpcp_color',
+			'type' => 'kkcp_color',
 	),
 ),
 ```",
@@ -132,7 +132,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Disallow Transparent', 'i18n' ),
 					'description' => __( 'Disable the transparent button, `transparent` value not allowed.', 'i18n' ),
-					'type' => 'pwpcp_color',
+					'type' => 'kkcp_color',
 					'disallowTransparent' => true,
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
@@ -144,7 +144,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Disallow Transparent', 'i18n' ),
-		'type' => 'pwpcp_color',
+		'type' => 'kkcp_color',
 		'disallowTransparent' => true,
 	),
 ),
@@ -160,7 +160,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Allow Alpha', 'i18n' ),
 					'description' => __( 'Allow `rgba` colors. Show a slider to control the alpha channel.', 'i18n' ),
-					'type' => 'pwpcp_color',
+					'type' => 'kkcp_color',
 					'allowAlpha' => true,
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
@@ -172,7 +172,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Allow Alpha', 'i18n' ),
-		'type' => 'pwpcp_color',
+		'type' => 'kkcp_color',
 		'allowAlpha' => true,
 	),
 ),
@@ -188,7 +188,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Palette only', 'i18n' ),
 					'description' => __( 'Disable the normal color picker and show only a palette with the color you define. Only these colors are allowed when `showPaletteOnly` is set to `true`. The `palette` arg is an array of arrays where each array it is a row of color choices in the UI.', 'i18n' ),
-					'type' => 'pwpcp_color',
+					'type' => 'kkcp_color',
 					'showPaletteOnly' => true,
 					'palette' => array(
 						array( '#000', '#444', '#666', '#999', '#ccc', '#eee', '#f3f3f3', '#fff' ),
@@ -203,7 +203,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Palette only', 'i18n' ),
-		'type' => 'pwpcp_color',
+		'type' => 'kkcp_color',
 		'showPaletteOnly' => true,
 		'palette' => array(
 			array( '#000', '#444', '#666', '#999', '#ccc', '#eee', '#f3f3f3', '#fff' ),
@@ -222,7 +222,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Palette with picker', 'i18n' ),
 					'description' => __( '', 'i18n' ),
-					'type' => 'pwpcp_color',
+					'type' => 'kkcp_color',
 					'palette' => array(
 						array( '#000', '#444', '#666', '#999', '#ccc', '#eee', '#f3f3f3', '#fff' ),
 					),
@@ -236,7 +236,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Palette with picker', 'i18n' ),
-		'type' => 'pwpcp_color',
+		'type' => 'kkcp_color',
 		'palette' => array(
 			array( '#000', '#444', '#666', '#999', '#ccc', '#eee', '#f3f3f3', '#fff' ),
 		),
@@ -254,7 +254,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Palette and hidden picker', 'i18n' ),
 					'description' => __( '', 'i18n' ),
-					'type' => 'pwpcp_color',
+					'type' => 'kkcp_color',
 					'showPaletteOnly' => true,
 					'togglePaletteOnly' => true,
 					'palette' => array(
@@ -273,7 +273,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Palette and hidden picker', 'i18n' ),
-		'type' => 'pwpcp_color',
+		'type' => 'kkcp_color',
 		'showPaletteOnly' => true,
 		'togglePaletteOnly' => true,
 		'palette' => array(
@@ -296,7 +296,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Dynamic Color', 'i18n' ),
 					'description' => __( '(active role)', 'i18n' ),
-					'type' => 'pwpcp_color_dynamic',
+					'type' => 'kkcp_color_dynamic',
 					'guide' => array(
 						'title' => __( 'See Code (Premium control)', 'i18n' ),
 						'text' => "```php
@@ -307,7 +307,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Dynamic Color', 'i18n' ),
-		'type' => 'pwpcp_color_dynamic',
+		'type' => 'kkcp_color_dynamic',
 	),
 ),
 ```",
@@ -322,7 +322,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Dynamic Color', 'i18n' ),
 					'description' => __( '(passive role)', 'i18n' ),
-					'type' => 'pwpcp_color_dynamic',
+					'type' => 'kkcp_color_dynamic',
 					'guide' => array(
 						'title' => __( 'See Code (Premium control)', 'i18n' ),
 						'text' => "```php
@@ -333,7 +333,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Dynamic Color', 'i18n' ),
-		'type' => 'pwpcp_color_dynamic',
+		'type' => 'kkcp_color_dynamic',
 	),
 ),
 ```",
@@ -348,7 +348,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Dynamic Color (hide dynamic tab)', 'i18n' ),
 					'description' => __( '(active role)', 'i18n' ),
-					'type' => 'pwpcp_color_dynamic',
+					'type' => 'kkcp_color_dynamic',
 					'hideDynamic' => true,
 					'guide' => array(
 						'title' => __( 'See Code (Premium control)', 'i18n' ),
@@ -361,7 +361,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Dynamic Color (hide dynamic tab)', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_color_dynamic',
+		'type' => 'kkcp_color_dynamic',
 		'hideDynamic' => true,
 	),
 ),
@@ -377,7 +377,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Dynamic Color (hide dynamic tab)', 'i18n' ),
 					'description' => __( '(passive role)', 'i18n' ),
-					'type' => 'pwpcp_color_dynamic',
+					'type' => 'kkcp_color_dynamic',
 					'hideDynamic' => true,
 					'guide' => array(
 						'title' => __( 'See Code (Premium control)', 'i18n' ),
@@ -390,7 +390,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Dynamic Color (hide dynamic tab)', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_color_dynamic',
+		'type' => 'kkcp_color_dynamic',
 		'hideDynamic' => true,
 	),
 ),
@@ -404,7 +404,7 @@ return array(
 		'subject' => 'section',
 		'id' => 'section-sizes',
 		'title' => __( 'Size controls', 'textDomain' ),
-		'type' => 'pwpcp_section',
+		'type' => 'kkcp_section',
 		'dashicon' => 211,
 		'fields' => array(
 			'slider' => array(
@@ -415,7 +415,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Slider (default->px)', 'i18n' ),
 					'description' => __( '', 'i18n' ),
-					'type' => 'pwpcp_slider',
+					'type' => 'kkcp_slider',
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
 						'text' => "```php
@@ -426,7 +426,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Slider (default->px)', 'i18n' ),
-		'type' => 'pwpcp_slider',
+		'type' => 'kkcp_slider',
 	),
 ),
 ```",
@@ -441,7 +441,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Slider (em)', 'i18n' ),
 					'description' => __( '', 'i18n' ),
-					'type' => 'pwpcp_slider',
+					'type' => 'kkcp_slider',
 					'units' => array( 'em' ),
 					'input_attrs' => array(
 						'min' => 0,
@@ -458,7 +458,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Slider (em)', 'i18n' ),
-		'type' => 'pwpcp_slider',
+		'type' => 'kkcp_slider',
 		'units' => array( 'em' ),
 		'input_attrs' => array(
 			'min' => 0,
@@ -479,7 +479,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Slider (px or percent)', 'i18n' ),
 					'description' => __( '', 'i18n' ),
-					'type' => 'pwpcp_slider',
+					'type' => 'kkcp_slider',
 					'units' => array( 'px', '%' ),
 					'input_attrs' => array(
 						'min' => 0,
@@ -496,7 +496,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Slider (px or percent)', 'i18n' ),
-		'type' => 'pwpcp_slider',
+		'type' => 'kkcp_slider',
 		'units' => array( 'px', '%' ),
 		'input_attrs' => array(
 			'min' => 0,
@@ -517,7 +517,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Slider (no units)', 'i18n' ),
 					'description' => __( '', 'i18n' ),
-					'type' => 'pwpcp_slider',
+					'type' => 'kkcp_slider',
 					'units' => array(),
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
@@ -529,7 +529,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Slider (no units)', 'i18n' ),
-		'type' => 'pwpcp_slider',
+		'type' => 'kkcp_slider',
 		'units' => array(),
 	),
 ),
@@ -545,7 +545,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Size Dynamic 1', 'i18n' ),
 					'description' => __( '(active role)', 'i18n' ),
-					'type' => 'pwpcp_size_dynamic',
+					'type' => 'kkcp_size_dynamic',
 					'guide' => array(
 						'title' => __( 'See Code (Premium control)', 'i18n' ),
 						'text' => "```php
@@ -556,7 +556,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Size Dynamic 1', 'i18n' ),
-		'type' => 'pwpcp_size_dynamic',
+		'type' => 'kkcp_size_dynamic',
 	),
 ),
 ```",
@@ -571,7 +571,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Size Dynamic 2', 'i18n' ),
 					'description' => __( '(passive role)', 'i18n' ),
-					'type' => 'pwpcp_size_dynamic',
+					'type' => 'kkcp_size_dynamic',
 					'units' => array( 'px', '%' ),
 					'guide' => array(
 						'title' => __( 'See Code (Premium control)', 'i18n' ),
@@ -583,7 +583,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Size Dynamic 2', 'i18n' ),
-		'type' => 'pwpcp_size_dynamic',
+		'type' => 'kkcp_size_dynamic',
 		'units' => array( 'px', '%' ),
 	),
 ),
@@ -599,7 +599,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Size Dynamic (hide dynamic tab) 3', 'i18n' ),
 					'description' => __( '(active role)', 'i18n' ),
-					'type' => 'pwpcp_size_dynamic',
+					'type' => 'kkcp_size_dynamic',
 					'hideDynamic' => true,
 					'guide' => array(
 						'title' => __( 'See Code (Premium control)', 'i18n' ),
@@ -611,7 +611,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Size Dynamic (hide dynamic tab)  3', 'i18n' ),
-		'type' => 'pwpcp_size_dynamic',
+		'type' => 'kkcp_size_dynamic',
 		'hideDynamic' => true,
 	),
 ),
@@ -627,7 +627,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Size Dynamic (hide dynamic tab) 4', 'i18n' ),
 					'description' => __( '(passive role)', 'i18n' ),
-					'type' => 'pwpcp_size_dynamic',
+					'type' => 'kkcp_size_dynamic',
 					'hideDynamic' => true,
 					'guide' => array(
 						'title' => __( 'See Code (Premium control)', 'i18n' ),
@@ -639,7 +639,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Size Dynamic (hide dynamic tab) 4', 'i18n' ),
-		'type' => 'pwpcp_size_dynamic',
+		'type' => 'kkcp_size_dynamic',
 		'hideDynamic' => true,
 	),
 ),
@@ -653,7 +653,7 @@ return array(
 		'subject' => 'section',
 		'id' => 'section-radio',
 		'title' => __( 'Radio controls', 'textDomain' ),
-		'type' => 'pwpcp_section',
+		'type' => 'kkcp_section',
 		'dashicon' => 159,
 		'fields' => array(
 			'radio' => array(
@@ -663,7 +663,7 @@ return array(
 				),
 				'control' => array(
 					'label' => __( 'Radio', 'i18n' ),
-					'type' => 'pwpcp_radio',
+					'type' => 'kkcp_radio',
 					'choices' => array(
 						'standard' => array(
 							'label' => __( 'Standard', 'i18n' ),
@@ -691,7 +691,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Radio', 'i18n' ),
-		'type' => 'pwpcp_radio',
+		'type' => 'kkcp_radio',
 		'choices' => array(
 			'standard' => array(
 				'label' => __( 'Standard', 'i18n' ),
@@ -722,7 +722,7 @@ return array(
 				),
 				'control' => array(
 					'label' => __( 'Buttonset', 'i18n' ),
-					'type' => 'pwpcp_buttonset',
+					'type' => 'kkcp_buttonset',
 					'guide' => array(
 						'title' => __( 'Buttonset guide', 'i18n' ),
 						'text' => __( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe laboriosam sunt ab, error explicabo cupiditate alias blanditiis minima inventore tempora necessitatibus excepturi mollitia quam laborum unde maxime laudantium! Ratione, impedit!', 'i18n' ),
@@ -742,7 +742,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Buttonset', 'i18n' ),
-		'type' => 'pwpcp_buttonset',
+		'type' => 'kkcp_buttonset',
 		'choices' => array(
 			'boxed' => __( 'Boxed', 'i18n' ),
 			'fluid' => __( 'Fluid', 'i18n' ),
@@ -760,7 +760,7 @@ return array(
 				),
 				'control' => array(
 					'label' => __( 'Buttonset three', 'i18n' ),
-					'type' => 'pwpcp_buttonset',
+					'type' => 'kkcp_buttonset',
 					'guide' => array(
 						'title' => __( 'Buttonset guide', 'i18n' ),
 						'text' => __( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe laboriosam sunt ab, error explicabo cupiditate alias blanditiis minima inventore tempora necessitatibus excepturi mollitia quam laborum unde maxime laudantium! Ratione, impedit!', 'i18n' ),
@@ -781,7 +781,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Buttonset three', 'i18n' ),
-		'type' => 'pwpcp_buttonset',
+		'type' => 'kkcp_buttonset',
 		'choices' => array(
 			'may' => __( 'May', 'i18n' ),
 			'ibanez' => __( 'Ibanez', 'i18n' ),
@@ -800,7 +800,7 @@ return array(
 				),
 				'control' => array(
 					'label' => __( 'Buttonset three', 'i18n' ),
-					'type' => 'pwpcp_buttonset',
+					'type' => 'kkcp_buttonset',
 					'guide' => array(
 						'title' => __( 'Buttonset guide', 'i18n' ),
 						'text' => __( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe laboriosam sunt ab, error explicabo cupiditate alias blanditiis minima inventore tempora necessitatibus excepturi mollitia quam laborum unde maxime laudantium! Ratione, impedit!', 'i18n' ),
@@ -822,7 +822,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Buttonset three', 'i18n' ),
-		'type' => 'pwpcp_buttonset',
+		'type' => 'kkcp_buttonset',
 		'choices' => array(
 			'one' => __( 'One', 'i18n' ),
 			'two' => __( 'Two', 'i18n' ),
@@ -843,7 +843,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Radio image', 'i18n' ),
 					'description' => __( 'Images already in the plugin, just put the image name', 'i18n' ),
-					'type' => 'pwpcp_radio_image',
+					'type' => 'kkcp_radio_image',
 					'guide' => array(
 						'docs' => 'doc-url/for-this-control/',
 					),
@@ -875,7 +875,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Radio image', 'i18n' ),
-		'type' => 'pwpcp_radio_image',
+		'type' => 'kkcp_radio_image',
 		'choices' => array(
 			'less' => array(
 				'label' => __( 'Single column', 'i18n' ),
@@ -908,7 +908,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Radio image (custom)', 'i18n' ),
 					'description' => __( '', 'i18n' ),
-					'type' => 'pwpcp_radio_image',
+					'type' => 'kkcp_radio_image',
 					'choices' => array(
 						'chrome' => array(
 							'label' => __( 'Chrome', 'i18n' ),
@@ -941,7 +941,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Radio image (custom)', 'i18n' ),
-		'type' => 'pwpcp_radio_image',
+		'type' => 'kkcp_radio_image',
 		'choices' => array(
 			'chrome' => array(
 				'label' => __( 'Chrome', 'i18n' ),
@@ -976,7 +976,7 @@ return array(
 		'subject' => 'section',
 		'id' => 'section-checkbox',
 		'title' => __( 'Checkbox controls', 'textDomain' ),
-		'type' => 'pwpcp_section',
+		'type' => 'kkcp_section',
 		'dashicon' => 314,
 		'fields' => array(
 			'toggle' => array(
@@ -987,7 +987,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Toggle', 'i18n' ),
 					'description' => __( 'Either 0 or 1.', 'i18n' ),
-					'type' => 'pwpcp_toggle',
+					'type' => 'kkcp_toggle',
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
 						'text' => "```php
@@ -998,7 +998,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Toggle', 'i18n' ),
-		'type' => 'pwpcp_toggle',
+		'type' => 'kkcp_toggle',
 	),
 ),
 ```",
@@ -1013,7 +1013,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Multicheck', 'i18n' ),
 					'description' => __( 'Select multiple options checking the boxes. Gives back an array ordered as defined by the developer.', 'i18n' ),
-					'type' => 'pwpcp_multicheck',
+					'type' => 'kkcp_multicheck',
 					'choices' => array(
 						'mango' => __( 'Mango', 'i18n' ),
 						'grape' => __( 'Grape', 'i18n' ),
@@ -1031,7 +1031,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Multicheck', 'i18n' ),
-		'type' => 'pwpcp_multicheck',
+		'type' => 'kkcp_multicheck',
 		'choices' => array(
 			'mango' => __( 'Mango', 'i18n' ),
 			'grape' => __( 'Grape', 'i18n' ),
@@ -1053,7 +1053,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Multicheck sortable', 'i18n' ),
 					'description' => __( 'Returns an array sorted as defined by the user containing only the checked values.', 'i18n' ),
-					'type' => 'pwpcp_multicheck',
+					'type' => 'kkcp_multicheck',
 					'choices' => array(
 						'facebook' => __( 'Facebook', 'i18n' ),
 						'twitter' => __( 'Twitter', 'i18n' ),
@@ -1075,7 +1075,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Multicheck sortable', 'i18n' ),
-		'type' => 'pwpcp_multicheck',
+		'type' => 'kkcp_multicheck',
 		'choices' => array(
 			'facebook' => __( 'Facebook', 'i18n' ),
 			'twitter' => __( 'Twitter', 'i18n' ),
@@ -1099,7 +1099,7 @@ return array(
 		'subject' => 'section',
 		'id' => 'section-texts',
 		'title' => __( 'Text controls', 'textDomain' ),
-		'type' => 'pwpcp_section',
+		'type' => 'kkcp_section',
 		'dashicon' => 217,
 		'fields' => array(
 			'text' => array(
@@ -1110,7 +1110,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Text', 'i18n' ),
 					'description' => __( '', 'i18n' ),
-					'type' => 'pwpcp_text',
+					'type' => 'kkcp_text',
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
 						'text' => "```php
@@ -1121,7 +1121,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Text', 'i18n' ),
-		'type' => 'pwpcp_text',
+		'type' => 'kkcp_text',
 	),
 ),
 ```",
@@ -1136,7 +1136,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Text max length 10', 'i18n' ),
 					'description' => __( '', 'i18n' ),
-					'type' => 'pwpcp_text',
+					'type' => 'kkcp_text',
 					'input_attrs' => array(
 						'maxlength' => 10,
 					),
@@ -1150,7 +1150,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Text max length 10', 'i18n' ),
-		'type' => 'pwpcp_text',
+		'type' => 'kkcp_text',
 		'input_attrs' => array(
 			'maxlength' => 10,
 		),
@@ -1168,7 +1168,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Text optional', 'i18n' ),
 					'description' => __( 'Empty value is allowed.', 'i18n' ),
-					'type' => 'pwpcp_text',
+					'type' => 'kkcp_text',
 					'optional' => true,
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
@@ -1180,7 +1180,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Text optional', 'i18n' ),
-		'type' => 'pwpcp_text',
+		'type' => 'kkcp_text',
 		'optional' => true,
 	)
 ),
@@ -1196,7 +1196,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Text URL', 'i18n' ),
 					'description' => __( 'It accepts only a valid url.', 'i18n' ),
-					'type' => 'pwpcp_text',
+					'type' => 'kkcp_text',
 					'input_attrs' => array(
 						'type' => 'url',
 					),
@@ -1211,7 +1211,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Text URL', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_text',
+		'type' => 'kkcp_text',
 		'input_attrs' => array(
 			'type' => 'url',
 		),
@@ -1229,7 +1229,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Text Email', 'i18n' ),
 					'description' => __( 'It accepts only a valid email address.', 'i18n' ),
-					'type' => 'pwpcp_text',
+					'type' => 'kkcp_text',
 					'input_attrs' => array(
 						'type' => 'email',
 					),
@@ -1244,7 +1244,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Text Email', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_text',
+		'type' => 'kkcp_text',
 		'input_attrs' => array(
 			'type' => 'email',
 		),
@@ -1262,7 +1262,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Textarea', 'i18n' ),
 					'description' => __( 'The output and the value in database will be escaped.', 'i18n' ),
-					'type' => 'pwpcp_textarea',
+					'type' => 'kkcp_textarea',
 					'input_attrs' => array(
 						'maxlength' => 300,
 						'placeholder' => 'E.g. <h2>Ciao</h2> will be escaped to &lt;h2&gt;Ciao&lt;/h2&gt;.'
@@ -1278,7 +1278,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Textarea', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_textarea',
+		'type' => 'kkcp_textarea',
 		'input_attrs' => array(
 			'maxlength' => 300,
 		),
@@ -1296,7 +1296,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Textarea (allow HTML)', 'i18n' ),
 					'description' => __( '', 'i18n' ),
-					'type' => 'pwpcp_textarea',
+					'type' => 'kkcp_textarea',
 					'input_attrs' => array(
 						'maxlength' => 300,
 						'rows' => 8,
@@ -1313,7 +1313,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Textarea (allow HTML)', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_textarea',
+		'type' => 'kkcp_textarea',
 		'input_attrs' => array(
 			'maxlength' => 300,
 			'rows' => 8,
@@ -1333,7 +1333,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Textarea (wp_editor)', 'i18n' ),
 					'description' => __( '', 'i18n' ),
-					'type' => 'pwpcp_textarea',
+					'type' => 'kkcp_textarea',
 					'wp_editor' => true,
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
@@ -1346,7 +1346,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Textarea (wp_editor)', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_textarea',
+		'type' => 'kkcp_textarea',
 		'wp_editor' => true,
 	),
 ),
@@ -1362,7 +1362,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Textarea (wp_editor with options)', 'i18n' ),
 					'description' => __( '', 'i18n' ),
-					'type' => 'pwpcp_textarea',
+					'type' => 'kkcp_textarea',
 					'wp_editor' => array(
 						'toolbar1' => 'bold,italic,underline,undo,redo',
 					),
@@ -1377,7 +1377,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Textarea (wp_editor with options)', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_textarea',
+		'type' => 'kkcp_textarea',
 		'wp_editor' => array(
 			'toolbar1' => 'bold,italic,underline,undo,redo',
 		),
@@ -1393,7 +1393,7 @@ return array(
 		'subject' => 'section',
 		'id' => 'section-numbers',
 		'title' => __( 'Number controls', 'textDomain' ),
-		'type' => 'pwpcp_section',
+		'type' => 'kkcp_section',
 		'dashicon' => 204,
 		'fields' => array(
 			'number' => array(
@@ -1404,7 +1404,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Number', 'i18n' ),
 					'description' => __( 'Default number control, only integer numbers.', 'i18n' ),
-					'type' => 'pwpcp_number',
+					'type' => 'kkcp_number',
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
 						'text' => "```php
@@ -1415,7 +1415,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Number', 'i18n' ),
-		'type' => 'pwpcp_number',
+		'type' => 'kkcp_number',
 	),
 ),
 ```",
@@ -1430,7 +1430,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Number', 'i18n' ),
 					'description' => __( 'Default number control, accept both integers and float numbers.', 'i18n' ),
-					'type' => 'pwpcp_number',
+					'type' => 'kkcp_number',
 					'allowFloat' => true,
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
@@ -1443,7 +1443,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Number', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_number',
+		'type' => 'kkcp_number',
 		'allowFloat' => true,
 	),
 ),
@@ -1459,7 +1459,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Number min', 'i18n' ),
 					'description' => __( 'Number with a minimum value.', 'i18n' ),
-					'type' => 'pwpcp_number',
+					'type' => 'kkcp_number',
 					'input_attrs' => array(
 						'min' => 4,
 					),
@@ -1474,7 +1474,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Number min', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_number',
+		'type' => 'kkcp_number',
 		'input_attrs' => array(
 			'min' => 4,
 		),
@@ -1492,7 +1492,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Number max / optional', 'i18n' ),
 					'description' => __( 'Number with a maximum value. Empty value allowed.', 'i18n' ),
-					'type' => 'pwpcp_number',
+					'type' => 'kkcp_number',
 					'optional' => true,
 					'input_attrs' => array(
 						'max' => 7,
@@ -1508,7 +1508,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Number max', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_number',
+		'type' => 'kkcp_number',
 		'optional' => true,
 		'input_attrs' => array(
 			'max' => 7,
@@ -1527,7 +1527,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Number step', 'i18n' ),
 					'description' => __( 'Number that increment or decrement by a defined step.', 'i18n' ),
-					'type' => 'pwpcp_number',
+					'type' => 'kkcp_number',
 					'input_attrs' => array(
 						'step' => 5,
 					),
@@ -1542,7 +1542,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Number step', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_number',
+		'type' => 'kkcp_number',
 		'input_attrs' => array(
 			'step' => 5,
 		),
@@ -1558,7 +1558,7 @@ return array(
 		'subject' => 'section',
 		'id' => 'section-select',
 		'title' => __( 'Select controls', 'textDomain' ),
-		'type' => 'pwpcp_section',
+		'type' => 'kkcp_section',
 		'dashicon' => 163,
 		'fields' => array(
 			'select' => array(
@@ -1569,7 +1569,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Select', 'i18n' ),
 					'description' => __( '', 'i18n' ),
-					'type' => 'pwpcp_select',
+					'type' => 'kkcp_select',
 					'choices' => array(
 						'lemon' => __( 'Lemon', 'i18n' ),
 						'orange' => __( 'Orange', 'i18n' ),
@@ -1587,7 +1587,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Select', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_select',
+		'type' => 'kkcp_select',
 		'choices' => array(
 			'lemon' => __( 'Lemon', 'i18n' ),
 			'orange' => __( 'Orange', 'i18n' ),
@@ -1609,7 +1609,7 @@ return array(
 			// 	'control' => array(
 			// 		'label' => __( 'Select multiple', 'i18n' ),
 			// 		'description' => __( '', 'i18n' ),
-			// 		'type' => 'pwpcp_select',
+			// 		'type' => 'kkcp_select',
 			// 		'choices' => array(
 			// 			'grape' => __( 'Grape', 'i18n' ),
 			// 			'apple' => __( 'Apple', 'i18n' ),
@@ -1628,7 +1628,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Selectize', 'i18n' ),
 					'description' => __( '', 'i18n' ),
-					'type' => 'pwpcp_select',
+					'type' => 'kkcp_select',
 					'choices' => array(
 						'lemon' => __( 'Lemon', 'i18n' ),
 						'orange' => __( 'Orange', 'i18n' ),
@@ -1651,7 +1651,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Selectize', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_select',
+		'type' => 'kkcp_select',
 		'choices' => array(
 			'lemon' => __( 'Lemon', 'i18n' ),
 			'orange' => __( 'Orange', 'i18n' ),
@@ -1677,7 +1677,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Selectize with options', 'i18n' ),
 					'description' => __( '', 'i18n' ),
-					'type' => 'pwpcp_select',
+					'type' => 'kkcp_select',
 					'choices' => array(
 						'lemon' => __( 'Lemon', 'i18n' ),
 						'orange' => __( 'Orange', 'i18n' ),
@@ -1702,7 +1702,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Selectize with options', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_select',
+		'type' => 'kkcp_select',
 		'choices' => array(
 			'lemon' => __( 'Lemon', 'i18n' ),
 			'orange' => __( 'Orange', 'i18n' ),
@@ -1730,7 +1730,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Selectize with multiple selection', 'i18n' ),
 					'description' => __( '', 'i18n' ),
-					'type' => 'pwpcp_select',
+					'type' => 'kkcp_select',
 					'choices' => array(
 						'IT' => __( 'Italy', 'i18n' ),
 						'DE' => __( 'Germany', 'i18n' ),
@@ -1753,7 +1753,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Selectize with multiple selection', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_select',
+		'type' => 'kkcp_select',
 		'choices' => array(
 			'IT' => __( 'Italy', 'i18n' ),
 			'DE' => __( 'Germany', 'i18n' ),
@@ -1779,7 +1779,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Selectize with multiple selection and plugins', 'i18n' ),
 					'description' => __( '', 'i18n' ),
-					'type' => 'pwpcp_select',
+					'type' => 'kkcp_select',
 					'choices' => array(
 						'IT' => __( 'Italy', 'i18n' ),
 						'DE' => __( 'Germany', 'i18n' ),
@@ -1804,7 +1804,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Selectize with multiple selection and plugins', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_select',
+		'type' => 'kkcp_select',
 		'choices' => array(
 			'IT' => __( 'Italy', 'i18n' ),
 			'DE' => __( 'Germany', 'i18n' ),
@@ -1830,7 +1830,7 @@ return array(
 		'subject' => 'section',
 		'id' => 'section-tags',
 		'title' => __( 'Tags controls', 'textDomain' ),
-		'type' => 'pwpcp_section',
+		'type' => 'kkcp_section',
 		'dashicon' => 323,
 		'fields' => array(
 			'tags' => array(
@@ -1841,7 +1841,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Tags', 'i18n' ),
 					'description' => __( 'Default tags control. User can insert new tags freely (HTML is escaped). It returns a comma separated string. Tags can be removed pressing the delete key.', 'i18n' ),
-					'type' => 'pwpcp_tags',
+					'type' => 'kkcp_tags',
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
 						'text' => "```php
@@ -1853,7 +1853,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Tags', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_tags',
+		'type' => 'kkcp_tags',
 	),
 ),
 ```",
@@ -1868,7 +1868,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Tags removable (max 4 items)', 'i18n' ),
 					'description' => __( 'Tags can be removed clicking the x button close to each of them.', 'i18n' ),
-					'type' => 'pwpcp_tags',
+					'type' => 'kkcp_tags',
 					'selectize' => array(
 						'plugins' => array( 'restore_on_backspace', 'remove_button' ),
 						'maxItems' => 4,
@@ -1884,7 +1884,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Tags removable', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_tags',
+		'type' => 'kkcp_tags',
 		'selectize' => array(
 			'plugins' => array( 'restore_on_backspace', 'remove_button' ),
 			'maxItems' => 4,
@@ -1903,7 +1903,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Tags sortable and removable', 'i18n' ),
 					'description' => __( '', 'i18n' ),
-					'type' => 'pwpcp_tags',
+					'type' => 'kkcp_tags',
 					'selectize' => array(
 						'plugins' => array( 'remove_button', 'drag_drop' )
 					),
@@ -1918,7 +1918,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Tags sortable and removable', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_tags',
+		'type' => 'kkcp_tags',
 		'selectize' => array(
 			'plugins' => array( 'remove_button', 'drag_drop' )
 		),
@@ -1936,7 +1936,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Tags max items', 'i18n' ),
 					'description' => __( 'Specify a maximum nuber of tags allowed.', 'i18n' ),
-					'type' => 'pwpcp_tags',
+					'type' => 'kkcp_tags',
 					'selectize' => array(
 						'plugins' => array( 'restore_on_backspace', 'remove_button', 'drag_drop' ),
 						'maxItems' => 2,
@@ -1952,7 +1952,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Tags max items', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_tags',
+		'type' => 'kkcp_tags',
 		'selectize' => array(
 			'plugins' => array( 'restore_on_backspace', 'remove_button', 'drag_drop' ),
 			'maxItems' => 2,
@@ -1969,7 +1969,7 @@ return array(
 		'subject' => 'section',
 		'id' => 'section-sortable',
 		'title' => __( 'Sortable controls', 'textDomain' ),
-		'type' => 'pwpcp_section',
+		'type' => 'kkcp_section',
 		'dashicon' => 156,
 		'fields' => array(
 			'sortable' => array(
@@ -1980,7 +1980,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Sortable', 'i18n' ),
 					'description' => __( 'A sortable array of strings.', 'i18n' ),
-					'type' => 'pwpcp_sortable',
+					'type' => 'kkcp_sortable',
 					'choices' => array(
 						'lemon' => __( 'Lemon', 'i18n' ),
 						34 => '34',
@@ -1999,7 +1999,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Sortable', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_sortable',
+		'type' => 'kkcp_sortable',
 		'choices' => array(
 			'lemon' => __( 'Lemon', 'i18n' ),
 			34 => '34',
@@ -2022,7 +2022,7 @@ return array(
 			// 	'control' => array(
 			// 		'label' => __( 'Sortable', 'i18n' ),
 			// 		'description' => __( '', 'i18n' ),
-			// 		'type' => 'pwpcp_sortable',
+			// 		'type' => 'kkcp_sortable',
 			// 		'editable' => true,
 			// 		'items' => array(
 			// 			'placeholder' => __( 'Placeholder', 'i18n' ),
@@ -2037,7 +2037,7 @@ return array(
 		'subject' => 'section',
 		'id' => 'section-font',
 		'title' => __( 'Font controls', 'textDomain' ),
-		'type' => 'pwpcp_section',
+		'type' => 'kkcp_section',
 		'dashicon' => 215,
 		'fields' => array(
 			'font-family' => array(
@@ -2048,7 +2048,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Font family', 'i18n' ),
 					'description' => __( 'Select the font families and sort them.', 'i18n' ),
-					'type' => 'pwpcp_font_family',
+					'type' => 'kkcp_font_family',
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
 						'text' => "```php
@@ -2059,7 +2059,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Font family', 'i18n' ),
-		'type' => 'pwpcp_font_family',
+		'type' => 'kkcp_font_family',
 	),
 ),
 ```",
@@ -2074,7 +2074,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Font weight', 'i18n' ),
 					'description' => __( 'Select the font weight. Just a shortcut of an otherwise verbose select with many choices.', 'i18n' ),
-					'type' => 'pwpcp_font_weight',
+					'type' => 'kkcp_font_weight',
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
 						'text' => "```php
@@ -2085,7 +2085,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Font weight', 'i18n' ),
-		'type' => 'pwpcp_font_weight',
+		'type' => 'kkcp_font_weight',
 	),
 ),
 ```",
@@ -2098,7 +2098,7 @@ return array(
 		'subject' => 'section',
 		'id' => 'section-icon',
 		'title' => __( 'Icons controls', 'textDomain' ),
-		'type' => 'pwpcp_section',
+		'type' => 'kkcp_section',
 		'dashicon' => 163,
 		'fields' => array(
 			'dashicons' => array(
@@ -2109,7 +2109,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Dashicon', 'i18n' ),
 					'description' => __( '', 'i18n' ),
-					'type' => 'pwpcp_icon',
+					'type' => 'kkcp_icon',
 					'choices' => 'dashicons',
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
@@ -2121,7 +2121,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Icon', 'i18n' ),
-		'type' => 'pwpcp_icon',
+		'type' => 'kkcp_icon',
 		'choices' => 'dashicons',
 	),
 ),
@@ -2135,7 +2135,7 @@ return array(
 		'subject' => 'section',
 		'id' => 'section-others',
 		'title' => __( 'Other controls', 'textDomain' ),
-		'type' => 'pwpcp_section',
+		'type' => 'kkcp_section',
 		'dashicon' => 322,
 		'fields' => array(
 			'knob' => array(
@@ -2146,7 +2146,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Knob', 'i18n' ),
 					'description' => __( 'Basically a number input. Uses [jQuery.knob.js](https://github.com/aterrien/jQuery-Knob).', 'i18n' ),
-					'type' => 'pwpcp_knob',
+					'type' => 'kkcp_knob',
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
 						'text' => "```php
@@ -2158,7 +2158,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Knob', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_knob',
+		'type' => 'kkcp_knob',
 	),
 ),
 ```",
@@ -2173,7 +2173,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Knob (with options)', 'i18n' ),
 					'description' => __( 'It is possible to pass to the `input_attrs` arg some jQuery.knob js options. See a [list here](http://@@todo) of the options allowed.', 'i18n' ),
-					'type' => 'pwpcp_knob',
+					'type' => 'kkcp_knob',
 					'input_attrs' => array(
 						'min' => 30,
 						'step' => 5,
@@ -2190,7 +2190,7 @@ return array(
 	'control' => array(
 		'label' => __( 'Knob (with options)', 'i18n' ),
 		'description' => __( '', 'i18n' ),
-		'type' => 'pwpcp_knob',
+		'type' => 'kkcp_knob',
 		'input_attrs' => array(
 			'min' => 30,
 			'step' => 5,
@@ -2211,7 +2211,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Date', 'i18n' ),
 					'description' => __( 'Focus the input to slide down the [jQuery UI datepicker](https://jqueryui.com/datepicker/)  widget. The date is validated according to the `dateFormat` selected.', 'i18n' ),
-					'type' => 'pwpcp_date',
+					'type' => 'kkcp_date',
 					'input_attrs' => array(
 						'dateFormat' => 'dd/mm/yy',
 					),
@@ -2225,7 +2225,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Date', 'i18n' ),
-		'type' => 'pwpcp_date',
+		'type' => 'kkcp_date',
 		'input_attrs' => array(
 			'dateFormat' => 'dd/mm/yy',
 		),
@@ -2243,7 +2243,7 @@ return array(
 				'control' => array(
 					'label' => __( 'Date (`inline` with `input_attrs`)', 'i18n' ),
 					'description' => __( 'Pass [jQuery UI datepicker](http://api.jqueryui.com/datepicker/) options and `inline` to always show a calendar without text input.', 'i18n' ),
-					'type' => 'pwpcp_date',
+					'type' => 'kkcp_date',
 					'inline' => true,
 					'input_attrs' => array(
 						'dateFormat' => 'yy-mm-dd',
@@ -2261,7 +2261,7 @@ return array(
 	),
 	'control' => array(
 		'label' => __( 'Date', 'i18n' ),
-		'type' => 'pwpcp_date',
+		'type' => 'kkcp_date',
 		'inline' => true,
 		'input_attrs' => array(
 			'dateFormat' => 'yy-mm-dd',
@@ -2284,35 +2284,35 @@ return array(
 		'description' => __( 'These controls are all tight to a dummy setting, their only purpose is to show some content between a control and the other.', 'textDomain' ),
 		'dashicon' => 105,
 		'fields' => array(
-			'pwpcp-dummy' => array(
+			'kkcp-dummy' => array(
 				'control' => array(
 					'label' => __( 'Dummy', 'i18n' ),
 					'description' => __( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam consequatur sit fugit mollitia magni similique, nesciunt culpa maxime cupiditate debitis sed, facere odit, optio officiis architecto, ab veritatis id omnis.', 'i18n' ),
-					'type' => 'pwpcp_content',
+					'type' => 'kkcp_content',
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
 						'text' => "```php
-'pwpcp-dummy' => array(
+'kkcp-dummy' => array(
 	'control' => array(
 		'label' => __( 'Dummy default', 'i18n' ),
 		'description' => __( 'Some text as you like', 'i18n' ),
-		'type' => 'pwpcp_content',
+		'type' => 'kkcp_content',
 	),
 ),
 ```",
 					),
 				),
 			),
-			'pwpcp-dummy-markdown' => array(
+			'kkcp-dummy-markdown' => array(
 				'control' => array(
-					'type' => 'pwpcp_content',
+					'type' => 'kkcp_content',
 					'markdown' => "
 # Image
 
 ![sample image](http://lorempixel.com/g/270/180/city/)
 
 ## Base
-`pwpcp_section`
+`kkcp_section`
 
 ### Features
 - icons for sections, in the same fashion as WordPress native icons for panels.
@@ -2347,9 +2347,9 @@ You can use WordPress default controls as you can see in the demo, in this case 
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
 						'text' => "```php
-'pwpcp-dummy' => array(
+'kkcp-dummy' => array(
 	'control' => array(
-		'type' => 'pwpcp_content',
+		'type' => 'kkcp_content',
 		'markdown' => 'a lot of text and markdown.'
 	),
 ),
@@ -2363,7 +2363,7 @@ You can use WordPress default controls as you can see in the demo, in this case 
 		'subject' => 'section',
 		'id' => 'section-wordpress',
 		'title' => __( 'WordPress controls', 'textDomain' ),
-		// 'type' => 'pwpcp_section',
+		// 'type' => 'kkcp_section',
 		'dashicon' => 120,
 		'fields' => array(
 			'wp-text' => array(

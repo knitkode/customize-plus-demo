@@ -1,4 +1,4 @@
-# Customize Plus Theme [![by Knitkode](https://img.shields.io/badge/by-Knitkode-blue.svg?style=social)]()
+# Customize Plus Theme [![by KnitKode](https://img.shields.io/badge/by-KnitKode-blue.svg?style=social)]()
 
 [![Build Status](https://scrutinizer-ci.com/g/knitkode/customize-plus-demo/badges/build.png?b=master)](https://scrutinizer-ci.com/g/knitkode/customize-plus-demo/build-status/master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/knitkode/customize-plus-demo/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/knitkode/customize-plus-demo/?branch=master)
@@ -39,8 +39,8 @@ Donate
 
 License
 ---------------
- [![License](https://img.shields.io/badge/license-GPL--2.0%2B-blue.svg)](https://github.com/knitkode/customize-plus-demo/blob/master/license.txt) [![Knitkode](https://img.shields.io/badge/%C2%A9Knitkode-2017-blue.svg)](https://knitkode.com)
+ [![License](https://img.shields.io/badge/license-GPL--2.0%2B-blue.svg)](https://github.com/knitkode/customize-plus-demo/blob/master/license.txt) [![KnitKode](https://img.shields.io/badge/%C2%A9KnitKode-2017-blue.svg)](https://knitkode.com)
 
 
 ---------------
-:registered: Knitkode 2017 | [knitkode.com](https://knitkode.com) | dev@knitkode.com
+:registered: KnitKode 2017 | [knitkode.com](https://knitkode.com) | dev@knitkode.com

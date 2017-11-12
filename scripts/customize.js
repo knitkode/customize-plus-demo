@@ -14,7 +14,7 @@
    * @augments wp.customize.Control
    * @augments wp.customize.Class
    */
-  wpApi.controlConstructor.pwpcp_demo_custom_control = api.controls.Base.extend({
+  wpApi.controlConstructor.kkcp_demo_custom_control = api.controls.Base.extend({
     /**
      * On ready
      *
@@ -25,4 +25,4 @@
     }
   });
 
-})(window, document, jQuery, _, wp, PWPcp);
+})(window, document, jQuery, _, wp, KKcp);
