@@ -1724,7 +1724,7 @@ return array(
 			),
 			'select-selectize-more-items' => array(
 				'setting' => array(
-					'default' => wp_json_encode( array( 'IT', 'UK' ) ),
+					'default' => array( 'IT', 'UK' ),
 					'transport' => 'postMessage',
 				),
 				'control' => array(
