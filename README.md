@@ -32,7 +32,7 @@ There are various ways you can contribute:
 
 Donate
 ---------------
-[![Gratipay](https://img.shields.io/gratipay/knitkode.svg)](https://gratipay.com/knitkode)
+[![Gratipay](https://img.shields.io/gratipay/knitkode/shields.svg)](https://gratipay.com/knitkode)
 
 
 License
