@@ -161,6 +161,7 @@
     'textarea-html',
     'textarea-wp_editor',
     'textarea-wp_editor-options',
+    'textarea-wp_editor-no-quicktags'
   ];
   _.each(settingsToHtml, function (setting) {
     wpApi(setting, function (value) {

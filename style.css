@@ -1,6 +1,6 @@
 /*
  Theme Name:   Customize Plus Demo
- Theme URI:    https://knitkode.com/customize-plus/demo
+ Theme URI:    https://knitkode.com/demo/customize-plus
  Description:  Customize Plus plugin demo starter theme
  Author:       KnitKode
  Author URI:   https://knitkode.com
@@ -42,8 +42,8 @@ body.admin-bar .navbar-fixed-top {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
-  word-break: break-all; /* firefox */
-  word-break: break-word; /* chrome */
+  word-break: break-all;
+  word-break: break-word;
   overflow: auto;
 }
 

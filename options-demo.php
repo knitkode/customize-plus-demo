@@ -1364,7 +1364,10 @@ return array(
 					'description' => __( '', 'i18n' ),
 					'type' => 'kkcp_textarea',
 					'wp_editor' => array(
-						'toolbar1' => 'bold,italic,underline,undo,redo',
+						'textareaRows' => 7,
+						'quicktags' => array(
+							'buttons' => 'strong,em',
+						)
 					),
 					'guide' => array(
 						'title' => __( 'See Code', 'i18n' ),
@@ -1379,7 +1382,43 @@ return array(
 		'description' => __( '', 'i18n' ),
 		'type' => 'kkcp_textarea',
 		'wp_editor' => array(
-			'toolbar1' => 'bold,italic,underline,undo,redo',
+			'textareaRows' => 7,
+			'quicktags' => array(
+				'buttons' => 'strong,em',
+			)
+		),
+	),
+),
+```",
+					),
+				),
+			),
+			'textarea-wp_editor-no-quicktags' => array(
+				'setting' => array(
+					'default' => '<h3>No quicktags</h3> <p>Ratione delectus qui natus consequatur rem magnam, dolorem reprehenderit explicabo non nisi.</p>',
+					'transport' => 'postMessage',
+				),
+				'control' => array(
+					'label' => __( 'Textarea (no quicktags)', 'i18n' ),
+					'description' => __( 'You can pass options to the wp_editor, in this example we hide the quicktags', 'i18n' ),
+					'type' => 'kkcp_textarea',
+					'wp_editor' => array(
+						'quicktags' => false,
+					),
+					'guide' => array(
+						'title' => __( 'See Code', 'i18n' ),
+						'text' => "```php
+'an-id' => array(
+	'setting' => array(
+		'default' => '<h3>No quicktags</h3> <p>Ratione delectus qui natus consequatur rem magnam, dolorem reprehenderit explicabo non nisi.</p>',
+		'transport' => 'postMessage',
+	),
+	'control' => array(
+		'label' => __( 'Textarea (wp_editor with options)', 'i18n' ),
+		'description' => __( '', 'i18n' ),
+		'type' => 'kkcp_textarea',
+		'wp_editor' => array(
+			'quicktags' => false,
 		),
 	),
 ),

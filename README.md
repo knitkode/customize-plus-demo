@@ -1,4 +1,4 @@
-# Customize Plus Theme [![by KnitKode](https://img.shields.io/badge/by-KnitKode-blue.svg?style=social)]()
+# Customize Plus Demo/Starter [![by KnitKode](https://img.shields.io/badge/by-KnitKode-blue.svg?style=social)]()
 
 [![Build Status](https://scrutinizer-ci.com/g/knitkode/customize-plus-demo/badges/build.png?b=master)](https://scrutinizer-ci.com/g/knitkode/customize-plus-demo/build-status/master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/knitkode/customize-plus-demo/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/knitkode/customize-plus-demo/?branch=master)
@@ -14,11 +14,11 @@ If you find an issue, please let us know [here](https://github.com/knitkode/cust
 
 Support
 ---------------
-This is a developer's portal and should **not** be used for support. Please visit the [support forums](https://knitkode.com/support).
+This is a developer's portal and should **not** be used for support but only for development. Please visit the [support page](https://knitkode.com/support) to see other options.
 
-Otherwise you can also try to see if someone is in our [chat room](https://gitter.im/knitkode/chat):
+Otherwise you can also try to see if someone is in our [chat room](https://gitter.im/knitkode/customize-plus-demo):
 
-[![Gitter Chat](http://img.shields.io/badge/GITTER-JOIN%20CHAT-1DCE73.svg)](https://gitter.im/knitkode/chat)
+[![Gitter Chat](http://img.shields.io/badge/GITTER-JOIN%20CHAT-1DCE73.svg)](https://gitter.im/knitkode/customize-plus-demo)
 
 
 Contribute

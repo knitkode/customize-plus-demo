@@ -13,22 +13,28 @@
 class Customize_Plus_Demo {
 
 	/**
-	 * Description for const
+	 * Theme version
+	 *
+	 * @since 0.0.1
 	 */
 	const VERSION = '0.0.1';
 
 	/**
 	 * Theme prefix constant
+	 * @since 0.0.1
 	 */
 	const PREFIX = 'cpdemo';
 
 	/**
 	 * Theme docs base url
+	 * @since 0.0.1
 	 */
 	const DOCS_BASE_URL = 'https://knitkode.com/docs/';
 
 	/**
 	 * Settings default values
+	 *
+	 * @since 0.0.1
 	 * @var array
 	 */
 	public static $settings_defaults;
@@ -68,6 +74,7 @@ class Customize_Plus_Demo {
 				'required'         => true,
 				'force_activation' => true,
 			),
+			// @note this is only for Customize Plus Premium
 			array(
 				'name'             => 'Customize Plus Premium',
 				'slug'             => 'customize-plus-premium',
@@ -99,7 +106,8 @@ class Customize_Plus_Demo {
 			'customize_tree' => self::get_customize_tree(),
 			'images_base_url' => get_stylesheet_directory_uri() . '/images/',
 			'docs_base_url' => self::DOCS_BASE_URL,
-			// *** Customize Plus Premium ***
+
+			// @note this works only with Customize Plus Premium
 			'styles' => array(
 				array(
 					'id' => self::PREFIX . '-example',
@@ -108,7 +116,8 @@ class Customize_Plus_Demo {
 					'path_uncompiled' => '/styles/theme.less',
 				),
 			),
-			// *** Customize Plus Premium ***
+
+			// @note this works only with Customize Plus Premium
 			'components' => array(
 				'compiler' => 'required',
 				'advanced' => 'required',
@@ -122,7 +131,6 @@ class Customize_Plus_Demo {
 				'info' => 'recommended',
 			)
 		) );
-
 	}
 
 	/**
@@ -164,6 +172,7 @@ class Customize_Plus_Demo {
 
 	/**
 	 * Add contact details to Customize screen (info component)
+	 * @note this works only with Customize Plus Premium
 	 *
 	 * @since  0.0.1
 	 */
@@ -184,8 +193,8 @@ class Customize_Plus_Demo {
 	 * @param {WP_Customize_Manager} $wp_customize Theme Customizer object
 	 */
 	public static function remove_wp_defaults( $wp_customize ) {
-		// $wp_customize->remove_panel( 'nav_menus' ); // @@todo \\
-		// $wp_customize->remove_panel( 'widgets' ); // @@todo \\
+		// $wp_customize->remove_panel( 'nav_menus' );
+		// $wp_customize->remove_panel( 'widgets' );
 		$wp_customize->remove_section( 'colors' );
 		$wp_customize->remove_section( 'static_front_page' );
 		$wp_customize->remove_section( 'title_tagline' );
@@ -217,7 +226,8 @@ class Customize_Plus_Demo {
 	/**
 	 * Safe `get_theme_mod` with default fallback
 	 *
-	 * This is the same as using the global function `kk_get_theme_mod`
+	 * This is just to show an alternative to the function
+	 * `kk_get_theme_mod( $opt_name )` available globally, they work the same
 	 *
 	 * @since  0.0.1
 	 * @param string $opt_name
@@ -234,7 +244,8 @@ class Customize_Plus_Demo {
 	/**
 	 * Safe `get_option` with default fallback
 	 *
-	 * This is the same as using the global function `kk_get_option`
+	 * This is just to show an alternative to the function
+	 * `kk_get_option( $opt_name )` available globally, they work the same
 	 *
 	 * @since  0.0.1
 	 * @param string $opt_name
