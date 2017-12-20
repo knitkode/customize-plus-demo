@@ -1,8 +1,6 @@
 # Customize Plus Demo/Starter [![by KnitKode](https://img.shields.io/badge/by-KnitKode-blue.svg?style=social)]()
 
-[![Build Status](https://scrutinizer-ci.com/g/knitkode/customize-plus-demo/badges/build.png?b=master)](https://scrutinizer-ci.com/g/knitkode/customize-plus-demo/build-status/master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/knitkode/customize-plus-demo/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/knitkode/customize-plus-demo/?branch=master)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a436c992e0314cd28ae0288e6f317061)](https://www.codacy.com/app/knitkode/customize-plus-demo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=knitkode/customize-plus-demo&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ffca84750b274d139f75a37dc2526f6b)](https://www.codacy.com/app/knitkode/customize-plus-demo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=knitkode/customize-plus-demo&amp;utm_campaign=Badge_Grade)
 
 > A theme starter, or a demo for the [Customize Plus](https://github.com/knitkode/customize-plus/) plugin.
 

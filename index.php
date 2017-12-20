@@ -96,4 +96,4 @@
 			<?php echo "<div class='setting-preview' id='$key' title='$key'>$value</div>"; ?>
 		</div>
 <?php } ?>
-<?php get_footer(); ?>
+<?php get_footer();
