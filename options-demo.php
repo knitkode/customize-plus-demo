@@ -15,15 +15,15 @@ return array(
 	array(
 		'subject' => 'panel',
 		'id' => 'layout',
-		'title' => __( 'Example panel', 'textDomain' ),
-		'description' => __( 'Layout generic options, globally change the look and feel', 'textDomain' ),
+		'title' => esc_html__( 'Example panel', 'i18n' ),
+		'description' => esc_html__( 'Layout generic options, globally change the look and feel', 'i18n' ),
 		// 'dashicon' => 309,
 		'type' => 'kkcp_panel',
 		'sections' => array(
 			array(
 				'id' => 'layout-generic',
-				'title' => __( 'Example section (empty)', 'textDomain' ),
-				'description' => __( 'Just an empty section.', 'textDomain' ),
+				'title' => esc_html__( 'Example section (empty)', 'i18n' ),
+				'description' => esc_html__( 'Just an empty section.', 'i18n' ),
 				'type' => 'kkcp_section',
 				'fields' => array()
 			),
@@ -32,7 +32,8 @@ return array(
 	array(
 		'subject' => 'section',
 		'id' => 'section-settings-apis',
-		'title' => __( 'Settings APIs', 'textDomain' ),
+		'title' => esc_html__( 'Settings APIs', 'i18n' ),
+		'description' => esc_html__( 'This section simplyshows that with Customize Plus you can use both theme mods and options, just as with WordPress', 'i18n' ),
 		'type' => 'kkcp_section',
 		'dashicon' => 486,
 		'fields' => array(
@@ -42,11 +43,11 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Theme mods API', 'i18n' ),
-					'description' => __( 'This is used by default. Check the [WordPress codex](https://codex.wordpress.org/Theme_Modification_API).', 'i18n' ),
+					'label' => esc_html__( 'Theme mods API', 'i18n' ),
+					'description' => esc_html__( 'This is used by default. Check the [WordPress codex](https://codex.wordpress.org/Theme_Modification_API).', 'i18n' ),
 					'type' => 'kkcp_text',
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -69,11 +70,11 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Options API', 'i18n' ),
-					'description' => __( "Use `'type' => 'option'` in the setting's args, as with the normal WordPress API, to use the [Options API](https://codex.wordpress.org/Options_API) for a specific setting.", 'i18n' ),
+					'label' => esc_html__( 'Options API', 'i18n' ),
+					'description' => esc_html__( "Use `'type' => 'option'` in the setting's args, as with the normal WordPress API, to use the [Options API](https://codex.wordpress.org/Options_API) for a specific setting.", 'i18n' ),
 					'type' => 'kkcp_text',
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -94,7 +95,7 @@ return array(
 	array(
 		'subject' => 'section',
 		'id' => 'section-colors',
-		'title' => __( 'Color controls', 'textDomain' ),
+		'title' => esc_html__( 'Color controls', 'i18n' ),
 		'type' => 'kkcp_section',
 		'dashicon' => 309,
 		'fields' => array(
@@ -104,11 +105,11 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Color', 'i18n' ),
-					'description' => __( '', 'i18n' ),
+					'label' => esc_html__( 'Color', 'i18n' ),
+					'description' => esc_html__( '', 'i18n' ),
 					'type' => 'kkcp_color',
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -116,7 +117,7 @@ return array(
 			'transport' => 'postMessage',
 		),
 		'control' => array(
-			'label' => __( 'Color', 'i18n' ),
+			'label' => esc_html__( 'Color', 'i18n' ),
 			'type' => 'kkcp_color',
 	),
 ),
@@ -130,12 +131,12 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Disallow Transparent', 'i18n' ),
-					'description' => __( 'Disable the transparent button, `transparent` value not allowed.', 'i18n' ),
+					'label' => esc_html__( 'Disallow Transparent', 'i18n' ),
+					'description' => esc_html__( 'Disable the transparent button, `transparent` value not allowed.', 'i18n' ),
 					'type' => 'kkcp_color',
 					'disallowTransparent' => true,
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -143,7 +144,7 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Disallow Transparent', 'i18n' ),
+		'label' => esc_html__( 'Disallow Transparent', 'i18n' ),
 		'type' => 'kkcp_color',
 		'disallowTransparent' => true,
 	),
@@ -158,12 +159,12 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Allow Alpha', 'i18n' ),
-					'description' => __( 'Allow `rgba` colors. Show a slider to control the alpha channel.', 'i18n' ),
+					'label' => esc_html__( 'Allow Alpha', 'i18n' ),
+					'description' => esc_html__( 'Allow `rgba` colors. Show a slider to control the alpha channel.', 'i18n' ),
 					'type' => 'kkcp_color',
 					'allowAlpha' => true,
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -171,7 +172,7 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Allow Alpha', 'i18n' ),
+		'label' => esc_html__( 'Allow Alpha', 'i18n' ),
 		'type' => 'kkcp_color',
 		'allowAlpha' => true,
 	),
@@ -186,15 +187,15 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Palette only', 'i18n' ),
-					'description' => __( 'Disable the normal color picker and show only a palette with the color you define. Only these colors are allowed when `showPaletteOnly` is set to `true`. The `palette` arg is an array of arrays where each array it is a row of color choices in the UI.', 'i18n' ),
+					'label' => esc_html__( 'Palette only', 'i18n' ),
+					'description' => esc_html__( 'Disable the normal color picker and show only a palette with the color you define. Only these colors are allowed when `showPaletteOnly` is set to `true`. The `palette` arg is an array of arrays where each array it is a row of color choices in the UI.', 'i18n' ),
 					'type' => 'kkcp_color',
 					'showPaletteOnly' => true,
 					'palette' => array(
 						array( '#000', '#444', '#666', '#999', '#ccc', '#eee', '#f3f3f3', '#fff' ),
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -202,7 +203,7 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Palette only', 'i18n' ),
+		'label' => esc_html__( 'Palette only', 'i18n' ),
 		'type' => 'kkcp_color',
 		'showPaletteOnly' => true,
 		'palette' => array(
@@ -220,14 +221,14 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Palette with picker', 'i18n' ),
-					'description' => __( '', 'i18n' ),
+					'label' => esc_html__( 'Palette with picker', 'i18n' ),
+					'description' => esc_html__( '', 'i18n' ),
 					'type' => 'kkcp_color',
 					'palette' => array(
 						array( '#000', '#444', '#666', '#999', '#ccc', '#eee', '#f3f3f3', '#fff' ),
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -235,7 +236,7 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Palette with picker', 'i18n' ),
+		'label' => esc_html__( 'Palette with picker', 'i18n' ),
 		'type' => 'kkcp_color',
 		'palette' => array(
 			array( '#000', '#444', '#666', '#999', '#ccc', '#eee', '#f3f3f3', '#fff' ),
@@ -252,8 +253,8 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Palette and hidden picker', 'i18n' ),
-					'description' => __( '', 'i18n' ),
+					'label' => esc_html__( 'Palette and hidden picker', 'i18n' ),
+					'description' => esc_html__( '', 'i18n' ),
 					'type' => 'kkcp_color',
 					'showPaletteOnly' => true,
 					'togglePaletteOnly' => true,
@@ -264,7 +265,7 @@ return array(
 						array( '#ea9999', '#f9cb9c', '#ffe599', '#b6d7a8', '#a2c4c9', '#9fc5e8', '#b4a7d6', '#d5a6bd' ),
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -272,7 +273,7 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Palette and hidden picker', 'i18n' ),
+		'label' => esc_html__( 'Palette and hidden picker', 'i18n' ),
 		'type' => 'kkcp_color',
 		'showPaletteOnly' => true,
 		'togglePaletteOnly' => true,
@@ -294,11 +295,11 @@ return array(
 					'transport' => 'recompilePost',
 				),
 				'control' => array(
-					'label' => __( 'Dynamic Color', 'i18n' ),
-					'description' => __( '(active role)', 'i18n' ),
+					'label' => esc_html__( 'Dynamic Color', 'i18n' ),
+					'description' => esc_html__( '(active role)', 'i18n' ),
 					'type' => 'kkcp_color_dynamic',
 					'guide' => array(
-						'title' => __( 'See Code (Premium control)', 'i18n' ),
+						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -306,7 +307,7 @@ return array(
 		'transport' => 'recompilePost',
 	),
 	'control' => array(
-		'label' => __( 'Dynamic Color', 'i18n' ),
+		'label' => esc_html__( 'Dynamic Color', 'i18n' ),
 		'type' => 'kkcp_color_dynamic',
 	),
 ),
@@ -320,11 +321,11 @@ return array(
 					'transport' => 'recompilePost',
 				),
 				'control' => array(
-					'label' => __( 'Dynamic Color', 'i18n' ),
-					'description' => __( '(passive role)', 'i18n' ),
+					'label' => esc_html__( 'Dynamic Color', 'i18n' ),
+					'description' => esc_html__( '(passive role)', 'i18n' ),
 					'type' => 'kkcp_color_dynamic',
 					'guide' => array(
-						'title' => __( 'See Code (Premium control)', 'i18n' ),
+						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -332,7 +333,7 @@ return array(
 		'transport' => 'recompilePost',
 	),
 	'control' => array(
-		'label' => __( 'Dynamic Color', 'i18n' ),
+		'label' => esc_html__( 'Dynamic Color', 'i18n' ),
 		'type' => 'kkcp_color_dynamic',
 	),
 ),
@@ -346,12 +347,12 @@ return array(
 					'transport' => 'recompilePost',
 				),
 				'control' => array(
-					'label' => __( 'Dynamic Color (hide dynamic tab)', 'i18n' ),
-					'description' => __( '(active role)', 'i18n' ),
+					'label' => esc_html__( 'Dynamic Color (hide dynamic tab)', 'i18n' ),
+					'description' => esc_html__( '(active role)', 'i18n' ),
 					'type' => 'kkcp_color_dynamic',
 					'hideDynamic' => true,
 					'guide' => array(
-						'title' => __( 'See Code (Premium control)', 'i18n' ),
+						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -359,8 +360,8 @@ return array(
 		'transport' => 'recompilePost',
 	),
 	'control' => array(
-		'label' => __( 'Dynamic Color (hide dynamic tab)', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Dynamic Color (hide dynamic tab)', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_color_dynamic',
 		'hideDynamic' => true,
 	),
@@ -375,12 +376,12 @@ return array(
 					'transport' => 'recompilePost',
 				),
 				'control' => array(
-					'label' => __( 'Dynamic Color (hide dynamic tab)', 'i18n' ),
-					'description' => __( '(passive role)', 'i18n' ),
+					'label' => esc_html__( 'Dynamic Color (hide dynamic tab)', 'i18n' ),
+					'description' => esc_html__( '(passive role)', 'i18n' ),
 					'type' => 'kkcp_color_dynamic',
 					'hideDynamic' => true,
 					'guide' => array(
-						'title' => __( 'See Code (Premium control)', 'i18n' ),
+						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -388,8 +389,8 @@ return array(
 		'transport' => 'recompilePost',
 	),
 	'control' => array(
-		'label' => __( 'Dynamic Color (hide dynamic tab)', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Dynamic Color (hide dynamic tab)', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_color_dynamic',
 		'hideDynamic' => true,
 	),
@@ -403,7 +404,7 @@ return array(
 	array(
 		'subject' => 'section',
 		'id' => 'section-sizes',
-		'title' => __( 'Size controls', 'textDomain' ),
+		'title' => esc_html__( 'Size controls', 'i18n' ),
 		'type' => 'kkcp_section',
 		'dashicon' => 211,
 		'fields' => array(
@@ -413,11 +414,11 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Slider (default->px)', 'i18n' ),
-					'description' => __( '', 'i18n' ),
+					'label' => esc_html__( 'Slider (default->px)', 'i18n' ),
+					'description' => esc_html__( '', 'i18n' ),
 					'type' => 'kkcp_slider',
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -425,7 +426,7 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Slider (default->px)', 'i18n' ),
+		'label' => esc_html__( 'Slider (default->px)', 'i18n' ),
 		'type' => 'kkcp_slider',
 	),
 ),
@@ -439,8 +440,8 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Slider (em)', 'i18n' ),
-					'description' => __( '', 'i18n' ),
+					'label' => esc_html__( 'Slider (em)', 'i18n' ),
+					'description' => esc_html__( '', 'i18n' ),
 					'type' => 'kkcp_slider',
 					'units' => array( 'em' ),
 					'input_attrs' => array(
@@ -449,7 +450,7 @@ return array(
 						'step' => 0.1,
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -457,7 +458,7 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Slider (em)', 'i18n' ),
+		'label' => esc_html__( 'Slider (em)', 'i18n' ),
 		'type' => 'kkcp_slider',
 		'units' => array( 'em' ),
 		'input_attrs' => array(
@@ -477,8 +478,8 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Slider (px or percent)', 'i18n' ),
-					'description' => __( '', 'i18n' ),
+					'label' => esc_html__( 'Slider (px or percent)', 'i18n' ),
+					'description' => esc_html__( '', 'i18n' ),
 					'type' => 'kkcp_slider',
 					'units' => array( 'px', '%' ),
 					'input_attrs' => array(
@@ -487,7 +488,7 @@ return array(
 						'step' => 1,
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -495,7 +496,7 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Slider (px or percent)', 'i18n' ),
+		'label' => esc_html__( 'Slider (px or percent)', 'i18n' ),
 		'type' => 'kkcp_slider',
 		'units' => array( 'px', '%' ),
 		'input_attrs' => array(
@@ -515,12 +516,12 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Slider (no units)', 'i18n' ),
-					'description' => __( '', 'i18n' ),
+					'label' => esc_html__( 'Slider (no units)', 'i18n' ),
+					'description' => esc_html__( '', 'i18n' ),
 					'type' => 'kkcp_slider',
 					'units' => array(),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -528,7 +529,7 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Slider (no units)', 'i18n' ),
+		'label' => esc_html__( 'Slider (no units)', 'i18n' ),
 		'type' => 'kkcp_slider',
 		'units' => array(),
 	),
@@ -543,11 +544,11 @@ return array(
 					'transport' => 'recompilePost',
 				),
 				'control' => array(
-					'label' => __( 'Size Dynamic 1', 'i18n' ),
-					'description' => __( '(active role)', 'i18n' ),
+					'label' => esc_html__( 'Size Dynamic 1', 'i18n' ),
+					'description' => esc_html__( '(active role)', 'i18n' ),
 					'type' => 'kkcp_size_dynamic',
 					'guide' => array(
-						'title' => __( 'See Code (Premium control)', 'i18n' ),
+						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -555,7 +556,7 @@ return array(
 		'transport' => 'recompilePost',
 	),
 	'control' => array(
-		'label' => __( 'Size Dynamic 1', 'i18n' ),
+		'label' => esc_html__( 'Size Dynamic 1', 'i18n' ),
 		'type' => 'kkcp_size_dynamic',
 	),
 ),
@@ -569,12 +570,12 @@ return array(
 					'transport' => 'recompilePost',
 				),
 				'control' => array(
-					'label' => __( 'Size Dynamic 2', 'i18n' ),
-					'description' => __( '(passive role)', 'i18n' ),
+					'label' => esc_html__( 'Size Dynamic 2', 'i18n' ),
+					'description' => esc_html__( '(passive role)', 'i18n' ),
 					'type' => 'kkcp_size_dynamic',
 					'units' => array( 'px', '%' ),
 					'guide' => array(
-						'title' => __( 'See Code (Premium control)', 'i18n' ),
+						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -582,7 +583,7 @@ return array(
 		'transport' => 'recompilePost',
 	),
 	'control' => array(
-		'label' => __( 'Size Dynamic 2', 'i18n' ),
+		'label' => esc_html__( 'Size Dynamic 2', 'i18n' ),
 		'type' => 'kkcp_size_dynamic',
 		'units' => array( 'px', '%' ),
 	),
@@ -597,12 +598,12 @@ return array(
 					'transport' => 'recompilePost',
 				),
 				'control' => array(
-					'label' => __( 'Size Dynamic (hide dynamic tab) 3', 'i18n' ),
-					'description' => __( '(active role)', 'i18n' ),
+					'label' => esc_html__( 'Size Dynamic (hide dynamic tab) 3', 'i18n' ),
+					'description' => esc_html__( '(active role)', 'i18n' ),
 					'type' => 'kkcp_size_dynamic',
 					'hideDynamic' => true,
 					'guide' => array(
-						'title' => __( 'See Code (Premium control)', 'i18n' ),
+						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -610,7 +611,7 @@ return array(
 		'transport' => 'recompilePost',
 	),
 	'control' => array(
-		'label' => __( 'Size Dynamic (hide dynamic tab)  3', 'i18n' ),
+		'label' => esc_html__( 'Size Dynamic (hide dynamic tab)  3', 'i18n' ),
 		'type' => 'kkcp_size_dynamic',
 		'hideDynamic' => true,
 	),
@@ -625,12 +626,12 @@ return array(
 					'transport' => 'recompilePost',
 				),
 				'control' => array(
-					'label' => __( 'Size Dynamic (hide dynamic tab) 4', 'i18n' ),
-					'description' => __( '(passive role)', 'i18n' ),
+					'label' => esc_html__( 'Size Dynamic (hide dynamic tab) 4', 'i18n' ),
+					'description' => esc_html__( '(passive role)', 'i18n' ),
 					'type' => 'kkcp_size_dynamic',
 					'hideDynamic' => true,
 					'guide' => array(
-						'title' => __( 'See Code (Premium control)', 'i18n' ),
+						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -638,7 +639,7 @@ return array(
 		'transport' => 'recompilePost',
 	),
 	'control' => array(
-		'label' => __( 'Size Dynamic (hide dynamic tab) 4', 'i18n' ),
+		'label' => esc_html__( 'Size Dynamic (hide dynamic tab) 4', 'i18n' ),
 		'type' => 'kkcp_size_dynamic',
 		'hideDynamic' => true,
 	),
@@ -652,7 +653,7 @@ return array(
 	array(
 		'subject' => 'section',
 		'id' => 'section-radio',
-		'title' => __( 'Radio controls', 'textDomain' ),
+		'title' => esc_html__( 'Radio controls', 'i18n' ),
 		'type' => 'kkcp_section',
 		'dashicon' => 159,
 		'fields' => array(
@@ -662,27 +663,27 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Radio', 'i18n' ),
+					'label' => esc_html__( 'Radio', 'i18n' ),
 					'type' => 'kkcp_radio',
 					'choices' => array(
 						'standard' => array(
-							'label' => __( 'Standard', 'i18n' ),
+							'label' => esc_html__( 'Standard', 'i18n' ),
 							'help' => 'popover',
-							'help_title' => __( 'Standard value', 'i18n' ),
+							'help_title' => esc_html__( 'Standard value', 'i18n' ),
 							'help_img' => 'view-skeleton--bootstrap.jpg',
 						),
 						'one' => array(
-							'label' => __( 'Choice one', 'i18n' ),
+							'label' => esc_html__( 'Choice one', 'i18n' ),
 						),
 						'two' => array(
-							'label' => __( 'Choice two', 'i18n' ),
+							'label' => esc_html__( 'Choice two', 'i18n' ),
 						),
 						'three' => array(
-							'label' => __( 'Choice three', 'i18n' ),
+							'label' => esc_html__( 'Choice three', 'i18n' ),
 						),
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -690,23 +691,23 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Radio', 'i18n' ),
+		'label' => esc_html__( 'Radio', 'i18n' ),
 		'type' => 'kkcp_radio',
 		'choices' => array(
 			'standard' => array(
-				'label' => __( 'Standard', 'i18n' ),
+				'label' => esc_html__( 'Standard', 'i18n' ),
 				'help' => 'popover',
-				'help_title' => __( 'Standard value', 'i18n' ),
+				'help_title' => esc_html__( 'Standard value', 'i18n' ),
 				'help_img' => 'view-skeleton--bootstrap.jpg',
 			),
 			'one' => array(
-				'label' => __( 'Choice one', 'i18n' ),
+				'label' => esc_html__( 'Choice one', 'i18n' ),
 			),
 			'two' => array(
-				'label' => __( 'Choice two', 'i18n' ),
+				'label' => esc_html__( 'Choice two', 'i18n' ),
 			),
 			'three' => array(
-				'label' => __( 'Choice three', 'i18n' ),
+				'label' => esc_html__( 'Choice three', 'i18n' ),
 			),
 		),
 	),
@@ -721,19 +722,19 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Buttonset', 'i18n' ),
+					'label' => esc_html__( 'Buttonset', 'i18n' ),
 					'type' => 'kkcp_buttonset',
 					'guide' => array(
-						'title' => __( 'Buttonset guide', 'i18n' ),
-						'text' => __( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe laboriosam sunt ab, error explicabo cupiditate alias blanditiis minima inventore tempora necessitatibus excepturi mollitia quam laborum unde maxime laudantium! Ratione, impedit!', 'i18n' ),
+						'title' => esc_html__( 'Buttonset guide', 'i18n' ),
+						'text' => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe laboriosam sunt ab, error explicabo cupiditate alias blanditiis minima inventore tempora necessitatibus excepturi mollitia quam laborum unde maxime laudantium! Ratione, impedit!', 'i18n' ),
 						'video' => 'uD7_Vt5q2q8',
 					),
 					'choices' => array(
-						'boxed' => __( 'Boxed', 'i18n' ),
-						'fluid' => __( 'Fluid', 'i18n' ),
+						'boxed' => esc_html__( 'Boxed', 'i18n' ),
+						'fluid' => esc_html__( 'Fluid', 'i18n' ),
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -741,11 +742,11 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Buttonset', 'i18n' ),
+		'label' => esc_html__( 'Buttonset', 'i18n' ),
 		'type' => 'kkcp_buttonset',
 		'choices' => array(
-			'boxed' => __( 'Boxed', 'i18n' ),
-			'fluid' => __( 'Fluid', 'i18n' ),
+			'boxed' => esc_html__( 'Boxed', 'i18n' ),
+			'fluid' => esc_html__( 'Fluid', 'i18n' ),
 		),
 	),
 ),
@@ -759,20 +760,20 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Buttonset three', 'i18n' ),
+					'label' => esc_html__( 'Buttonset three', 'i18n' ),
 					'type' => 'kkcp_buttonset',
 					'guide' => array(
-						'title' => __( 'Buttonset guide', 'i18n' ),
-						'text' => __( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe laboriosam sunt ab, error explicabo cupiditate alias blanditiis minima inventore tempora necessitatibus excepturi mollitia quam laborum unde maxime laudantium! Ratione, impedit!', 'i18n' ),
+						'title' => esc_html__( 'Buttonset guide', 'i18n' ),
+						'text' => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe laboriosam sunt ab, error explicabo cupiditate alias blanditiis minima inventore tempora necessitatibus excepturi mollitia quam laborum unde maxime laudantium! Ratione, impedit!', 'i18n' ),
 						'video' => 'uD7_Vt5q2q8',
 					),
 					'choices' => array(
-						'may' => __( 'May', 'i18n' ),
-						'ibanez' => __( 'Ibanez', 'i18n' ),
-						'ward' => __( 'Ward', 'i18n' ),
+						'may' => esc_html__( 'May', 'i18n' ),
+						'ibanez' => esc_html__( 'Ibanez', 'i18n' ),
+						'ward' => esc_html__( 'Ward', 'i18n' ),
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -780,12 +781,12 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Buttonset three', 'i18n' ),
+		'label' => esc_html__( 'Buttonset three', 'i18n' ),
 		'type' => 'kkcp_buttonset',
 		'choices' => array(
-			'may' => __( 'May', 'i18n' ),
-			'ibanez' => __( 'Ibanez', 'i18n' ),
-			'ward' => __( 'Ward', 'i18n' ),
+			'may' => esc_html__( 'May', 'i18n' ),
+			'ibanez' => esc_html__( 'Ibanez', 'i18n' ),
+			'ward' => esc_html__( 'Ward', 'i18n' ),
 		),
 	),
 ),
@@ -799,21 +800,21 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Buttonset three', 'i18n' ),
+					'label' => esc_html__( 'Buttonset three', 'i18n' ),
 					'type' => 'kkcp_buttonset',
 					'guide' => array(
-						'title' => __( 'Buttonset guide', 'i18n' ),
-						'text' => __( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe laboriosam sunt ab, error explicabo cupiditate alias blanditiis minima inventore tempora necessitatibus excepturi mollitia quam laborum unde maxime laudantium! Ratione, impedit!', 'i18n' ),
+						'title' => esc_html__( 'Buttonset guide', 'i18n' ),
+						'text' => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe laboriosam sunt ab, error explicabo cupiditate alias blanditiis minima inventore tempora necessitatibus excepturi mollitia quam laborum unde maxime laudantium! Ratione, impedit!', 'i18n' ),
 						'video' => 'uD7_Vt5q2q8',
 					),
 					'choices' => array(
-						'one' => __( 'One', 'i18n' ),
-						'two' => __( 'Two', 'i18n' ),
-						'five' => __( 'Five', 'i18n' ),
-						'six' => __( 'Six', 'i18n' ),
+						'one' => esc_html__( 'One', 'i18n' ),
+						'two' => esc_html__( 'Two', 'i18n' ),
+						'five' => esc_html__( 'Five', 'i18n' ),
+						'six' => esc_html__( 'Six', 'i18n' ),
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -821,13 +822,13 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Buttonset three', 'i18n' ),
+		'label' => esc_html__( 'Buttonset three', 'i18n' ),
 		'type' => 'kkcp_buttonset',
 		'choices' => array(
-			'one' => __( 'One', 'i18n' ),
-			'two' => __( 'Two', 'i18n' ),
-			'five' => __( 'Five', 'i18n' ),
-			'six' => __( 'Six', 'i18n' ),
+			'one' => esc_html__( 'One', 'i18n' ),
+			'two' => esc_html__( 'Two', 'i18n' ),
+			'five' => esc_html__( 'Five', 'i18n' ),
+			'six' => esc_html__( 'Six', 'i18n' ),
 		),
 	),
 ),
@@ -841,32 +842,32 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Radio image', 'i18n' ),
-					'description' => __( 'Images already in the plugin, just put the image name', 'i18n' ),
+					'label' => esc_html__( 'Radio image', 'i18n' ),
+					'description' => esc_html__( 'Images already in the plugin, just put the image name', 'i18n' ),
 					'type' => 'kkcp_radio_image',
 					'guide' => array(
 						'docs' => 'doc-url/for-this-control/',
 					),
 					'choices' => array(
 						'less' => array(
-							'label' => __( 'Single column', 'i18n' ),
+							'label' => esc_html__( 'Single column', 'i18n' ),
 							'img' => 'sidebar-less',
 						),
 						'right' => array(
-							'label' => __( 'Sidebar on the right', 'i18n' ),
+							'label' => esc_html__( 'Sidebar on the right', 'i18n' ),
 							'img' => 'sidebar-right',
 						),
 						'left' => array(
-							'label' => __( 'Sidebar on the left', 'i18n' ),
+							'label' => esc_html__( 'Sidebar on the left', 'i18n' ),
 							'img' => 'sidebar-left',
 						),
 						'both' => array(
-							'label' => __( 'Sidebar on both sides', 'i18n' ),
+							'label' => esc_html__( 'Sidebar on both sides', 'i18n' ),
 							'img' => 'sidebar-both',
 						)
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -874,23 +875,23 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Radio image', 'i18n' ),
+		'label' => esc_html__( 'Radio image', 'i18n' ),
 		'type' => 'kkcp_radio_image',
 		'choices' => array(
 			'less' => array(
-				'label' => __( 'Single column', 'i18n' ),
+				'label' => esc_html__( 'Single column', 'i18n' ),
 				'img' => 'sidebar-less',
 			),
 			'right' => array(
-				'label' => __( 'Sidebar on the right', 'i18n' ),
+				'label' => esc_html__( 'Sidebar on the right', 'i18n' ),
 				'img' => 'sidebar-right',
 			),
 			'left' => array(
-				'label' => __( 'Sidebar on the left', 'i18n' ),
+				'label' => esc_html__( 'Sidebar on the left', 'i18n' ),
 				'img' => 'sidebar-left',
 			),
 			'both' => array(
-				'label' => __( 'Sidebar on both sides', 'i18n' ),
+				'label' => esc_html__( 'Sidebar on both sides', 'i18n' ),
 				'img' => 'sidebar-both',
 			)
 		),
@@ -906,33 +907,33 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Radio image (custom)', 'i18n' ),
-					'description' => __( '', 'i18n' ),
+					'label' => esc_html__( 'Radio image (custom)', 'i18n' ),
+					'description' => esc_html__( '', 'i18n' ),
 					'type' => 'kkcp_radio_image',
 					'choices' => array(
 						'chrome' => array(
-							'label' => __( 'Chrome', 'i18n' ),
+							'label' => esc_html__( 'Chrome', 'i18n' ),
 							'img_custom' => 'icon-chrome.png',
 						),
 						'firefox' => array(
-							'label' => __( 'Firefox', 'i18n' ),
+							'label' => esc_html__( 'Firefox', 'i18n' ),
 							'img_custom' => 'icon-firefox.png',
 						),
 						'ie' => array(
-							'label' => __( 'IE', 'i18n' ),
+							'label' => esc_html__( 'IE', 'i18n' ),
 							'img_custom' => 'icon-ie.png',
 						),
 						'opera' => array(
-							'label' => __( 'Opera', 'i18n' ),
+							'label' => esc_html__( 'Opera', 'i18n' ),
 							'img_custom' => 'icon-opera.png',
 						),
 						'safari' => array(
-							'label' => __( 'Safari', 'i18n' ),
+							'label' => esc_html__( 'Safari', 'i18n' ),
 							'img_custom' => 'icon-safari.png',
 						),
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -940,27 +941,27 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Radio image (custom)', 'i18n' ),
+		'label' => esc_html__( 'Radio image (custom)', 'i18n' ),
 		'type' => 'kkcp_radio_image',
 		'choices' => array(
 			'chrome' => array(
-				'label' => __( 'Chrome', 'i18n' ),
+				'label' => esc_html__( 'Chrome', 'i18n' ),
 				'img_custom' => 'icon-chrome.png',
 			),
 			'firefox' => array(
-				'label' => __( 'Firefox', 'i18n' ),
+				'label' => esc_html__( 'Firefox', 'i18n' ),
 				'img_custom' => 'icon-firefox.png',
 			),
 			'ie' => array(
-				'label' => __( 'IE', 'i18n' ),
+				'label' => esc_html__( 'IE', 'i18n' ),
 				'img_custom' => 'icon-ie.png',
 			),
 			'opera' => array(
-				'label' => __( 'Opera', 'i18n' ),
+				'label' => esc_html__( 'Opera', 'i18n' ),
 				'img_custom' => 'icon-opera.png',
 			),
 			'safari' => array(
-				'label' => __( 'Safari', 'i18n' ),
+				'label' => esc_html__( 'Safari', 'i18n' ),
 				'img_custom' => 'icon-safari.png',
 			),
 		),
@@ -975,7 +976,7 @@ return array(
 	array(
 		'subject' => 'section',
 		'id' => 'section-checkbox',
-		'title' => __( 'Checkbox controls', 'textDomain' ),
+		'title' => esc_html__( 'Checkbox controls', 'i18n' ),
 		'type' => 'kkcp_section',
 		'dashicon' => 314,
 		'fields' => array(
@@ -985,11 +986,11 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Toggle', 'i18n' ),
-					'description' => __( 'Either 0 or 1.', 'i18n' ),
+					'label' => esc_html__( 'Toggle', 'i18n' ),
+					'description' => esc_html__( 'Either 0 or 1.', 'i18n' ),
 					'type' => 'kkcp_toggle',
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -997,7 +998,7 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Toggle', 'i18n' ),
+		'label' => esc_html__( 'Toggle', 'i18n' ),
 		'type' => 'kkcp_toggle',
 	),
 ),
@@ -1011,18 +1012,18 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Multicheck', 'i18n' ),
-					'description' => __( 'Select multiple options checking the boxes. Gives back an array ordered as defined by the developer.', 'i18n' ),
+					'label' => esc_html__( 'Multicheck', 'i18n' ),
+					'description' => esc_html__( 'Select multiple options checking the boxes. Gives back an array ordered as defined by the developer.', 'i18n' ),
 					'type' => 'kkcp_multicheck',
 					'choices' => array(
-						'mango' => __( 'Mango', 'i18n' ),
-						'grape' => __( 'Grape', 'i18n' ),
-						'apple' => __( 'Apple', 'i18n' ),
-						'cherry' => __( 'Cherry', 'i18n' ),
-						'banana' => __( 'Banana', 'i18n' ),
+						'mango' => esc_html__( 'Mango', 'i18n' ),
+						'grape' => esc_html__( 'Grape', 'i18n' ),
+						'apple' => esc_html__( 'Apple', 'i18n' ),
+						'cherry' => esc_html__( 'Cherry', 'i18n' ),
+						'banana' => esc_html__( 'Banana', 'i18n' ),
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1030,14 +1031,14 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Multicheck', 'i18n' ),
+		'label' => esc_html__( 'Multicheck', 'i18n' ),
 		'type' => 'kkcp_multicheck',
 		'choices' => array(
-			'mango' => __( 'Mango', 'i18n' ),
-			'grape' => __( 'Grape', 'i18n' ),
-			'apple' => __( 'Apple', 'i18n' ),
-			'cherry' => __( 'Cherry', 'i18n' ),
-			'banana' => __( 'Banana', 'i18n' ),
+			'mango' => esc_html__( 'Mango', 'i18n' ),
+			'grape' => esc_html__( 'Grape', 'i18n' ),
+			'apple' => esc_html__( 'Apple', 'i18n' ),
+			'cherry' => esc_html__( 'Cherry', 'i18n' ),
+			'banana' => esc_html__( 'Banana', 'i18n' ),
 		),
 	),
 ),
@@ -1051,22 +1052,22 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Multicheck sortable', 'i18n' ),
-					'description' => __( 'Returns an array sorted as defined by the user containing only the checked values.', 'i18n' ),
+					'label' => esc_html__( 'Multicheck sortable', 'i18n' ),
+					'description' => esc_html__( 'Returns an array sorted as defined by the user containing only the checked values.', 'i18n' ),
 					'type' => 'kkcp_multicheck',
 					'choices' => array(
-						'facebook' => __( 'Facebook', 'i18n' ),
-						'twitter' => __( 'Twitter', 'i18n' ),
-						'google' => __( 'Google+', 'i18n' ),
-						'tumblr' => __( 'Tumblr', 'i18n' ),
-						'linkedin' => __( 'LinkedIn', 'i18n' ),
-						'pinterest' => __( 'Pinterest', 'i18n' ),
-						'reddit' => __( 'Reddit', 'i18n' ),
-						'email' => __( 'Email', 'i18n' ),
+						'facebook' => esc_html__( 'Facebook', 'i18n' ),
+						'twitter' => esc_html__( 'Twitter', 'i18n' ),
+						'google' => esc_html__( 'Google+', 'i18n' ),
+						'tumblr' => esc_html__( 'Tumblr', 'i18n' ),
+						'linkedin' => esc_html__( 'LinkedIn', 'i18n' ),
+						'pinterest' => esc_html__( 'Pinterest', 'i18n' ),
+						'reddit' => esc_html__( 'Reddit', 'i18n' ),
+						'email' => esc_html__( 'Email', 'i18n' ),
 					),
 					'sortable' => true,
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1074,17 +1075,17 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Multicheck sortable', 'i18n' ),
+		'label' => esc_html__( 'Multicheck sortable', 'i18n' ),
 		'type' => 'kkcp_multicheck',
 		'choices' => array(
-			'facebook' => __( 'Facebook', 'i18n' ),
-			'twitter' => __( 'Twitter', 'i18n' ),
-			'google' => __( 'Google+', 'i18n' ),
-			'tumblr' => __( 'Tumblr', 'i18n' ),
-			'linkedin' => __( 'LinkedIn', 'i18n' ),
-			'pinterest' => __( 'Pinterest', 'i18n' ),
-			'reddit' => __( 'Reddit', 'i18n' ),
-			'email' => __( 'Email', 'i18n' ),
+			'facebook' => esc_html__( 'Facebook', 'i18n' ),
+			'twitter' => esc_html__( 'Twitter', 'i18n' ),
+			'google' => esc_html__( 'Google+', 'i18n' ),
+			'tumblr' => esc_html__( 'Tumblr', 'i18n' ),
+			'linkedin' => esc_html__( 'LinkedIn', 'i18n' ),
+			'pinterest' => esc_html__( 'Pinterest', 'i18n' ),
+			'reddit' => esc_html__( 'Reddit', 'i18n' ),
+			'email' => esc_html__( 'Email', 'i18n' ),
 		),
 		'sortable' => true,
 	),
@@ -1098,7 +1099,7 @@ return array(
 	array(
 		'subject' => 'section',
 		'id' => 'section-texts',
-		'title' => __( 'Text controls', 'textDomain' ),
+		'title' => esc_html__( 'Text controls', 'i18n' ),
 		'type' => 'kkcp_section',
 		'dashicon' => 217,
 		'fields' => array(
@@ -1108,11 +1109,11 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Text', 'i18n' ),
-					'description' => __( '', 'i18n' ),
+					'label' => esc_html__( 'Text', 'i18n' ),
+					'description' => esc_html__( '', 'i18n' ),
 					'type' => 'kkcp_text',
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1120,7 +1121,7 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Text', 'i18n' ),
+		'label' => esc_html__( 'Text', 'i18n' ),
 		'type' => 'kkcp_text',
 	),
 ),
@@ -1134,14 +1135,14 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Text max length 10', 'i18n' ),
-					'description' => __( '', 'i18n' ),
+					'label' => esc_html__( 'Text max length 10', 'i18n' ),
+					'description' => esc_html__( '', 'i18n' ),
 					'type' => 'kkcp_text',
 					'input_attrs' => array(
 						'maxlength' => 10,
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1149,7 +1150,7 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Text max length 10', 'i18n' ),
+		'label' => esc_html__( 'Text max length 10', 'i18n' ),
 		'type' => 'kkcp_text',
 		'input_attrs' => array(
 			'maxlength' => 10,
@@ -1166,12 +1167,12 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Text optional', 'i18n' ),
-					'description' => __( 'Empty value is allowed.', 'i18n' ),
+					'label' => esc_html__( 'Text optional', 'i18n' ),
+					'description' => esc_html__( 'Empty value is allowed.', 'i18n' ),
 					'type' => 'kkcp_text',
 					'optional' => true,
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1179,7 +1180,7 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Text optional', 'i18n' ),
+		'label' => esc_html__( 'Text optional', 'i18n' ),
 		'type' => 'kkcp_text',
 		'optional' => true,
 	)
@@ -1194,14 +1195,14 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Text URL', 'i18n' ),
-					'description' => __( 'It accepts only a valid url.', 'i18n' ),
+					'label' => esc_html__( 'Text URL', 'i18n' ),
+					'description' => esc_html__( 'It accepts only a valid url.', 'i18n' ),
 					'type' => 'kkcp_text',
 					'input_attrs' => array(
 						'type' => 'url',
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1209,8 +1210,8 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Text URL', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Text URL', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_text',
 		'input_attrs' => array(
 			'type' => 'url',
@@ -1227,14 +1228,14 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Text Email', 'i18n' ),
-					'description' => __( 'It accepts only a valid email address.', 'i18n' ),
+					'label' => esc_html__( 'Text Email', 'i18n' ),
+					'description' => esc_html__( 'It accepts only a valid email address.', 'i18n' ),
 					'type' => 'kkcp_text',
 					'input_attrs' => array(
 						'type' => 'email',
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1242,8 +1243,8 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Text Email', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Text Email', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_text',
 		'input_attrs' => array(
 			'type' => 'email',
@@ -1260,15 +1261,15 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Textarea', 'i18n' ),
-					'description' => __( 'The output and the value in database will be escaped.', 'i18n' ),
+					'label' => esc_html__( 'Textarea', 'i18n' ),
+					'description' => esc_html__( 'The output and the value in database will be escaped.', 'i18n' ),
 					'type' => 'kkcp_textarea',
 					'input_attrs' => array(
 						'maxlength' => 300,
 						'placeholder' => 'E.g. <h2>Ciao</h2> will be escaped to &lt;h2&gt;Ciao&lt;/h2&gt;.'
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1276,8 +1277,8 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Textarea', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Textarea', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_textarea',
 		'input_attrs' => array(
 			'maxlength' => 300,
@@ -1294,8 +1295,8 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Textarea (allow HTML)', 'i18n' ),
-					'description' => __( '', 'i18n' ),
+					'label' => esc_html__( 'Textarea (allow HTML)', 'i18n' ),
+					'description' => esc_html__( '', 'i18n' ),
 					'type' => 'kkcp_textarea',
 					'input_attrs' => array(
 						'maxlength' => 300,
@@ -1303,7 +1304,7 @@ return array(
 					),
 					'allowHTML' => true,
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1311,8 +1312,8 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Textarea (allow HTML)', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Textarea (allow HTML)', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_textarea',
 		'input_attrs' => array(
 			'maxlength' => 300,
@@ -1331,12 +1332,12 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Textarea (wp_editor)', 'i18n' ),
-					'description' => __( '', 'i18n' ),
+					'label' => esc_html__( 'Textarea (wp_editor)', 'i18n' ),
+					'description' => esc_html__( '', 'i18n' ),
 					'type' => 'kkcp_textarea',
 					'wp_editor' => true,
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1344,8 +1345,8 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Textarea (wp_editor)', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Textarea (wp_editor)', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_textarea',
 		'wp_editor' => true,
 	),
@@ -1360,8 +1361,8 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Textarea (wp_editor with options)', 'i18n' ),
-					'description' => __( '', 'i18n' ),
+					'label' => esc_html__( 'Textarea (wp_editor with options)', 'i18n' ),
+					'description' => esc_html__( '', 'i18n' ),
 					'type' => 'kkcp_textarea',
 					'wp_editor' => array(
 						'textareaRows' => 7,
@@ -1370,7 +1371,7 @@ return array(
 						)
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1378,8 +1379,8 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Textarea (wp_editor with options)', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Textarea (wp_editor with options)', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_textarea',
 		'wp_editor' => array(
 			'textareaRows' => 7,
@@ -1399,14 +1400,14 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Textarea (no quicktags)', 'i18n' ),
-					'description' => __( 'You can pass options to the wp_editor, in this example we hide the quicktags', 'i18n' ),
+					'label' => esc_html__( 'Textarea (no quicktags)', 'i18n' ),
+					'description' => esc_html__( 'You can pass options to the wp_editor, in this example we hide the quicktags', 'i18n' ),
 					'type' => 'kkcp_textarea',
 					'wp_editor' => array(
 						'quicktags' => false,
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1414,8 +1415,8 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Textarea (wp_editor with options)', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Textarea (wp_editor with options)', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_textarea',
 		'wp_editor' => array(
 			'quicktags' => false,
@@ -1431,7 +1432,7 @@ return array(
 	array(
 		'subject' => 'section',
 		'id' => 'section-numbers',
-		'title' => __( 'Number controls', 'textDomain' ),
+		'title' => esc_html__( 'Number controls', 'i18n' ),
 		'type' => 'kkcp_section',
 		'dashicon' => 204,
 		'fields' => array(
@@ -1441,11 +1442,11 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Number', 'i18n' ),
-					'description' => __( 'Default number control, only integer numbers.', 'i18n' ),
+					'label' => esc_html__( 'Number', 'i18n' ),
+					'description' => esc_html__( 'Default number control, only integer numbers.', 'i18n' ),
 					'type' => 'kkcp_number',
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1453,7 +1454,7 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Number', 'i18n' ),
+		'label' => esc_html__( 'Number', 'i18n' ),
 		'type' => 'kkcp_number',
 	),
 ),
@@ -1467,12 +1468,12 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Number', 'i18n' ),
-					'description' => __( 'Default number control, accept both integers and float numbers.', 'i18n' ),
+					'label' => esc_html__( 'Number', 'i18n' ),
+					'description' => esc_html__( 'Default number control, accept both integers and float numbers.', 'i18n' ),
 					'type' => 'kkcp_number',
 					'allowFloat' => true,
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1480,8 +1481,8 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Number', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Number', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_number',
 		'allowFloat' => true,
 	),
@@ -1496,14 +1497,14 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Number min', 'i18n' ),
-					'description' => __( 'Number with a minimum value.', 'i18n' ),
+					'label' => esc_html__( 'Number min', 'i18n' ),
+					'description' => esc_html__( 'Number with a minimum value.', 'i18n' ),
 					'type' => 'kkcp_number',
 					'input_attrs' => array(
 						'min' => 4,
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1511,8 +1512,8 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Number min', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Number min', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_number',
 		'input_attrs' => array(
 			'min' => 4,
@@ -1529,15 +1530,15 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Number max / optional', 'i18n' ),
-					'description' => __( 'Number with a maximum value. Empty value allowed.', 'i18n' ),
+					'label' => esc_html__( 'Number max / optional', 'i18n' ),
+					'description' => esc_html__( 'Number with a maximum value. Empty value allowed.', 'i18n' ),
 					'type' => 'kkcp_number',
 					'optional' => true,
 					'input_attrs' => array(
 						'max' => 7,
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1545,8 +1546,8 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Number max', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Number max', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_number',
 		'optional' => true,
 		'input_attrs' => array(
@@ -1564,14 +1565,14 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Number step', 'i18n' ),
-					'description' => __( 'Number that increment or decrement by a defined step.', 'i18n' ),
+					'label' => esc_html__( 'Number step', 'i18n' ),
+					'description' => esc_html__( 'Number that increment or decrement by a defined step.', 'i18n' ),
 					'type' => 'kkcp_number',
 					'input_attrs' => array(
 						'step' => 5,
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1579,8 +1580,8 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Number step', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Number step', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_number',
 		'input_attrs' => array(
 			'step' => 5,
@@ -1596,7 +1597,7 @@ return array(
 	array(
 		'subject' => 'section',
 		'id' => 'section-select',
-		'title' => __( 'Select controls', 'textDomain' ),
+		'title' => esc_html__( 'Select controls', 'i18n' ),
 		'type' => 'kkcp_section',
 		'dashicon' => 163,
 		'fields' => array(
@@ -1606,17 +1607,17 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Select', 'i18n' ),
-					'description' => __( '', 'i18n' ),
+					'label' => esc_html__( 'Select', 'i18n' ),
+					'description' => esc_html__( '', 'i18n' ),
 					'type' => 'kkcp_select',
 					'choices' => array(
-						'lemon' => __( 'Lemon', 'i18n' ),
-						'orange' => __( 'Orange', 'i18n' ),
-						'pineapple' => __( 'Pineapple', 'i18n' ),
-						'mango' => __( 'Mango', 'i18n' ),
+						'lemon' => esc_html__( 'Lemon', 'i18n' ),
+						'orange' => esc_html__( 'Orange', 'i18n' ),
+						'pineapple' => esc_html__( 'Pineapple', 'i18n' ),
+						'mango' => esc_html__( 'Mango', 'i18n' ),
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1624,14 +1625,14 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Select', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Select', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_select',
 		'choices' => array(
-			'lemon' => __( 'Lemon', 'i18n' ),
-			'orange' => __( 'Orange', 'i18n' ),
-			'pineapple' => __( 'Pineapple', 'i18n' ),
-			'mango' => __( 'Mango', 'i18n' ),
+			'lemon' => esc_html__( 'Lemon', 'i18n' ),
+			'orange' => esc_html__( 'Orange', 'i18n' ),
+			'pineapple' => esc_html__( 'Pineapple', 'i18n' ),
+			'mango' => esc_html__( 'Mango', 'i18n' ),
 		),
 	),
 ),
@@ -1646,14 +1647,14 @@ return array(
 			// 		'transport' => 'postMessage',
 			// 	),
 			// 	'control' => array(
-			// 		'label' => __( 'Select multiple', 'i18n' ),
-			// 		'description' => __( '', 'i18n' ),
+			// 		'label' => esc_html__( 'Select multiple', 'i18n' ),
+			// 		'description' => esc_html__( '', 'i18n' ),
 			// 		'type' => 'kkcp_select',
 			// 		'choices' => array(
-			// 			'grape' => __( 'Grape', 'i18n' ),
-			// 			'apple' => __( 'Apple', 'i18n' ),
-			// 			'cherry' => __( 'Cherry', 'i18n' ),
-			// 			'banana' => __( 'Banana', 'i18n' ),
+			// 			'grape' => esc_html__( 'Grape', 'i18n' ),
+			// 			'apple' => esc_html__( 'Apple', 'i18n' ),
+			// 			'cherry' => esc_html__( 'Cherry', 'i18n' ),
+			// 			'banana' => esc_html__( 'Banana', 'i18n' ),
 			// 		),
 			// 		'multiple' => true,
 			// 	),
@@ -1665,22 +1666,22 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Selectize', 'i18n' ),
-					'description' => __( '', 'i18n' ),
+					'label' => esc_html__( 'Selectize', 'i18n' ),
+					'description' => esc_html__( '', 'i18n' ),
 					'type' => 'kkcp_select',
 					'choices' => array(
-						'lemon' => __( 'Lemon', 'i18n' ),
-						'orange' => __( 'Orange', 'i18n' ),
-						'pineapple' => __( 'Pineapple', 'i18n' ),
-						'mango' => __( 'Mango', 'i18n' ),
-						'grape' => __( 'Grape', 'i18n' ),
-						'apple' => __( 'Apple', 'i18n' ),
-						'cherry' => __( 'Cherry', 'i18n' ),
-						'banana' => __( 'Banana', 'i18n' ),
+						'lemon' => esc_html__( 'Lemon', 'i18n' ),
+						'orange' => esc_html__( 'Orange', 'i18n' ),
+						'pineapple' => esc_html__( 'Pineapple', 'i18n' ),
+						'mango' => esc_html__( 'Mango', 'i18n' ),
+						'grape' => esc_html__( 'Grape', 'i18n' ),
+						'apple' => esc_html__( 'Apple', 'i18n' ),
+						'cherry' => esc_html__( 'Cherry', 'i18n' ),
+						'banana' => esc_html__( 'Banana', 'i18n' ),
 					),
 					'selectize' => true,
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1688,18 +1689,18 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Selectize', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Selectize', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_select',
 		'choices' => array(
-			'lemon' => __( 'Lemon', 'i18n' ),
-			'orange' => __( 'Orange', 'i18n' ),
-			'pineapple' => __( 'Pineapple', 'i18n' ),
-			'mango' => __( 'Mango', 'i18n' ),
-			'grape' => __( 'Grape', 'i18n' ),
-			'apple' => __( 'Apple', 'i18n' ),
-			'cherry' => __( 'Cherry', 'i18n' ),
-			'banana' => __( 'Banana', 'i18n' ),
+			'lemon' => esc_html__( 'Lemon', 'i18n' ),
+			'orange' => esc_html__( 'Orange', 'i18n' ),
+			'pineapple' => esc_html__( 'Pineapple', 'i18n' ),
+			'mango' => esc_html__( 'Mango', 'i18n' ),
+			'grape' => esc_html__( 'Grape', 'i18n' ),
+			'apple' => esc_html__( 'Apple', 'i18n' ),
+			'cherry' => esc_html__( 'Cherry', 'i18n' ),
+			'banana' => esc_html__( 'Banana', 'i18n' ),
 		),
 		'selectize' => true,
 	),
@@ -1714,24 +1715,24 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Selectize with options', 'i18n' ),
-					'description' => __( '', 'i18n' ),
+					'label' => esc_html__( 'Selectize with options', 'i18n' ),
+					'description' => esc_html__( '', 'i18n' ),
 					'type' => 'kkcp_select',
 					'choices' => array(
-						'lemon' => __( 'Lemon', 'i18n' ),
-						'orange' => __( 'Orange', 'i18n' ),
-						'pineapple' => __( 'Pineapple', 'i18n' ),
-						'mango' => __( 'Mango', 'i18n' ),
-						'grape' => __( 'Grape', 'i18n' ),
-						'apple' => __( 'Apple', 'i18n' ),
-						'cherry' => __( 'Cherry', 'i18n' ),
-						'banana' => __( 'Banana', 'i18n' ),
+						'lemon' => esc_html__( 'Lemon', 'i18n' ),
+						'orange' => esc_html__( 'Orange', 'i18n' ),
+						'pineapple' => esc_html__( 'Pineapple', 'i18n' ),
+						'mango' => esc_html__( 'Mango', 'i18n' ),
+						'grape' => esc_html__( 'Grape', 'i18n' ),
+						'apple' => esc_html__( 'Apple', 'i18n' ),
+						'cherry' => esc_html__( 'Cherry', 'i18n' ),
+						'banana' => esc_html__( 'Banana', 'i18n' ),
 					),
 					'selectize' => array(
 						'sortField' => 'text',
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1739,18 +1740,18 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Selectize with options', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Selectize with options', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_select',
 		'choices' => array(
-			'lemon' => __( 'Lemon', 'i18n' ),
-			'orange' => __( 'Orange', 'i18n' ),
-			'pineapple' => __( 'Pineapple', 'i18n' ),
-			'mango' => __( 'Mango', 'i18n' ),
-			'grape' => __( 'Grape', 'i18n' ),
-			'apple' => __( 'Apple', 'i18n' ),
-			'cherry' => __( 'Cherry', 'i18n' ),
-			'banana' => __( 'Banana', 'i18n' ),
+			'lemon' => esc_html__( 'Lemon', 'i18n' ),
+			'orange' => esc_html__( 'Orange', 'i18n' ),
+			'pineapple' => esc_html__( 'Pineapple', 'i18n' ),
+			'mango' => esc_html__( 'Mango', 'i18n' ),
+			'grape' => esc_html__( 'Grape', 'i18n' ),
+			'apple' => esc_html__( 'Apple', 'i18n' ),
+			'cherry' => esc_html__( 'Cherry', 'i18n' ),
+			'banana' => esc_html__( 'Banana', 'i18n' ),
 		),
 		'selectize' => array(
 			'sortField' => 'text',
@@ -1767,22 +1768,22 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Selectize with multiple selection', 'i18n' ),
-					'description' => __( '', 'i18n' ),
+					'label' => esc_html__( 'Selectize with multiple selection', 'i18n' ),
+					'description' => esc_html__( '', 'i18n' ),
 					'type' => 'kkcp_select',
 					'choices' => array(
-						'IT' => __( 'Italy', 'i18n' ),
-						'DE' => __( 'Germany', 'i18n' ),
-						'FR' => __( 'France', 'i18n' ),
-						'UK' => __( 'United Kingdom', 'i18n' ),
-						'NL' => __( 'Netherlands', 'i18n' ),
-						'SP' => __( 'Spain', 'i18n' ),
+						'IT' => esc_html__( 'Italy', 'i18n' ),
+						'DE' => esc_html__( 'Germany', 'i18n' ),
+						'FR' => esc_html__( 'France', 'i18n' ),
+						'UK' => esc_html__( 'United Kingdom', 'i18n' ),
+						'NL' => esc_html__( 'Netherlands', 'i18n' ),
+						'SP' => esc_html__( 'Spain', 'i18n' ),
 					),
 					'selectize' => array(
 						'maxItems' => 3,
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1790,16 +1791,16 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Selectize with multiple selection', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Selectize with multiple selection', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_select',
 		'choices' => array(
-			'IT' => __( 'Italy', 'i18n' ),
-			'DE' => __( 'Germany', 'i18n' ),
-			'FR' => __( 'France', 'i18n' ),
-			'UK' => __( 'United Kingdom', 'i18n' ),
-			'NL' => __( 'Netherlands', 'i18n' ),
-			'SP' => __( 'Spain', 'i18n' ),
+			'IT' => esc_html__( 'Italy', 'i18n' ),
+			'DE' => esc_html__( 'Germany', 'i18n' ),
+			'FR' => esc_html__( 'France', 'i18n' ),
+			'UK' => esc_html__( 'United Kingdom', 'i18n' ),
+			'NL' => esc_html__( 'Netherlands', 'i18n' ),
+			'SP' => esc_html__( 'Spain', 'i18n' ),
 		),
 		'selectize' => array(
 			'maxItems' => 3,
@@ -1816,16 +1817,16 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Selectize with multiple selection and plugins', 'i18n' ),
-					'description' => __( '', 'i18n' ),
+					'label' => esc_html__( 'Selectize with multiple selection and plugins', 'i18n' ),
+					'description' => esc_html__( '', 'i18n' ),
 					'type' => 'kkcp_select',
 					'choices' => array(
-						'IT' => __( 'Italy', 'i18n' ),
-						'DE' => __( 'Germany', 'i18n' ),
-						'FR' => __( 'France', 'i18n' ),
-						'UK' => __( 'United Kingdom', 'i18n' ),
-						'NL' => __( 'Netherlands', 'i18n' ),
-						'SP' => __( 'Spain', 'i18n' ),
+						'IT' => esc_html__( 'Italy', 'i18n' ),
+						'DE' => esc_html__( 'Germany', 'i18n' ),
+						'FR' => esc_html__( 'France', 'i18n' ),
+						'UK' => esc_html__( 'United Kingdom', 'i18n' ),
+						'NL' => esc_html__( 'Netherlands', 'i18n' ),
+						'SP' => esc_html__( 'Spain', 'i18n' ),
 					),
 					'selectize' => array(
 						'sortField' => 'text',
@@ -1833,7 +1834,7 @@ return array(
 						'plugins' => array( 'restore_on_backspace', 'remove_button', 'drag_drop' ),
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1841,16 +1842,16 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Selectize with multiple selection and plugins', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Selectize with multiple selection and plugins', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_select',
 		'choices' => array(
-			'IT' => __( 'Italy', 'i18n' ),
-			'DE' => __( 'Germany', 'i18n' ),
-			'FR' => __( 'France', 'i18n' ),
-			'UK' => __( 'United Kingdom', 'i18n' ),
-			'NL' => __( 'Netherlands', 'i18n' ),
-			'SP' => __( 'Spain', 'i18n' ),
+			'IT' => esc_html__( 'Italy', 'i18n' ),
+			'DE' => esc_html__( 'Germany', 'i18n' ),
+			'FR' => esc_html__( 'France', 'i18n' ),
+			'UK' => esc_html__( 'United Kingdom', 'i18n' ),
+			'NL' => esc_html__( 'Netherlands', 'i18n' ),
+			'SP' => esc_html__( 'Spain', 'i18n' ),
 		),
 		'selectize' => array(
 			'sortField' => 'text',
@@ -1868,7 +1869,7 @@ return array(
 	array(
 		'subject' => 'section',
 		'id' => 'section-tags',
-		'title' => __( 'Tags controls', 'textDomain' ),
+		'title' => esc_html__( 'Tags controls', 'i18n' ),
 		'type' => 'kkcp_section',
 		'dashicon' => 323,
 		'fields' => array(
@@ -1878,11 +1879,11 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Tags', 'i18n' ),
-					'description' => __( 'Default tags control. User can insert new tags freely (HTML is escaped). It returns a comma separated string. Tags can be removed pressing the delete key.', 'i18n' ),
+					'label' => esc_html__( 'Tags', 'i18n' ),
+					'description' => esc_html__( 'Default tags control. User can insert new tags freely (HTML is escaped). It returns a comma separated string. Tags can be removed pressing the delete key.', 'i18n' ),
 					'type' => 'kkcp_tags',
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1890,8 +1891,8 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Tags', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Tags', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_tags',
 	),
 ),
@@ -1905,15 +1906,15 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Tags removable (max 4 items)', 'i18n' ),
-					'description' => __( 'Tags can be removed clicking the x button close to each of them.', 'i18n' ),
+					'label' => esc_html__( 'Tags removable (max 4 items)', 'i18n' ),
+					'description' => esc_html__( 'Tags can be removed clicking the x button close to each of them.', 'i18n' ),
 					'type' => 'kkcp_tags',
 					'selectize' => array(
 						'plugins' => array( 'restore_on_backspace', 'remove_button' ),
 						'maxItems' => 4,
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1921,8 +1922,8 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Tags removable', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Tags removable', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_tags',
 		'selectize' => array(
 			'plugins' => array( 'restore_on_backspace', 'remove_button' ),
@@ -1940,14 +1941,14 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Tags sortable and removable', 'i18n' ),
-					'description' => __( '', 'i18n' ),
+					'label' => esc_html__( 'Tags sortable and removable', 'i18n' ),
+					'description' => esc_html__( '', 'i18n' ),
 					'type' => 'kkcp_tags',
 					'selectize' => array(
 						'plugins' => array( 'remove_button', 'drag_drop' )
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1955,8 +1956,8 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Tags sortable and removable', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Tags sortable and removable', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_tags',
 		'selectize' => array(
 			'plugins' => array( 'remove_button', 'drag_drop' )
@@ -1973,15 +1974,15 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Tags max items', 'i18n' ),
-					'description' => __( 'Specify a maximum nuber of tags allowed.', 'i18n' ),
+					'label' => esc_html__( 'Tags max items', 'i18n' ),
+					'description' => esc_html__( 'Specify a maximum nuber of tags allowed.', 'i18n' ),
 					'type' => 'kkcp_tags',
 					'selectize' => array(
 						'plugins' => array( 'restore_on_backspace', 'remove_button', 'drag_drop' ),
 						'maxItems' => 2,
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -1989,8 +1990,8 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Tags max items', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Tags max items', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_tags',
 		'selectize' => array(
 			'plugins' => array( 'restore_on_backspace', 'remove_button', 'drag_drop' ),
@@ -2007,7 +2008,7 @@ return array(
 	array(
 		'subject' => 'section',
 		'id' => 'section-sortable',
-		'title' => __( 'Sortable controls', 'textDomain' ),
+		'title' => esc_html__( 'Sortable controls', 'i18n' ),
 		'type' => 'kkcp_section',
 		'dashicon' => 156,
 		'fields' => array(
@@ -2017,18 +2018,18 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Sortable', 'i18n' ),
-					'description' => __( 'A sortable array of strings.', 'i18n' ),
+					'label' => esc_html__( 'Sortable', 'i18n' ),
+					'description' => esc_html__( 'A sortable array of strings.', 'i18n' ),
 					'type' => 'kkcp_sortable',
 					'choices' => array(
-						'lemon' => __( 'Lemon', 'i18n' ),
+						'lemon' => esc_html__( 'Lemon', 'i18n' ),
 						34 => '34',
-						'mango' => __( 'Mango', 'i18n' ),
-						'grape' => __( 'Grape', 'i18n' ),
-						'cherry' => __( 'Cherry', 'i18n' ),
+						'mango' => esc_html__( 'Mango', 'i18n' ),
+						'grape' => esc_html__( 'Grape', 'i18n' ),
+						'cherry' => esc_html__( 'Cherry', 'i18n' ),
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -2036,15 +2037,15 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Sortable', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Sortable', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_sortable',
 		'choices' => array(
-			'lemon' => __( 'Lemon', 'i18n' ),
+			'lemon' => esc_html__( 'Lemon', 'i18n' ),
 			34 => '34',
-			'mango' => __( 'Mango', 'i18n' ),
-			'grape' => __( 'Grape', 'i18n' ),
-			'cherry' => __( 'Cherry', 'i18n' ),
+			'mango' => esc_html__( 'Mango', 'i18n' ),
+			'grape' => esc_html__( 'Grape', 'i18n' ),
+			'cherry' => esc_html__( 'Cherry', 'i18n' ),
 		),
 	),
 ),
@@ -2059,12 +2060,12 @@ return array(
 			// 		'transport' => 'postMessage',
 			// 	),
 			// 	'control' => array(
-			// 		'label' => __( 'Sortable', 'i18n' ),
-			// 		'description' => __( '', 'i18n' ),
+			// 		'label' => esc_html__( 'Sortable', 'i18n' ),
+			// 		'description' => esc_html__( '', 'i18n' ),
 			// 		'type' => 'kkcp_sortable',
 			// 		'editable' => true,
 			// 		'items' => array(
-			// 			'placeholder' => __( 'Placeholder', 'i18n' ),
+			// 			'placeholder' => esc_html__( 'Placeholder', 'i18n' ),
 			// 		),
 			// 		'maxItems' => 4,
 			// 	),
@@ -2075,7 +2076,7 @@ return array(
 	array(
 		'subject' => 'section',
 		'id' => 'section-font',
-		'title' => __( 'Font controls', 'textDomain' ),
+		'title' => esc_html__( 'Font controls', 'i18n' ),
 		'type' => 'kkcp_section',
 		'dashicon' => 215,
 		'fields' => array(
@@ -2085,11 +2086,11 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Font family', 'i18n' ),
-					'description' => __( 'Select the font families and sort them.', 'i18n' ),
+					'label' => esc_html__( 'Font family', 'i18n' ),
+					'description' => esc_html__( 'Select the font families and sort them.', 'i18n' ),
 					'type' => 'kkcp_font_family',
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -2097,7 +2098,7 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Font family', 'i18n' ),
+		'label' => esc_html__( 'Font family', 'i18n' ),
 		'type' => 'kkcp_font_family',
 	),
 ),
@@ -2111,11 +2112,11 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Font weight', 'i18n' ),
-					'description' => __( 'Select the font weight. Just a shortcut of an otherwise verbose select with many choices.', 'i18n' ),
+					'label' => esc_html__( 'Font weight', 'i18n' ),
+					'description' => esc_html__( 'Select the font weight. Just a shortcut of an otherwise verbose select with many choices.', 'i18n' ),
 					'type' => 'kkcp_font_weight',
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -2123,7 +2124,7 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Font weight', 'i18n' ),
+		'label' => esc_html__( 'Font weight', 'i18n' ),
 		'type' => 'kkcp_font_weight',
 	),
 ),
@@ -2136,7 +2137,7 @@ return array(
 	array(
 		'subject' => 'section',
 		'id' => 'section-icon',
-		'title' => __( 'Icons controls', 'textDomain' ),
+		'title' => esc_html__( 'Icons controls', 'i18n' ),
 		'type' => 'kkcp_section',
 		'dashicon' => 163,
 		'fields' => array(
@@ -2146,12 +2147,12 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Dashicon', 'i18n' ),
-					'description' => __( '', 'i18n' ),
+					'label' => esc_html__( 'Dashicon', 'i18n' ),
+					'description' => esc_html__( '', 'i18n' ),
 					'type' => 'kkcp_icon',
 					'choices' => 'dashicons',
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -2159,7 +2160,7 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Icon', 'i18n' ),
+		'label' => esc_html__( 'Icon', 'i18n' ),
 		'type' => 'kkcp_icon',
 		'choices' => 'dashicons',
 	),
@@ -2173,7 +2174,7 @@ return array(
 	array(
 		'subject' => 'section',
 		'id' => 'section-others',
-		'title' => __( 'Other controls', 'textDomain' ),
+		'title' => esc_html__( 'Other controls', 'i18n' ),
 		'type' => 'kkcp_section',
 		'dashicon' => 322,
 		'fields' => array(
@@ -2183,11 +2184,11 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Knob', 'i18n' ),
-					'description' => __( 'Basically a number input. Uses [jQuery.knob.js](https://github.com/aterrien/jQuery-Knob).', 'i18n' ),
+					'label' => esc_html__( 'Knob', 'i18n' ),
+					'description' => esc_html__( 'Basically a number input. Uses [jQuery.knob.js](https://github.com/aterrien/jQuery-Knob).', 'i18n' ),
 					'type' => 'kkcp_knob',
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -2195,8 +2196,8 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Knob', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Knob', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_knob',
 	),
 ),
@@ -2210,8 +2211,8 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Knob (with options)', 'i18n' ),
-					'description' => __( 'It is possible to pass to the `input_attrs` arg some jQuery.knob js options. See a [list here](http://@@todo) of the options allowed.', 'i18n' ),
+					'label' => esc_html__( 'Knob (with options)', 'i18n' ),
+					'description' => esc_html__( 'It is possible to pass to the `input_attrs` arg some jQuery.knob js options. See a [list here](http://@@todo) of the options allowed.', 'i18n' ),
 					'type' => 'kkcp_knob',
 					'input_attrs' => array(
 						'min' => 30,
@@ -2220,15 +2221,15 @@ return array(
 						'cursor' => 20,
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'default' => 275,
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Knob (with options)', 'i18n' ),
-		'description' => __( '', 'i18n' ),
+		'label' => esc_html__( 'Knob (with options)', 'i18n' ),
+		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_knob',
 		'input_attrs' => array(
 			'min' => 30,
@@ -2248,14 +2249,14 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Date', 'i18n' ),
-					'description' => __( 'Focus the input to slide down the [jQuery UI datepicker](https://jqueryui.com/datepicker/)  widget. The date is validated according to the `dateFormat` selected.', 'i18n' ),
+					'label' => esc_html__( 'Date', 'i18n' ),
+					'description' => esc_html__( 'Focus the input to slide down the [jQuery UI datepicker](https://jqueryui.com/datepicker/)  widget. The date is validated according to the `dateFormat` selected.', 'i18n' ),
 					'type' => 'kkcp_date',
 					'input_attrs' => array(
 						'dateFormat' => 'dd/mm/yy',
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -2263,7 +2264,7 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Date', 'i18n' ),
+		'label' => esc_html__( 'Date', 'i18n' ),
 		'type' => 'kkcp_date',
 		'input_attrs' => array(
 			'dateFormat' => 'dd/mm/yy',
@@ -2280,8 +2281,8 @@ return array(
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'Date (`inline` with `input_attrs`)', 'i18n' ),
-					'description' => __( 'Pass [jQuery UI datepicker](http://api.jqueryui.com/datepicker/) options and `inline` to always show a calendar without text input.', 'i18n' ),
+					'label' => esc_html__( 'Date (`inline` with `input_attrs`)', 'i18n' ),
+					'description' => esc_html__( 'Pass [jQuery UI datepicker](http://api.jqueryui.com/datepicker/) options and `inline` to always show a calendar without text input.', 'i18n' ),
 					'type' => 'kkcp_date',
 					'inline' => true,
 					'input_attrs' => array(
@@ -2291,7 +2292,7 @@ return array(
 						'showButtonPanel' => true,
 					),
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -2299,7 +2300,7 @@ return array(
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'Date', 'i18n' ),
+		'label' => esc_html__( 'Date', 'i18n' ),
 		'type' => 'kkcp_date',
 		'inline' => true,
 		'input_attrs' => array(
@@ -2319,22 +2320,22 @@ return array(
 	array(
 		'subject' => 'section',
 		'id' => 'section-presentation',
-		'title' => __( 'Presentation controls', 'textDomain' ),
-		'description' => __( 'These controls are all tight to a dummy setting, their only purpose is to show some content between a control and the other.', 'textDomain' ),
+		'title' => esc_html__( 'Presentation controls', 'i18n' ),
+		'description' => esc_html__( 'These controls are all tight to a dummy setting, their only purpose is to show some content between a control and the other.', 'i18n' ),
 		'dashicon' => 105,
 		'fields' => array(
 			'kkcp-dummy' => array(
 				'control' => array(
-					'label' => __( 'Dummy', 'i18n' ),
-					'description' => __( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam consequatur sit fugit mollitia magni similique, nesciunt culpa maxime cupiditate debitis sed, facere odit, optio officiis architecto, ab veritatis id omnis.', 'i18n' ),
+					'label' => esc_html__( 'Dummy', 'i18n' ),
+					'description' => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam consequatur sit fugit mollitia magni similique, nesciunt culpa maxime cupiditate debitis sed, facere odit, optio officiis architecto, ab veritatis id omnis.', 'i18n' ),
 					'type' => 'kkcp_content',
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'kkcp-dummy' => array(
 	'control' => array(
-		'label' => __( 'Dummy default', 'i18n' ),
-		'description' => __( 'Some text as you like', 'i18n' ),
+		'label' => esc_html__( 'Dummy default', 'i18n' ),
+		'description' => esc_html__( 'Some text as you like', 'i18n' ),
 		'type' => 'kkcp_content',
 	),
 ),
@@ -2384,7 +2385,7 @@ All controls setting are required by default, set `'optional' => true` to allow 
 You can use WordPress default controls as you can see in the demo, in this case you are in charge to handle the sanitization, defininig a 'sanitization_callback'
 ",
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'kkcp-dummy' => array(
 	'control' => array(
@@ -2401,7 +2402,8 @@ You can use WordPress default controls as you can see in the demo, in this case 
 	array(
 		'subject' => 'section',
 		'id' => 'section-wordpress',
-		'title' => __( 'WordPress controls', 'textDomain' ),
+		'title' => esc_html__( 'WordPress controls', 'i18n' ),
+		'description' => esc_html__( 'This section is here just to show that the native WordPress controls will all keep working alongside Customize Plus controls. In this demo there is no live preview implemented for them though.', 'i18n' ),
 		// 'type' => 'kkcp_section',
 		'dashicon' => 120,
 		'fields' => array(
@@ -2411,10 +2413,10 @@ You can use WordPress default controls as you can see in the demo, in this case 
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'WP Text', 'i18n' ),
+					'label' => esc_html__( 'WP Text', 'i18n' ),
 					'type' => 'text',
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -2422,7 +2424,7 @@ You can use WordPress default controls as you can see in the demo, in this case 
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'WP Text', 'i18n' ),
+		'label' => esc_html__( 'WP Text', 'i18n' ),
 		'type' => 'text',
 	),
 ),
@@ -2436,10 +2438,10 @@ You can use WordPress default controls as you can see in the demo, in this case 
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'WP Color', 'i18n' ),
+					'label' => esc_html__( 'WP Color', 'i18n' ),
 					'type' => 'color',
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -2447,7 +2449,7 @@ You can use WordPress default controls as you can see in the demo, in this case 
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'WP Color', 'i18n' ),
+		'label' => esc_html__( 'WP Color', 'i18n' ),
 		'type' => 'color',
 	),
 ),
@@ -2457,14 +2459,14 @@ You can use WordPress default controls as you can see in the demo, in this case 
 			),
 			'wp-media' => array(
 				'setting' => array(
-					'default' => '@@todo',
+					'default' => 'dummy', // @@todo \\
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'WP Media', 'i18n' ),
+					'label' => esc_html__( 'WP Media', 'i18n' ),
 					'type' => 'media',
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -2472,7 +2474,7 @@ You can use WordPress default controls as you can see in the demo, in this case 
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'WP Media', 'i18n' ),
+		'label' => esc_html__( 'WP Media', 'i18n' ),
 		'type' => 'media',
 	),
 ),
@@ -2482,14 +2484,14 @@ You can use WordPress default controls as you can see in the demo, in this case 
 			),
 			'wp-image' => array(
 				'setting' => array(
-					'default' => '@@todo',
+					'default' => 'dummy', // @@todo \\
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'WP Image', 'i18n' ),
+					'label' => esc_html__( 'WP Image', 'i18n' ),
 					'type' => 'image',
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -2497,7 +2499,7 @@ You can use WordPress default controls as you can see in the demo, in this case 
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'WP Image', 'i18n' ),
+		'label' => esc_html__( 'WP Image', 'i18n' ),
 		'type' => 'image',
 	),
 ),
@@ -2507,14 +2509,14 @@ You can use WordPress default controls as you can see in the demo, in this case 
 			),
 			'wp-background' => array(
 				'setting' => array(
-					'default' => '@@todo',
+					'default' => 'dummy', // @@todo \\
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'WP Background', 'i18n' ),
+					'label' => esc_html__( 'WP Background', 'i18n' ),
 					'type' => 'background',
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -2522,7 +2524,7 @@ You can use WordPress default controls as you can see in the demo, in this case 
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'WP Background', 'i18n' ),
+		'label' => esc_html__( 'WP Background', 'i18n' ),
 		'type' => 'background',
 	),
 ),
@@ -2532,14 +2534,14 @@ You can use WordPress default controls as you can see in the demo, in this case 
 			),
 			'wp-upload' => array(
 				'setting' => array(
-					'default' => '@@todo',
+					'default' => 'dummy', // @@todo \\
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'WP Upload', 'i18n' ),
+					'label' => esc_html__( 'WP Upload', 'i18n' ),
 					'type' => 'upload',
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -2547,7 +2549,7 @@ You can use WordPress default controls as you can see in the demo, in this case 
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'WP Upload', 'i18n' ),
+		'label' => esc_html__( 'WP Upload', 'i18n' ),
 		'type' => 'upload',
 	),
 ),
@@ -2557,14 +2559,14 @@ You can use WordPress default controls as you can see in the demo, in this case 
 			),
 			'wp-cropped-image' => array(
 				'setting' => array(
-					'default' => '@@todo',
+					'default' => 'dummy', // @@todo \\
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'WP Cropped Image', 'i18n' ),
+					'label' => esc_html__( 'WP Cropped Image', 'i18n' ),
 					'type' => 'cropped_image',
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -2572,7 +2574,7 @@ You can use WordPress default controls as you can see in the demo, in this case 
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'WP Cropped Image', 'i18n' ),
+		'label' => esc_html__( 'WP Cropped Image', 'i18n' ),
 		'type' => 'cropped_image',
 	),
 ),
@@ -2582,14 +2584,14 @@ You can use WordPress default controls as you can see in the demo, in this case 
 			),
 			'wp-site_icon' => array(
 				'setting' => array(
-					'default' => '@@todo',
+					'default' => 'dummy', // @@todo \\
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'WP Site Icon', 'i18n' ),
+					'label' => esc_html__( 'WP Site Icon', 'i18n' ),
 					'type' => 'site_icon',
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -2597,7 +2599,7 @@ You can use WordPress default controls as you can see in the demo, in this case 
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'WP Site Icon', 'i18n' ),
+		'label' => esc_html__( 'WP Site Icon', 'i18n' ),
 		'type' => 'site_icon',
 	),
 ),
@@ -2607,14 +2609,14 @@ You can use WordPress default controls as you can see in the demo, in this case 
 			),
 			'wp-header' => array(
 				'setting' => array(
-					'default' => '@@todo',
+					'default' => 'dummy', // @@todo \\
 					'transport' => 'postMessage',
 				),
 				'control' => array(
-					'label' => __( 'WP Header', 'i18n' ),
+					'label' => esc_html__( 'WP Header', 'i18n' ),
 					'type' => 'header',
 					'guide' => array(
-						'title' => __( 'See Code', 'i18n' ),
+						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
@@ -2622,7 +2624,7 @@ You can use WordPress default controls as you can see in the demo, in this case 
 		'transport' => 'postMessage',
 	),
 	'control' => array(
-		'label' => __( 'WP Header', 'i18n' ),
+		'label' => esc_html__( 'WP Header', 'i18n' ),
 		'type' => 'header',
 	),
 ),

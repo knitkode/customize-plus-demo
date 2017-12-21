@@ -23,10 +23,25 @@
 		</nav>
 		<header class="jumbotron">
 			<div class="container">
-				<h1>Customize Plus Demo Theme</h1>
-				<p>Preview of each control and its associated setting</p>
-				<a href="https://github.com/knitkode/customize-plus" target="_blank" class="btn btn-lg btn-warning">View on Github</a>
+				<div class="media">
+					<div class="media-left">
+						<img class="pull-left" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/images/customize-plus__logo.png'); ?>">
+					</div>
+					<div class="media-body">
+						<h1>Customize Plus Demo Theme</h1>
+						<p>
+							<a href="https://knitkode.com/products/customize-plus-premium" target="_blank" class="btn btn-lg btn-danger">View Premium version</a> &nbsp;
+							<a href="https://github.com/knitkode/customize-plus" target="_blank" class="btn btn-lg btn-warning">View on Github</a> &nbsp;
+							<a href="https://wordpress.org/knitkode/customize-plus" target="_blank" class="btn btn-lg btn-default">View on WordPress.org</a>
+						</p>
+						<p>Do you want to improve your development experience with the WordPress Customizer? Find out about <strong><a href="https://knitkode.com/products/customize-plus-builder" target="_blank">Customize Plus Builder</a></strong></p>
+					</div>
+				</div>
 			</div>
 		</header>
 		<article class="container">
 			<div class="row">
+				<div class="col-xs-12">
+					<p class="text-muted">Viewing this within the Customizer admin screen you will see a live a preview of each control and its associated settings</p>
+					<p>&nbsp;</p>
+				</div>

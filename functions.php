@@ -52,9 +52,15 @@ class Customize_Plus_Demo {
 		add_action( 'KKcp/customize/register_custom_classes', array( __CLASS__, 'register_custom_classes' ), 20, 1 );
 		add_action( 'KKcp/info/add_to_view', array( __CLASS__, 'add_contacts_to_customize' ) );
 		add_action( 'customize_register', array( __CLASS__, 'remove_wp_defaults' ), 10, 1 );
-		add_action( 'customize_controls_print_footer_scripts' , array( __CLASS__, 'customize_enqueue_js_admin' ) );
+		add_action( 'customize_controls_print_styles' , array( __CLASS__, 'customize_enqueue_css' ) );
+		add_action( 'customize_controls_print_footer_scripts' , array( __CLASS__, 'customize_enqueue_js' ) );
+		// the following pretty self-explanatory hooks are also available
+		// 'KKcp/customize/enqueue_css_admin_pre'
+		// 'KKcp/customize/enqueue_css_admin_post'
+		// 'KKcp/customize/enqueue_js_admin_pre'
+		// 'KKcp/customize/enqueue_js_admin_post'
 		add_action( 'customize_preview_init' , array( __CLASS__, 'customize_enqueue_js_preview' ) );
-		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_manager' ) ); // just for demo purposes
+		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_manager' ) );
 	}
 
 	/**
@@ -72,7 +78,7 @@ class Customize_Plus_Demo {
 				'slug'             => 'customize-plus',
 				'version'          => '0.0.1',
 				'required'         => true,
-				'force_activation' => true,
+				'force_activation' => false,
 			),
 			// @note this is only for Customize Plus Premium
 			array(
@@ -178,9 +184,9 @@ class Customize_Plus_Demo {
 	 */
 	public static function add_contacts_to_customize () {
 		?>
-		<h3><?php _e( 'Contact and Social' ); ?></h3>
-		<p><?php _e( 'Website' ); ?>: <b><a href="https://knitkode.com" target="_blank">knitkode.com</a></b><br>
-			<?php _e( 'Mail' ); ?>: <b><a href="mailto:dev@knitkode.com" title="Contact the author" target="_blank">dev@knitkode.com</a></b></p>
+		<h3><?php esc_html_e( 'Contact and Social' ); ?></h3>
+		<p><?php esc_html_e( 'Website' ); ?>: <b><a href="https://knitkode.com" target="_blank">knitkode.com</a></b><br>
+			<?php esc_html_e( 'Mail' ); ?>: <b><a href="mailto:dev@knitkode.com" title="Contact the author" target="_blank">dev@knitkode.com</a></b></p>
 		<?php
 	}
 
@@ -195,13 +201,22 @@ class Customize_Plus_Demo {
 	public static function remove_wp_defaults( $wp_customize ) {
 		// $wp_customize->remove_panel( 'nav_menus' );
 		// $wp_customize->remove_panel( 'widgets' );
-		$wp_customize->remove_section( 'colors' );
-		$wp_customize->remove_section( 'static_front_page' );
-		$wp_customize->remove_section( 'title_tagline' );
-		$wp_customize->remove_section( 'background_image' );
-		$wp_customize->remove_section( 'header_image' );
-		$wp_customize->remove_control( 'background_color' );
-		$wp_customize->remove_control( 'header_textcolor' );
+		// $wp_customize->remove_section( 'colors' );
+		// $wp_customize->remove_section( 'static_front_page' );
+		// $wp_customize->remove_section( 'title_tagline' );
+		// $wp_customize->remove_section( 'background_image' );
+		// $wp_customize->remove_section( 'header_image' );
+		// $wp_customize->remove_control( 'background_color' );
+		// $wp_customize->remove_control( 'header_textcolor' );
+	}
+
+	/**
+	 * Enqueue css in the admin page of the customize
+	 *
+	 * @since  0.0.1
+	 */
+	public static function customize_enqueue_css() {
+		wp_enqueue_style( self::PREFIX . '-customize', get_template_directory_uri() . '/styles/customize.css', self::VERSION, false );
 	}
 
 	/**
@@ -209,9 +224,8 @@ class Customize_Plus_Demo {
 	 *
 	 * @since  0.0.1
 	 */
-	public static function customize_enqueue_js_admin() {
-		wp_enqueue_style( self::PREFIX . '-customize', get_template_directory_uri() . '/styles/customize.css', array( 'KKcp-customize', 'KKcpp-customize' ), self::VERSION, false );
-		wp_enqueue_script( self::PREFIX . '-customize', get_template_directory_uri() . '/scripts/customize.js', array( 'KKcp-customize', 'KKcpp-customize' ), self::VERSION, false );
+	public static function customize_enqueue_js() {
+		wp_enqueue_script( self::PREFIX . '-customize', get_template_directory_uri() . '/scripts/customize.js', array( 'KKcp-customize' ), self::VERSION, false );
 	}
 
 	/**
@@ -264,7 +278,7 @@ class Customize_Plus_Demo {
 	}
 
 	/**
-	 * Enqueue default style.css and bootstrap files requried only for this demo
+	 * Enqueue default style.css and bootstrap files required only for this demo
 	 *
 	 * @since 0.0.1
 	 */
