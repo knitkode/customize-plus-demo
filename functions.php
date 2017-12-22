@@ -48,17 +48,17 @@ class Customize_Plus_Demo {
 		require_once dirname( __FILE__ ) . '/vendor/tgm/plugin-activation/class-tgm-plugin-activation.php';
 		add_action( 'tgmpa_register', array( __CLASS__, 'register_plugins' ) );
 		add_action( 'after_setup_theme', array( __CLASS__, 'add_theme_supports' ) );
-		add_action( 'KKcp/theme/is_configured', array( __CLASS__, 'set_settings_defaults' ), 10, 1 );
-		add_action( 'KKcp/customize/register_custom_classes', array( __CLASS__, 'register_custom_classes' ), 20, 1 );
-		add_action( 'KKcp/info/add_to_view', array( __CLASS__, 'add_contacts_to_customize' ) );
+		add_action( 'kkcp_theme_is_configured', array( __CLASS__, 'set_settings_defaults' ), 10, 1 );
+		add_action( 'kkcp_customize_register_custom_classes', array( __CLASS__, 'register_custom_classes' ), 20, 1 );
+		add_action( 'kkcp_info_add_to_view', array( __CLASS__, 'add_contacts_to_customize' ) );
 		add_action( 'customize_register', array( __CLASS__, 'remove_wp_defaults' ), 10, 1 );
 		add_action( 'customize_controls_print_styles' , array( __CLASS__, 'customize_enqueue_css' ) );
 		add_action( 'customize_controls_print_footer_scripts' , array( __CLASS__, 'customize_enqueue_js' ) );
 		// the following pretty self-explanatory hooks are also available
-		// 'KKcp/customize/enqueue_css_admin_pre'
-		// 'KKcp/customize/enqueue_css_admin_post'
-		// 'KKcp/customize/enqueue_js_admin_pre'
-		// 'KKcp/customize/enqueue_js_admin_post'
+		// 'kkcp_customize_enqueue_css_admin_pre'
+		// 'kkcp_customize_enqueue_css_admin_post'
+		// 'kkcp_customize_enqueue_js_admin_pre'
+		// 'kkcp_customize_enqueue_js_admin_post'
 		add_action( 'customize_preview_init' , array( __CLASS__, 'customize_enqueue_js_preview' ) );
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_manager' ) );
 	}
