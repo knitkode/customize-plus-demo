@@ -1,8 +1,8 @@
-# Customize Plus Demo/Starter [![by KnitKode](https://img.shields.io/badge/by-KnitKode-blue.svg?style=social)]()
+# Customize Plus Demo [![by KnitKode](https://img.shields.io/badge/by-KnitKode-blue.svg?style=social)]()
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ffca84750b274d139f75a37dc2526f6b)](https://www.codacy.com/app/knitkode/customize-plus-demo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=knitkode/customize-plus-demo&amp;utm_campaign=Badge_Grade)
 
-> A demo or a starter theme for [Customize Plus](https://github.com/knitkode/customize-plus/) WordPress plugin.
+> A demo theme for [Customize Plus](https://github.com/knitkode/customize-plus/) WordPress plugin.
 
 
 Bugs
