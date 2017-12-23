@@ -25,4 +25,4 @@
     }
   });
 
-})(window, document, jQuery, _, wp, KKcp);
+})(window, document, jQuery, _, wp, kkcp);

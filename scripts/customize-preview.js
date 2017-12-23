@@ -1,4 +1,4 @@
-/* global jQuery, _, wp, KKcp */
+/* global jQuery, _, wp, kkcp */
 /* jshint unused: false */
 
 (function (window, $, wp, api) {
@@ -172,4 +172,4 @@
   });
 
 
-})(window, jQuery, wp, KKcp);
+})(window, jQuery, wp, kkcp);

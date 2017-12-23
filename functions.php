@@ -107,7 +107,7 @@ class Customize_Plus_Demo {
 	public static function add_theme_supports() {
 
 		// Customize Plus settings
-		add_theme_support( 'KKcp-customize', array(
+		add_theme_support( 'kkcp-customize', array(
 			'prefix' => self::PREFIX,
 			'customize_tree' => self::get_customize_tree(),
 			'images_base_url' => get_stylesheet_directory_uri() . '/images/',
@@ -225,7 +225,7 @@ class Customize_Plus_Demo {
 	 * @since  0.0.1
 	 */
 	public static function customize_enqueue_js() {
-		wp_enqueue_script( self::PREFIX . '-customize', get_template_directory_uri() . '/scripts/customize.js', array( 'KKcp-customize' ), self::VERSION, false );
+		wp_enqueue_script( self::PREFIX . '-customize', get_template_directory_uri() . '/scripts/customize.js', array( 'kkcp-customize' ), self::VERSION, false );
 	}
 
 	/**
@@ -234,7 +234,7 @@ class Customize_Plus_Demo {
 	 * @since  0.0.1
 	 */
 	public static function customize_enqueue_js_preview() {
-		wp_enqueue_script( self::PREFIX . '-customize', get_template_directory_uri() . '/scripts/customize-preview.js', array( 'KKcp-customize-preview' ), self::VERSION, true );
+		wp_enqueue_script( self::PREFIX . '-customize', get_template_directory_uri() . '/scripts/customize-preview.js', array( 'kkcp-customize-preview' ), self::VERSION, true );
 	}
 
 	/**
