@@ -71,7 +71,7 @@ return array(
 				),
 				'control' => array(
 					'label' => esc_html__( 'Options API', 'i18n' ),
-					'description' => esc_html__( "Use `'type' => 'option'` in the setting's args, as with the normal WordPress API, to use the [Options API](https://codex.wordpress.org/Options_API) for a specific setting.", 'i18n' ),
+					'description' => __( "Use `'type' => 'option'` in the setting's args, as with the normal WordPress API, to use the [Options API](https://codex.wordpress.org/Options_API) for a specific setting.", 'i18n' ),
 					'type' => 'kkcp_text',
 					'guide' => array(
 						'title' => esc_html__( 'See Code', 'i18n' ),
