@@ -14,18 +14,26 @@
 return array(
 	array(
 		'subject' => 'panel',
-		'id' => 'layout',
+		'id' => 'example-panel',
 		'title' => esc_html__( 'Example panel', 'i18n' ),
 		'description' => esc_html__( 'Layout generic options, globally change the look and feel', 'i18n' ),
-		// 'dashicon' => 309,
+		'dashicon' => 309,
 		'type' => 'kkcp_panel',
 		'sections' => array(
 			array(
-				'id' => 'layout-generic',
-				'title' => esc_html__( 'Example section (empty)', 'i18n' ),
-				'description' => esc_html__( 'Just an empty section.', 'i18n' ),
+				'id' => 'example-section',
+				'title' => esc_html__( 'Example section', 'i18n' ),
+				'description' => esc_html__( 'Just a sample section.', 'i18n' ),
 				'type' => 'kkcp_section',
-				'fields' => array()
+				'fields' => array(
+					'in-panel-control' => array(
+						'control' => array(
+							'label' => esc_html__( 'Example control', 'i18n' ),
+							'description' => __( "Just a sample content control to show a control inside a section *inside a panel.*", 'i18n' ),
+							'type' => 'kkcp_content',
+						),
+					),
+				),
 			),
 		)
 	),
