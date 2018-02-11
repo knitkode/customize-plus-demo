@@ -1016,7 +1016,7 @@ return array(
 			),
 			'multicheck' => array(
 				'setting' => array(
-					'default' => wp_json_encode( array( 'grape', 'cherry' ) ),
+					'default' => array( 'grape', 'cherry' ),
 					'transport' => 'postMessage',
 				),
 				'control' => array(
@@ -1035,7 +1035,7 @@ return array(
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
-		'default' => wp_json_encode( array( 'grape', 'cherry' ) ),
+		'default' => array( 'grape', 'cherry' ),
 		'transport' => 'postMessage',
 	),
 	'control' => array(
@@ -1056,7 +1056,7 @@ return array(
 			),
 			'multicheck-sortable' => array(
 				'setting' => array(
-					'default' => wp_json_encode( array( 'facebook', 'twitter', 'google' ) ),
+					'default' => array( 'facebook', 'twitter', 'google' ),
 					'transport' => 'postMessage',
 				),
 				'control' => array(
@@ -1079,7 +1079,7 @@ return array(
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
-		'default' => wp_json_encode( array( 'facebook', 'twitter', 'google' ) ),
+		'default' => array( 'facebook', 'twitter', 'google' ),
 		'transport' => 'postMessage',
 	),
 	'control' => array(
@@ -1096,6 +1096,50 @@ return array(
 			'email' => esc_html__( 'Email', 'i18n' ),
 		),
 		'sortable' => true,
+	),
+),
+```",
+					),
+				),
+			),
+			'multicheck-sortable-max' => array(
+				'setting' => array(
+					'default' => array( 'venus', 'jupiter' ),
+					'transport' => 'postMessage',
+				),
+				'control' => array(
+					'label' => esc_html__( 'Multicheck sortable (max items)', 'i18n' ),
+					'description' => esc_html__( 'Returns an array sorted as defined by the user containing only the checked values with a maximum of items selectable defined by the developer.', 'i18n' ),
+					'type' => 'kkcp_multicheck',
+					'choices' => array(
+						'mars' => esc_html__( 'Mars', 'i18n' ),
+						'venus' => esc_html__( 'Venus', 'i18n' ),
+						'earth' => esc_html__( 'Earth', 'i18n' ),
+						'jupiter' => esc_html__( 'Jupiter', 'i18n' ),
+						'saturn' => esc_html__( 'Saturn', 'i18n' ),
+					),
+					'sortable' => true,
+					'max' => 2,
+					'guide' => array(
+						'title' => esc_html__( 'See Code', 'i18n' ),
+						'text' => "```php
+'an-id' => array(
+	'setting' => array(
+		'default' => array( 'facebook', 'twitter', 'google' ),
+		'transport' => 'postMessage',
+	),
+	'control' => array(
+		'label' => esc_html__( 'Multicheck sortable (max items)', 'i18n' ),
+		'type' => 'kkcp_multicheck',
+		'choices' => array(
+			'mars' => esc_html__( 'Mars', 'i18n' ),
+			'venus' => esc_html__( 'Venus', 'i18n' ),
+			'earth' => esc_html__( 'Earth', 'i18n' ),
+			'jupiter' => esc_html__( 'Jupiter', 'i18n' ),
+			'saturn' => esc_html__( 'Saturn', 'i18n' ),
+		),
+		'sortable' => true,
+		'max' => 2,
 	),
 ),
 ```",
@@ -1624,6 +1668,7 @@ return array(
 						'pineapple' => esc_html__( 'Pineapple', 'i18n' ),
 						'mango' => esc_html__( 'Mango', 'i18n' ),
 					),
+					'selectize' => false,
 					'guide' => array(
 						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
@@ -1642,6 +1687,7 @@ return array(
 			'pineapple' => esc_html__( 'Pineapple', 'i18n' ),
 			'mango' => esc_html__( 'Mango', 'i18n' ),
 		),
+		'selectize' => false,
 	),
 ),
 ```",
@@ -1687,7 +1733,6 @@ return array(
 						'cherry' => esc_html__( 'Cherry', 'i18n' ),
 						'banana' => esc_html__( 'Banana', 'i18n' ),
 					),
-					'selectize' => true,
 					'guide' => array(
 						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
@@ -1710,7 +1755,6 @@ return array(
 			'cherry' => esc_html__( 'Cherry', 'i18n' ),
 			'banana' => esc_html__( 'Banana', 'i18n' ),
 		),
-		'selectize' => true,
 	),
 ),
 ```",
@@ -1724,7 +1768,7 @@ return array(
 				),
 				'control' => array(
 					'label' => esc_html__( 'Selectize with options', 'i18n' ),
-					'description' => esc_html__( '', 'i18n' ),
+					'description' => __( 'e.g.: `selectize => array( sortField => text, )`)', 'i18n' ), // @@todo escape? \\
 					'type' => 'kkcp_select',
 					'choices' => array(
 						'lemon' => esc_html__( 'Lemon', 'i18n' ),
@@ -1777,7 +1821,7 @@ return array(
 				),
 				'control' => array(
 					'label' => esc_html__( 'Selectize with multiple selection', 'i18n' ),
-					'description' => esc_html__( '', 'i18n' ),
+					'description' => __( 'With `max => 3,`', 'i18n' ), // @@todo escape? \\
 					'type' => 'kkcp_select',
 					'choices' => array(
 						'IT' => esc_html__( 'Italy', 'i18n' ),
@@ -1787,15 +1831,13 @@ return array(
 						'NL' => esc_html__( 'Netherlands', 'i18n' ),
 						'SP' => esc_html__( 'Spain', 'i18n' ),
 					),
-					'selectize' => array(
-						'maxItems' => 3,
-					),
+					'max' => 3,
 					'guide' => array(
 						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
-		'default' => wp_json_encode( array( 'IT', 'UK' ) ),
+		'default' => array( 'IT', 'UK' ),
 		'transport' => 'postMessage',
 	),
 	'control' => array(
@@ -1810,9 +1852,7 @@ return array(
 			'NL' => esc_html__( 'Netherlands', 'i18n' ),
 			'SP' => esc_html__( 'Spain', 'i18n' ),
 		),
-		'selectize' => array(
-			'maxItems' => 3,
-		),
+		'max' => 3,
 	),
 ),
 ```",
@@ -1821,7 +1861,7 @@ return array(
 			),
 			'select-selectize-tags-plugins' => array(
 				'setting' => array(
-					'default' => wp_json_encode( array( 'IT', 'NL', 'UK' ) ),
+					'default' => array( 'IT', 'NL', 'UK' ),
 					'transport' => 'postMessage',
 				),
 				'control' => array(
@@ -1836,9 +1876,9 @@ return array(
 						'NL' => esc_html__( 'Netherlands', 'i18n' ),
 						'SP' => esc_html__( 'Spain', 'i18n' ),
 					),
+					'max' => 4,
 					'selectize' => array(
 						'sortField' => 'text',
-						'maxItems' => 4,
 						'plugins' => array( 'restore_on_backspace', 'remove_button', 'drag_drop' ),
 					),
 					'guide' => array(
@@ -1846,7 +1886,7 @@ return array(
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
-		'default' => wp_json_encode( array( 'IT', 'NL', 'UK' ) ),
+		'default' => array( 'IT', 'NL', 'UK' ),
 		'transport' => 'postMessage',
 	),
 	'control' => array(
@@ -1861,9 +1901,9 @@ return array(
 			'NL' => esc_html__( 'Netherlands', 'i18n' ),
 			'SP' => esc_html__( 'Spain', 'i18n' ),
 		),
+		'max' => 4,
 		'selectize' => array(
 			'sortField' => 'text',
-			'maxItems' => 4,
 			'plugins' => array( 'restore_on_backspace', 'remove_button', 'drag_drop' ),
 		),
 	),
@@ -1917,9 +1957,9 @@ return array(
 					'label' => esc_html__( 'Tags removable (max 4 items)', 'i18n' ),
 					'description' => esc_html__( 'Tags can be removed clicking the x button close to each of them.', 'i18n' ),
 					'type' => 'kkcp_tags',
+					'max' => 4,
 					'selectize' => array(
 						'plugins' => array( 'restore_on_backspace', 'remove_button' ),
-						'maxItems' => 4,
 					),
 					'guide' => array(
 						'title' => esc_html__( 'See Code', 'i18n' ),
@@ -1933,9 +1973,9 @@ return array(
 		'label' => esc_html__( 'Tags removable', 'i18n' ),
 		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_tags',
+		'max' => 4,
 		'selectize' => array(
 			'plugins' => array( 'restore_on_backspace', 'remove_button' ),
-			'maxItems' => 4,
 		),
 	),
 ),
@@ -1985,9 +2025,9 @@ return array(
 					'label' => esc_html__( 'Tags max items', 'i18n' ),
 					'description' => esc_html__( 'Specify a maximum nuber of tags allowed.', 'i18n' ),
 					'type' => 'kkcp_tags',
+					'max' => 2,
 					'selectize' => array(
 						'plugins' => array( 'restore_on_backspace', 'remove_button', 'drag_drop' ),
-						'maxItems' => 2,
 					),
 					'guide' => array(
 						'title' => esc_html__( 'See Code', 'i18n' ),
@@ -2001,9 +2041,9 @@ return array(
 		'label' => esc_html__( 'Tags max items', 'i18n' ),
 		'description' => esc_html__( '', 'i18n' ),
 		'type' => 'kkcp_tags',
+		'max' => 2,
 		'selectize' => array(
 			'plugins' => array( 'restore_on_backspace', 'remove_button', 'drag_drop' ),
-			'maxItems' => 2,
 		),
 	),
 ),
@@ -2022,7 +2062,7 @@ return array(
 		'fields' => array(
 			'sortable' => array(
 				'setting' => array(
-					'default' => wp_json_encode( array( 'lemon', 'cherry', 34, 'mango', 'grape' ) ),
+					'default' => array( 'lemon', 'cherry', 34, 'mango', 'grape' ),
 					'transport' => 'postMessage',
 				),
 				'control' => array(
@@ -2031,7 +2071,7 @@ return array(
 					'type' => 'kkcp_sortable',
 					'choices' => array(
 						'lemon' => esc_html__( 'Lemon', 'i18n' ),
-						34 => '34',
+						'34' => 34,
 						'mango' => esc_html__( 'Mango', 'i18n' ),
 						'grape' => esc_html__( 'Grape', 'i18n' ),
 						'cherry' => esc_html__( 'Cherry', 'i18n' ),
@@ -2041,7 +2081,7 @@ return array(
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
-		'default' => wp_json_encode( array( 'lemon', 'cherry', 34, 'mango', 'grape' ) ),
+		'default' => array( 'lemon', 'cherry', 34, 'mango', 'grape' ),
 		'transport' => 'postMessage',
 	),
 	'control' => array(
@@ -2064,7 +2104,7 @@ return array(
 			// @@note this would be the same as selectize tags
 			// 'sortable-editable' => array(
 			// 	'setting' => array(
-			// 		'default' => wp_json_encode( array( 'lemon', 'cherry', 'pineapple', 'mango', 'grape' ) ),
+			// 		'default' => array( 'lemon', 'cherry', 'pineapple', 'mango', 'grape' ),
 			// 		'transport' => 'postMessage',
 			// 	),
 			// 	'control' => array(
@@ -2075,7 +2115,7 @@ return array(
 			// 		'items' => array(
 			// 			'placeholder' => esc_html__( 'Placeholder', 'i18n' ),
 			// 		),
-			// 		'maxItems' => 4,
+			// 		'max' => 4,
 			// 	),
 			// ),
 			// \\
@@ -2149,16 +2189,16 @@ return array(
 		'type' => 'kkcp_section',
 		'dashicon' => 163,
 		'fields' => array(
-			'dashicons' => array(
+			'dashicon' => array(
 				'setting' => array(
-					'default' => 'dashboard',
+					'default' => 'admin-users',
 					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Dashicon', 'i18n' ),
-					'description' => esc_html__( '', 'i18n' ),
+					'description' => esc_html__( 'A single dashicon to choose.', 'i18n' ),
 					'type' => 'kkcp_icon',
-					'choices' => 'dashicons',
+					'icons_set' => 'dashicons',
 					'guide' => array(
 						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
@@ -2170,13 +2210,43 @@ return array(
 	'control' => array(
 		'label' => esc_html__( 'Icon', 'i18n' ),
 		'type' => 'kkcp_icon',
-		'choices' => 'dashicons',
+		'icons_set' => 'dashicons',
 	),
 ),
 ```",
 					),
 				),
 			),
+			'dashicons-max' => array(
+				'setting' => array(
+					'default' => array( 'admin-plugins', 'admin-page' ),
+					'transport' => 'postMessage',
+				),
+				'control' => array(
+					'label' => esc_html__( 'Dashicons (max number of icons)', 'i18n' ),
+					'description' => esc_html__( 'In this example we set the `max` to `3`.', 'i18n' ),
+					'type' => 'kkcp_icon',
+					'icons_set' => 'dashicons',
+					'max' => 3,
+					'guide' => array(
+						'title' => esc_html__( 'See Code', 'i18n' ),
+						'text' => "```php
+'an-id' => array(
+	'setting' => array(
+		'default' => 'dashboard',
+		'transport' => 'postMessage',
+	),
+	'control' => array(
+		'label' => esc_html__( 'Icon', 'i18n' ),
+		'type' => 'kkcp_icon',
+		'icons_set' => 'dashicons',
+		'multiple' => true,
+	),
+),
+```",
+					),
+				),
+			)
 		)
 	),
 	array(

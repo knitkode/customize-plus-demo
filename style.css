@@ -12,16 +12,11 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  padding: 50px 0;
   overflow-y: scroll;
 }
 
-body.admin-bar .navbar-fixed-top {
+body.admin-bar .fixed-top {
   top: 32px;
-}
-
-.media-body .btn {
-  margin: 8px 16px 8px 0;
 }
 
 .setting-name {

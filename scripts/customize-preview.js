@@ -5,29 +5,28 @@
   'use strict';
 
   var wpApi = wp.customize;
-  var _toCSS = api.toCSS;
 
   var $body = $('body');
-  var $row = $('.row');
-  // var $toScroll = $('html, body');
+  var $previewsContainer = $('.previews');
+  var $toScroll = $('html, body');
 
   $.fn.flash = function (duration) {
 
-    this.parent().prependTo($row);
+    this.parent().prependTo($previewsContainer);
 
     this.addClass('flash');
     setTimeout(function () {
       this.removeClass('flash');
     }.bind(this), 300);
 
-    // var offset = this.offset();
-    // if (!offset) {
-    //   return this;
-    // }
+    var offset = this.offset();
+    if (!offset) {
+      return this;
+    }
     // @@doubt, scroll or not in preview \\
-    // $toScroll.animate({
-    //   scrollTop: offset.top -100
-    // }, 300);
+    $toScroll.animate({
+      scrollTop: offset.top -120
+    }, 300);
 
     return this;
   };
@@ -88,6 +87,7 @@
     'toggle',
     'multicheck',
     'multicheck-sortable',
+    'multicheck-sortable-max',
     'select',
     'select-selectize',
     'select-selectize-options',
@@ -100,7 +100,8 @@
     'sortable',
     'font-family',
     'font-weight',
-    'dashicons',
+    'dashicon',
+    'dashicons-max',
     // Customize Plus Premium controls
     'knob',
     'knob-options',
@@ -133,12 +134,7 @@
     'api-option'
   ];
 
-  /**
-   * Replace
-   * @@todo, move this to API, like isOptionsApi ? and api.isThemeModsAPI
-   * @param  {[type]} var i             [description]
-   * @return {[type]}     [description]
-   */
+  // @@todo, move this to API, like isOptionsApi ? and api.isThemeModsAPI
   for (var i = settingsApiKeys.length - 1; i >= 0; i--) {
     var idToChange = settingsApiKeys[i];
     var indexInSettingsToText = settingsToText.indexOf(idToChange);
@@ -151,8 +147,10 @@
   _.each(settingsToText, function (setting) {
     wpApi(setting, function (value) {
       value.bind(function (to) {
-        var el = document.getElementById(setting);
-        $(el).text(to).flash();
+        if (_.isArray(to) || _.isObject(to)) {
+          to = JSON.stringify(to);
+        }
+        $('#' + setting).text(to).flash();
       });
     });
   });
@@ -166,6 +164,9 @@
   _.each(settingsToHtml, function (setting) {
     wpApi(setting, function (value) {
       value.bind(function (to) {
+        if (_.isArray(to) || _.isObject(to)) {
+          to = JSON.stringify(to);
+        }
         $('#' + setting).html(to).flash();
       });
     });

@@ -28,6 +28,7 @@
 	'toggle',
 	'multicheck',
 	'multicheck-sortable',
+	'multicheck-sortable-max',
 	'select',
 	'select-selectize',
 	'select-selectize-options',
@@ -50,7 +51,8 @@
 	'textarea-wp_editor',
 	'textarea-wp_editor-options',
 	'textarea-wp_editor-no-quicktags',
-	'dashicons',
+	'dashicon',
+	'dashicons-max',
 	// Customize Plus Premium controls
 	'color-dynamic-active',
 	'color-dynamic-passive',
@@ -88,6 +90,8 @@
 			'api-option'
 		);
 
+		$is_jsonified = false;
+
 		if ( in_array( $key, $settings_api_keys ) ) {
 
 			// $value = Customize_Plus_Demo::get_option( $key );
@@ -101,12 +105,18 @@
 
 			if ( is_array( $value ) ) {
 				$value = json_encode( $value );
+				$is_jsonified = true;
 			}
 
 		} ?>
-		<div class="col-xs-4 col-sm-3 col-md-2 col-lg-2">
+		<?php if ( $is_jsonified ) { ?>
+			<div class="col-6 col-sm-4 col-md-4 col-lg-3 col-xl-2" data-toggle="popover" data-content="For preview purposes values that are saved as <code>array</code> are 'JSONified' with php function <code>json_encode</code>">
+		<?php } else { ?>
+			<div class="col-6 col-sm-4 col-md-4 col-lg-3 col-xl-2">
+		<?php } ?>
+			<!-- <div class="alert alert-info">For preview purposes values that are saved as <code>array</code> are 'JSONified' with php function <code>json_encode</code>.</div> -->
 			<?php echo "<div class='setting-name' title='$key'>$key</div>"; ?>
-			<?php echo "<div class='setting-preview' id='$key' title='$key'>$value</div>"; ?>
+			<?php echo "<div class='setting-preview' id='$key' title='Setting: $key'>$value</div>"; ?>
 		</div>
 <?php } ?>
 <?php get_footer();
