@@ -988,14 +988,46 @@ return array(
 		'type' => 'kkcp_section',
 		'dashicon' => 314,
 		'fields' => array(
-			'toggle' => array(
+			'checkbox' => array(
 				'setting' => array(
 					'default' => 1,
 					'transport' => 'postMessage',
 				),
 				'control' => array(
+					'label' => esc_html__( 'Checkbox', 'i18n' ),
+					'description' => esc_html__( 'A simple checkbox that can be either `1` or `0`.', 'i18n' ),
+					'input_attrs' => array(
+						'label' => esc_html__( 'Something to enable' ),
+					),
+					'type' => 'kkcp_checkbox',
+					'guide' => array(
+						'title' => esc_html__( 'See Code', 'i18n' ),
+						'text' => "```php
+'an-id' => array(
+	'setting' => array(
+		'default' => 1,
+		'transport' => 'postMessage',
+	),
+	'control' => array(
+		'label' => esc_html__( 'Checkbox', 'i18n' ),
+		'input_attrs' => array(
+			'label' => esc_html__( 'Something to enable' ),
+		),
+		'type' => 'kkcp_checkbox',
+	),
+),
+```",
+					),
+				),
+			),
+			'toggle' => array(
+				'setting' => array(
+					'default' => 0,
+					'transport' => 'postMessage',
+				),
+				'control' => array(
 					'label' => esc_html__( 'Toggle', 'i18n' ),
-					'description' => esc_html__( 'Either 0 or 1.', 'i18n' ),
+					'description' => esc_html__( 'Same as the above checkbox control but wiht a toggle/switch like styling.', 'i18n' ),
 					'type' => 'kkcp_toggle',
 					'guide' => array(
 						'title' => esc_html__( 'See Code', 'i18n' ),
@@ -1008,6 +1040,40 @@ return array(
 	'control' => array(
 		'label' => esc_html__( 'Toggle', 'i18n' ),
 		'type' => 'kkcp_toggle',
+	),
+),
+```",
+					),
+				),
+			),
+			'toggle-with-labels' => array(
+				'setting' => array(
+					'default' => 1,
+					'transport' => 'postMessage',
+				),
+				'control' => array(
+					'label' => esc_html__( 'Toggle with labels', 'i18n' ),
+					'description' => esc_html__( 'Toggle/switch like styling with visual labels on both sides.', 'i18n' ),
+					'type' => 'kkcp_toggle',
+					'input_attrs' => array(
+						'label_false' => 'Dark',
+						'label_true' => 'Light',
+					),
+					'guide' => array(
+						'title' => esc_html__( 'See Code', 'i18n' ),
+						'text' => "```php
+'an-id' => array(
+	'setting' => array(
+		'default' => 1,
+		'transport' => 'postMessage',
+	),
+	'control' => array(
+		'label' => esc_html__( 'Toggle', 'i18n' ),
+		'type' => 'kkcp_toggle',
+		'input_attrs' => array(
+			'label_false' => 'Dark',
+			'label_true' => 'Light'
+		),
 	),
 ),
 ```",
