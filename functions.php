@@ -172,8 +172,10 @@ class Customize_Plus_Demo {
 	 * @return array
 	 */
 	public static function get_customize_tree() {
-		$customize_tree_theme = (array) require( get_stylesheet_directory() . '/options-demo.php' );
-		return $customize_tree_theme;
+		$customize_tree = (array) require( get_stylesheet_directory() . '/options-demo.php' );
+		$customize_tree_premium = (array) require( get_stylesheet_directory() . '/options-demo-premium.php' );
+		// return array_merge( $customize_tree_premium, $customize_tree );
+		return $customize_tree;
 	}
 
 	/**

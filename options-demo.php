@@ -7,7 +7,7 @@
  * @since        0.0.1
  * @link         http://homepage.com
  * @author       name <email> (http://url.io)
- * @copyright    2015 | GPL
+ * @copyright    2018 | GPL
  * @license      GPL
  */
 
@@ -48,7 +48,6 @@ return array(
 			'api-theme_mod' => array(
 				'setting' => array(
 					'default' => 'I am managed by the Theme Mods API',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Theme mods API', 'i18n' ),
@@ -61,7 +60,6 @@ return array(
 	'setting' => array(
 		'default' => 'I am managed by the Theme Mods API',
 		'type' => 'setting',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'type' => 'kkcp_text'
@@ -75,7 +73,6 @@ return array(
 				'setting' => array(
 					'default' => 'I am managed by the Options API',
 					'type' => 'option',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Options API', 'i18n' ),
@@ -88,7 +85,6 @@ return array(
 	'setting' => array(
 		'default' => 'I am managed by the Options API',
 		'type' => 'setting',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'type' => 'kkcp_text'
@@ -110,7 +106,6 @@ return array(
 			'color' => array(
 				'setting' => array(
 					'default' => 'transparent',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Color', 'i18n' ),
@@ -122,7 +117,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 			'default' => 'transparent',
-			'transport' => 'postMessage',
 		),
 		'control' => array(
 			'label' => esc_html__( 'Color', 'i18n' ),
@@ -136,7 +130,6 @@ return array(
 			'color-no-transparent' => array(
 				'setting' => array(
 					'default' => '#f00',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Disallow Transparent', 'i18n' ),
@@ -149,7 +142,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => '#f00',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Disallow Transparent', 'i18n' ),
@@ -164,7 +156,6 @@ return array(
 			'color-alpha' => array(
 				'setting' => array(
 					'default' => 'rgba(0,255,130,.5)',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Allow Alpha', 'i18n' ),
@@ -177,7 +168,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 'rgba(0,255,130,.5)',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Allow Alpha', 'i18n' ),
@@ -192,7 +182,6 @@ return array(
 			'color-palette1' => array(
 				'setting' => array(
 					'default' => '#444',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Palette only', 'i18n' ),
@@ -208,7 +197,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => '#444',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Palette only', 'i18n' ),
@@ -226,7 +214,6 @@ return array(
 			'color-palette2' => array(
 				'setting' => array(
 					'default' => '#d9ead3',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Palette with picker', 'i18n' ),
@@ -241,7 +228,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => '#d9ead3',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Palette with picker', 'i18n' ),
@@ -258,7 +244,6 @@ return array(
 			'color-palette3' => array(
 				'setting' => array(
 					'default' => '#fce5cd',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Palette and hidden picker', 'i18n' ),
@@ -278,7 +263,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => '#fce5cd',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Palette and hidden picker', 'i18n' ),
@@ -297,117 +281,7 @@ return array(
 					),
 				),
 			),
-			'color-dynamic-active' => array(
-				'setting' => array(
-					'default' => '#f40030',
-					'transport' => 'recompilePost',
-				),
-				'control' => array(
-					'label' => esc_html__( 'Dynamic Color', 'i18n' ),
-					'description' => esc_html__( '(active role)', 'i18n' ),
-					'type' => 'kkcp_color_dynamic',
-					'guide' => array(
-						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
-						'text' => "```php
-'an-id' => array(
-	'setting' => array(
-		'default' => '#f40030',
-		'transport' => 'recompilePost',
-	),
-	'control' => array(
-		'label' => esc_html__( 'Dynamic Color', 'i18n' ),
-		'type' => 'kkcp_color_dynamic',
-	),
-),
-```",
-					),
-				),
-			),
-			'color-dynamic-passive' => array(
-				'setting' => array(
-					'default' => 'fadeout(@color-dynamic-active,30)',
-					'transport' => 'recompilePost',
-				),
-				'control' => array(
-					'label' => esc_html__( 'Dynamic Color', 'i18n' ),
-					'description' => esc_html__( '(passive role)', 'i18n' ),
-					'type' => 'kkcp_color_dynamic',
-					'guide' => array(
-						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
-						'text' => "```php
-'an-id' => array(
-	'setting' => array(
-		'default' => 'fadeout(@color-dynamic-active,30)',
-		'transport' => 'recompilePost',
-	),
-	'control' => array(
-		'label' => esc_html__( 'Dynamic Color', 'i18n' ),
-		'type' => 'kkcp_color_dynamic',
-	),
-),
-```",
-					),
-				),
-			),
-			'color-dynamic-hidetab-active' => array(
-				'setting' => array(
-					'default' => '#29BD57',
-					'transport' => 'recompilePost',
-				),
-				'control' => array(
-					'label' => esc_html__( 'Dynamic Color (hide dynamic tab)', 'i18n' ),
-					'description' => esc_html__( '(active role)', 'i18n' ),
-					'type' => 'kkcp_color_dynamic',
-					'hideDynamic' => true,
-					'guide' => array(
-						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
-						'text' => "```php
-'an-id' => array(
-	'setting' => array(
-		'default' => '#29BD57',
-		'transport' => 'recompilePost',
-	),
-	'control' => array(
-		'label' => esc_html__( 'Dynamic Color (hide dynamic tab)', 'i18n' ),
-		'description' => esc_html__( '', 'i18n' ),
-		'type' => 'kkcp_color_dynamic',
-		'hideDynamic' => true,
-	),
-),
-```",
-					),
-				),
-			),
-			'color-dynamic-hidetab-passive' => array(
-				'setting' => array(
-					'default' => 'lighten(@color-dynamic-hidetab-active,30)',
-					'transport' => 'recompilePost',
-				),
-				'control' => array(
-					'label' => esc_html__( 'Dynamic Color (hide dynamic tab)', 'i18n' ),
-					'description' => esc_html__( '(passive role)', 'i18n' ),
-					'type' => 'kkcp_color_dynamic',
-					'hideDynamic' => true,
-					'guide' => array(
-						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
-						'text' => "```php
-'an-id' => array(
-	'setting' => array(
-		'default' => 'lighten(@color-dynamic-hidetab-active,30)',
-		'transport' => 'recompilePost',
-	),
-	'control' => array(
-		'label' => esc_html__( 'Dynamic Color (hide dynamic tab)', 'i18n' ),
-		'description' => esc_html__( '', 'i18n' ),
-		'type' => 'kkcp_color_dynamic',
-		'hideDynamic' => true,
-	),
-),
-```",
-					),
-				),
-			),
-		)
+		),
 	),
 	array(
 		'subject' => 'section',
@@ -419,7 +293,6 @@ return array(
 			'slider' => array(
 				'setting' => array(
 					'default' => '14px',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Slider (default->px)', 'i18n' ),
@@ -431,7 +304,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => '14px',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Slider (default->px)', 'i18n' ),
@@ -445,7 +317,6 @@ return array(
 			'slider-em' => array(
 				'setting' => array(
 					'default' => '1.1em',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Slider (em)', 'i18n' ),
@@ -463,7 +334,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => '1.1em',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Slider (em)', 'i18n' ),
@@ -483,7 +353,6 @@ return array(
 			'slider-px-percent' => array(
 				'setting' => array(
 					'default' => '15%',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Slider (px or percent)', 'i18n' ),
@@ -501,7 +370,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => '15%',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Slider (px or percent)', 'i18n' ),
@@ -521,7 +389,6 @@ return array(
 			'slider-no-units' => array(
 				'setting' => array(
 					'default' => 44,
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Slider (no units)', 'i18n' ),
@@ -534,122 +401,11 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 44,
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Slider (no units)', 'i18n' ),
 		'type' => 'kkcp_slider',
 		'units' => array(),
-	),
-),
-```",
-					),
-				),
-			),
-			'size-dynamic-active' => array(
-				'setting' => array(
-					'default' => '14px',
-					'transport' => 'recompilePost',
-				),
-				'control' => array(
-					'label' => esc_html__( 'Size Dynamic 1', 'i18n' ),
-					'description' => esc_html__( '(active role)', 'i18n' ),
-					'type' => 'kkcp_size_dynamic',
-					'guide' => array(
-						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
-						'text' => "```php
-'an-id' => array(
-	'setting' => array(
-		'default' => '14px',
-		'transport' => 'recompilePost',
-	),
-	'control' => array(
-		'label' => esc_html__( 'Size Dynamic 1', 'i18n' ),
-		'type' => 'kkcp_size_dynamic',
-	),
-),
-```",
-					),
-				),
-			),
-			'size-dynamic-passive' => array(
-				'setting' => array(
-					'default' => '@size-dynamic-active',
-					'transport' => 'recompilePost',
-				),
-				'control' => array(
-					'label' => esc_html__( 'Size Dynamic 2', 'i18n' ),
-					'description' => esc_html__( '(passive role)', 'i18n' ),
-					'type' => 'kkcp_size_dynamic',
-					'units' => array( 'px', '%' ),
-					'guide' => array(
-						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
-						'text' => "```php
-'an-id' => array(
-	'setting' => array(
-		'default' => '@size-dynamic-active',
-		'transport' => 'recompilePost',
-	),
-	'control' => array(
-		'label' => esc_html__( 'Size Dynamic 2', 'i18n' ),
-		'type' => 'kkcp_size_dynamic',
-		'units' => array( 'px', '%' ),
-	),
-),
-```",
-					),
-				),
-			),
-			'size-dynamic-hidetab-active' => array(
-				'setting' => array(
-					'default' => '40px',
-					'transport' => 'recompilePost',
-				),
-				'control' => array(
-					'label' => esc_html__( 'Size Dynamic (hide dynamic tab) 3', 'i18n' ),
-					'description' => esc_html__( '(active role)', 'i18n' ),
-					'type' => 'kkcp_size_dynamic',
-					'hideDynamic' => true,
-					'guide' => array(
-						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
-						'text' => "```php
-'an-id' => array(
-	'setting' => array(
-		'default' => '40px',
-		'transport' => 'recompilePost',
-	),
-	'control' => array(
-		'label' => esc_html__( 'Size Dynamic (hide dynamic tab)  3', 'i18n' ),
-		'type' => 'kkcp_size_dynamic',
-		'hideDynamic' => true,
-	),
-),
-```",
-					),
-				),
-			),
-			'size-dynamic-hidetab-passive' => array(
-				'setting' => array(
-					'default' => '@size-dynamic-hidetab-active',
-					'transport' => 'recompilePost',
-				),
-				'control' => array(
-					'label' => esc_html__( 'Size Dynamic (hide dynamic tab) 4', 'i18n' ),
-					'description' => esc_html__( '(passive role)', 'i18n' ),
-					'type' => 'kkcp_size_dynamic',
-					'hideDynamic' => true,
-					'guide' => array(
-						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
-						'text' => "```php
-'an-id' => array(
-	'setting' => array(
-		'default' => '@size-dynamic-hidetab-active',
-		'transport' => 'recompilePost',
-	),
-	'control' => array(
-		'label' => esc_html__( 'Size Dynamic (hide dynamic tab) 4', 'i18n' ),
-		'type' => 'kkcp_size_dynamic',
-		'hideDynamic' => true,
 	),
 ),
 ```",
@@ -668,7 +424,6 @@ return array(
 			'radio' => array(
 				'setting' => array(
 					'default' => 'standard',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Radio', 'i18n' ),
@@ -696,7 +451,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 'standard',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Radio', 'i18n' ),
@@ -727,7 +481,6 @@ return array(
 			'buttonset' => array(
 				'setting' => array(
 					'default' => 'fluid',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Buttonset', 'i18n' ),
@@ -747,7 +500,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 'boxed',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Buttonset', 'i18n' ),
@@ -765,7 +517,6 @@ return array(
 			'buttonset-three' => array(
 				'setting' => array(
 					'default' => 'may',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Buttonset three', 'i18n' ),
@@ -786,7 +537,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 'boxed',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Buttonset three', 'i18n' ),
@@ -805,7 +555,6 @@ return array(
 			'buttonset-four' => array(
 				'setting' => array(
 					'default' => 'six',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Buttonset three', 'i18n' ),
@@ -827,7 +576,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 'boxed',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Buttonset three', 'i18n' ),
@@ -847,7 +595,6 @@ return array(
 			'radio-image' => array(
 				'setting' => array(
 					'default' => 'less',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Radio image', 'i18n' ),
@@ -880,7 +627,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 'less',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Radio image', 'i18n' ),
@@ -912,7 +658,6 @@ return array(
 			'radio-image-custom' => array(
 				'setting' => array(
 					'default' => 'firefox',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Radio image (custom)', 'i18n' ),
@@ -946,7 +691,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 'firefox',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Radio image (custom)', 'i18n' ),
@@ -991,7 +735,6 @@ return array(
 			'checkbox' => array(
 				'setting' => array(
 					'default' => 1,
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Checkbox', 'i18n' ),
@@ -1006,7 +749,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 1,
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Checkbox', 'i18n' ),
@@ -1023,7 +765,6 @@ return array(
 			'toggle' => array(
 				'setting' => array(
 					'default' => 0,
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Toggle', 'i18n' ),
@@ -1035,7 +776,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 1,
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Toggle', 'i18n' ),
@@ -1049,15 +789,14 @@ return array(
 			'toggle-with-labels' => array(
 				'setting' => array(
 					'default' => 1,
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Toggle with labels', 'i18n' ),
 					'description' => esc_html__( 'Toggle/switch like styling with visual labels on both sides.', 'i18n' ),
 					'type' => 'kkcp_toggle',
 					'input_attrs' => array(
-						'label_false' => 'Dark',
-						'label_true' => 'Light',
+						'label_false' => esc_html__( 'Dark' ),
+						'label_true' => esc_html__( 'Light' ),
 					),
 					'guide' => array(
 						'title' => esc_html__( 'See Code', 'i18n' ),
@@ -1065,14 +804,13 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 1,
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Toggle', 'i18n' ),
 		'type' => 'kkcp_toggle',
 		'input_attrs' => array(
-			'label_false' => 'Dark',
-			'label_true' => 'Light'
+			'label_false' => esc_html__( 'Dark' ),
+			'label_true' => esc_html__( 'Light' ),
 		),
 	),
 ),
@@ -1083,7 +821,6 @@ return array(
 			'multicheck' => array(
 				'setting' => array(
 					'default' => array( 'grape', 'cherry' ),
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Multicheck', 'i18n' ),
@@ -1102,7 +839,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => array( 'grape', 'cherry' ),
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Multicheck', 'i18n' ),
@@ -1123,7 +859,6 @@ return array(
 			'multicheck-sortable' => array(
 				'setting' => array(
 					'default' => array( 'facebook', 'twitter', 'google' ),
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Multicheck sortable', 'i18n' ),
@@ -1146,7 +881,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => array( 'facebook', 'twitter', 'google' ),
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Multicheck sortable', 'i18n' ),
@@ -1171,7 +905,6 @@ return array(
 			'multicheck-sortable-max' => array(
 				'setting' => array(
 					'default' => array( 'venus', 'jupiter' ),
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Multicheck sortable (max items)', 'i18n' ),
@@ -1192,7 +925,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => array( 'facebook', 'twitter', 'google' ),
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Multicheck sortable (max items)', 'i18n' ),
@@ -1224,7 +956,6 @@ return array(
 			'text' => array(
 				'setting' => array(
 					'default' => 'Some plain text',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Text', 'i18n' ),
@@ -1236,7 +967,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 'Some plain text',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Text', 'i18n' ),
@@ -1250,7 +980,6 @@ return array(
 			'text-max-length' => array(
 				'setting' => array(
 					'default' => 'tenchars !',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Text max length 10', 'i18n' ),
@@ -1265,7 +994,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 'tenchars !',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Text max length 10', 'i18n' ),
@@ -1282,7 +1010,6 @@ return array(
 			'text-optional' => array(
 				'setting' => array(
 					'default' => 'something',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Text optional', 'i18n' ),
@@ -1295,7 +1022,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 'something',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Text optional', 'i18n' ),
@@ -1310,7 +1036,6 @@ return array(
 			'text-url' => array(
 				'setting' => array(
 					'default' => 'http://myurl.com',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Text URL', 'i18n' ),
@@ -1325,7 +1050,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 'http://myurl.com',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Text URL', 'i18n' ),
@@ -1343,7 +1067,6 @@ return array(
 			'text-email' => array(
 				'setting' => array(
 					'default' => 'dev@knitkode.com',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Text Email', 'i18n' ),
@@ -1358,7 +1081,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 'dev@knitkode.com',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Text Email', 'i18n' ),
@@ -1373,10 +1095,19 @@ return array(
 					),
 				),
 			),
+
+		),
+	),
+	array(
+		'subject' => 'section',
+		'id' => 'section-textarea',
+		'title' => esc_html__( 'Textarea controls', 'i18n' ),
+		'type' => 'kkcp_section',
+		'dashicon' => 207,
+		'fields' => array(
 			'textarea' => array(
 				'setting' => array(
 					'default' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum dolor natus ducimus, minima placeat, modi sint corrupti eaque. Ratione delectus qui natus consequatur rem magnam, dolorem reprehenderit explicabo non nisi.',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Textarea', 'i18n' ),
@@ -1392,7 +1123,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum dolor natus ducimus, minima placeat, modi sint corrupti eaque. Ratione delectus qui natus consequatur rem magnam, dolorem reprehenderit explicabo non nisi.',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Textarea', 'i18n' ),
@@ -1410,7 +1140,6 @@ return array(
 			'textarea-html' => array(
 				'setting' => array(
 					'default' => '<h3>Lorem ipsum dolor sit amet</h3> <p>Consectetur adipisicing elit. Harum dolor natus ducimus, minima placeat, modi sint corrupti eaque. Ratione delectus qui natus consequatur rem magnam, dolorem reprehenderit explicabo non nisi.</p>',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Textarea (allow HTML)', 'i18n' ),
@@ -1427,7 +1156,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => '<h3>Lorem ipsum dolor sit amet</h3> <p>Consectetur adipisicing elit. Harum dolor natus ducimus, minima placeat, modi sint corrupti eaque. Ratione delectus qui natus consequatur rem magnam, dolorem reprehenderit explicabo non nisi.</p>',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Textarea (allow HTML)', 'i18n' ),
@@ -1447,7 +1175,6 @@ return array(
 			'textarea-wp_editor' => array(
 				'setting' => array(
 					'default' => '<h3>Lorem ipsum dolor sit amet</h3> <p>Consectetur adipisicing elit. Harum dolor natus ducimus, minima placeat, modi sint corrupti eaque.</p>',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Textarea (wp_editor)', 'i18n' ),
@@ -1460,7 +1187,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => '<h3>Lorem ipsum dolor sit amet</h3> <p>Consectetur adipisicing elit. Harum dolor natus ducimus, minima placeat, modi sint corrupti eaque.</p>',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Textarea (wp_editor)', 'i18n' ),
@@ -1476,7 +1202,6 @@ return array(
 			'textarea-wp_editor-options' => array(
 				'setting' => array(
 					'default' => '<h3>Consectetur adipisicing elit</h3> <p>Ratione delectus qui natus consequatur rem magnam, dolorem reprehenderit explicabo non nisi.</p>',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Textarea (wp_editor with options)', 'i18n' ),
@@ -1494,7 +1219,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => '<h3>Consectetur adipisicing elit</h3> <p>Ratione delectus qui natus consequatur rem magnam, dolorem reprehenderit explicabo non nisi.</p>',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Textarea (wp_editor with options)', 'i18n' ),
@@ -1515,7 +1239,6 @@ return array(
 			'textarea-wp_editor-no-quicktags' => array(
 				'setting' => array(
 					'default' => '<h3>No quicktags</h3> <p>Ratione delectus qui natus consequatur rem magnam, dolorem reprehenderit explicabo non nisi.</p>',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Textarea (no quicktags)', 'i18n' ),
@@ -1530,7 +1253,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => '<h3>No quicktags</h3> <p>Ratione delectus qui natus consequatur rem magnam, dolorem reprehenderit explicabo non nisi.</p>',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Textarea (wp_editor with options)', 'i18n' ),
@@ -1545,7 +1267,7 @@ return array(
 					),
 				),
 			),
-		),
+	  ),
 	),
 	array(
 		'subject' => 'section',
@@ -1557,7 +1279,6 @@ return array(
 			'number' => array(
 				'setting' => array(
 					'default' => 4,
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Number', 'i18n' ),
@@ -1569,7 +1290,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 4,
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Number', 'i18n' ),
@@ -1583,7 +1303,6 @@ return array(
 			'number-float' => array(
 				'setting' => array(
 					'default' => 27.56,
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Number', 'i18n' ),
@@ -1596,7 +1315,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 4,
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Number', 'i18n' ),
@@ -1612,7 +1330,6 @@ return array(
 			'number-min' => array(
 				'setting' => array(
 					'default' => 6,
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Number min', 'i18n' ),
@@ -1627,7 +1344,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 6,
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Number min', 'i18n' ),
@@ -1645,7 +1361,6 @@ return array(
 			'number-max' => array(
 				'setting' => array(
 					'default' => 3,
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Number max / optional', 'i18n' ),
@@ -1661,7 +1376,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 3,
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Number max', 'i18n' ),
@@ -1680,7 +1394,6 @@ return array(
 			'number-step' => array(
 				'setting' => array(
 					'default' => 15,
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Number step', 'i18n' ),
@@ -1695,7 +1408,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 15,
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Number step', 'i18n' ),
@@ -1722,7 +1434,6 @@ return array(
 			'select' => array(
 				'setting' => array(
 					'default' => 'orange',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Select', 'i18n' ),
@@ -1741,7 +1452,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 'orange',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Select', 'i18n' ),
@@ -1764,7 +1474,6 @@ return array(
 			// 'select-multiple' => array(
 			// 	'setting' => array(
 			// 		'default' => 'grape',
-			// 		'transport' => 'postMessage',
 			// 	),
 			// 	'control' => array(
 			// 		'label' => esc_html__( 'Select multiple', 'i18n' ),
@@ -1783,7 +1492,6 @@ return array(
 			'select-selectize' => array(
 				'setting' => array(
 					'default' => 'banana',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Selectize', 'i18n' ),
@@ -1805,7 +1513,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 'banana',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Selectize', 'i18n' ),
@@ -1830,7 +1537,6 @@ return array(
 			'select-selectize-options' => array(
 				'setting' => array(
 					'default' => 'cherry',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Selectize with options', 'i18n' ),
@@ -1855,7 +1561,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 'cherry',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Selectize with options', 'i18n' ),
@@ -1883,7 +1588,6 @@ return array(
 			'select-selectize-more-items' => array(
 				'setting' => array(
 					'default' => array( 'IT', 'UK' ),
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Selectize with multiple selection', 'i18n' ),
@@ -1904,7 +1608,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => array( 'IT', 'UK' ),
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Selectize with multiple selection', 'i18n' ),
@@ -1928,7 +1631,6 @@ return array(
 			'select-selectize-tags-plugins' => array(
 				'setting' => array(
 					'default' => array( 'IT', 'NL', 'UK' ),
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Selectize with multiple selection and plugins', 'i18n' ),
@@ -1953,7 +1655,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => array( 'IT', 'NL', 'UK' ),
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Selectize with multiple selection and plugins', 'i18n' ),
@@ -1990,7 +1691,6 @@ return array(
 			'tags' => array(
 				'setting' => array(
 					'default' => 'scissors,paper,rock',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Tags', 'i18n' ),
@@ -2002,7 +1702,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 'scissors,paper,rock',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Tags', 'i18n' ),
@@ -2017,7 +1716,6 @@ return array(
 			'tags-removable' => array(
 				'setting' => array(
 					'default' => 'one,two,three',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Tags removable (max 4 items)', 'i18n' ),
@@ -2033,7 +1731,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 'one,two,three',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Tags removable', 'i18n' ),
@@ -2052,7 +1749,6 @@ return array(
 			'tags-sortable-removable' => array(
 				'setting' => array(
 					'default' => 'milan,rome,venice',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Tags sortable and removable', 'i18n' ),
@@ -2067,7 +1763,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 'milan,rome,venice',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Tags sortable and removable', 'i18n' ),
@@ -2085,13 +1780,12 @@ return array(
 			'tags-max-items' => array(
 				'setting' => array(
 					'default' => 'pine,oak',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Tags max items', 'i18n' ),
-					'description' => esc_html__( 'Specify a maximum nuber of tags allowed.', 'i18n' ),
+					'description' => __( 'Specify a maximum nuber of tags allowed. `max => 3`', 'i18n' ),
 					'type' => 'kkcp_tags',
-					'max' => 2,
+					'max' => 3,
 					'selectize' => array(
 						'plugins' => array( 'restore_on_backspace', 'remove_button', 'drag_drop' ),
 					),
@@ -2101,7 +1795,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 'pine,oak',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Tags max items', 'i18n' ),
@@ -2129,7 +1822,6 @@ return array(
 			'sortable' => array(
 				'setting' => array(
 					'default' => array( 'lemon', 'cherry', 34, 'mango', 'grape' ),
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Sortable', 'i18n' ),
@@ -2148,7 +1840,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => array( 'lemon', 'cherry', 34, 'mango', 'grape' ),
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Sortable', 'i18n' ),
@@ -2171,7 +1862,6 @@ return array(
 			// 'sortable-editable' => array(
 			// 	'setting' => array(
 			// 		'default' => array( 'lemon', 'cherry', 'pineapple', 'mango', 'grape' ),
-			// 		'transport' => 'postMessage',
 			// 	),
 			// 	'control' => array(
 			// 		'label' => esc_html__( 'Sortable', 'i18n' ),
@@ -2197,7 +1887,6 @@ return array(
 			'font-family' => array(
 				'setting' => array(
 					'default' => "'Helvetica Neue', Helvetica, Arial, sans-serif",
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Font family', 'i18n' ),
@@ -2209,7 +1898,6 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => \"'Helvetica Neue', Helvetica, Arial, sans-serif\",
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Font family', 'i18n' ),
@@ -2220,32 +1908,98 @@ return array(
 					),
 				),
 			),
-			'font-weight' => array(
+			'font-family-with-options' => array(
 				'setting' => array(
-					'default' => 'bold',
-					'transport' => 'postMessage',
+					'default' => 'Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", Times, serif',
 				),
 				'control' => array(
-					'label' => esc_html__( 'Font weight', 'i18n' ),
-					'description' => esc_html__( 'Select the font weight. Just a shortcut of an otherwise verbose select with many choices.', 'i18n' ),
-					'type' => 'kkcp_font_weight',
+					'label' => esc_html__( 'Font family with options', 'i18n' ),
+					'description' => esc_html__( 'Select the font families only between the groups `sans-serif` and `serif`.', 'i18n' ),
+					'type' => 'kkcp_font_family',
+					'choices' => array(
+						'standard' => array(
+							'serif',
+							'sans-serif'
+						)
+					),
 					'guide' => array(
 						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
-		'default' => 'bold',
-		'transport' => 'postMessage',
+		'default' => 'Georgia, \"Palatino Linotype\", \"Book Antiqua\", Palatino, \"Times New Roman\", Times, serif',
 	),
 	'control' => array(
-		'label' => esc_html__( 'Font weight', 'i18n' ),
-		'type' => 'kkcp_font_weight',
+		'label' => esc_html__( 'Font family', 'i18n' ),
+		'type' => 'kkcp_font_family',
+		'choices' => array(
+			'standard' => array(
+				'serif',
+				'sans-serif'
+			)
+		),
 	),
 ),
 ```",
 					),
 				),
 			),
+			'font-family-just-one-monospace' => array(
+				'setting' => array(
+					'default' => 'Courier',
+				),
+				'control' => array(
+					'label' => esc_html__( 'One monospace font family', 'i18n' ),
+					'description' => esc_html__( 'Select maxmium one font family in the `monospace` group.', 'i18n' ),
+					'type' => 'kkcp_font_family',
+					'max' => 1,
+					'choices' => array(
+						'standard' => 'monospace',
+					),
+					'guide' => array(
+						'title' => esc_html__( 'See Code', 'i18n' ),
+						'text' => "```php
+'an-id' => array(
+	'setting' => array(
+		'default' => 'Courier',
+	),
+	'control' => array(
+		'label' => esc_html__( 'One monospace font family', 'i18n' ),
+		'type' => 'kkcp_font_family',
+		'max' => 1,
+		'choices' => array(
+			'standard' => 'monospace',
+		),
+	),
+),
+```",
+					),
+				),
+			),
+// 			'font-weight' => array(
+// 				'setting' => array(
+// 					'default' => 'bold',
+// 				),
+// 				'control' => array(
+// 					'label' => esc_html__( 'Font weight', 'i18n' ),
+// 					'description' => esc_html__( 'Select the font weight. Just a shortcut of an otherwise verbose select with many choices.', 'i18n' ),
+// 					'type' => 'kkcp_font_weight',
+// 					'guide' => array(
+// 						'title' => esc_html__( 'See Code', 'i18n' ),
+// 						'text' => "```php
+// 'an-id' => array(
+// 	'setting' => array(
+// 		'default' => 'bold',
+// 	),
+// 	'control' => array(
+// 		'label' => esc_html__( 'Font weight', 'i18n' ),
+// 		'type' => 'kkcp_font_weight',
+// 	),
+// ),
+// ```",
+// 					),
+// 				),
+// 			),
 		),
 	),
 	array(
@@ -2258,25 +2012,23 @@ return array(
 			'dashicon' => array(
 				'setting' => array(
 					'default' => 'admin-users',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Dashicon', 'i18n' ),
 					'description' => esc_html__( 'A single dashicon to choose.', 'i18n' ),
 					'type' => 'kkcp_icon',
-					'icons_set' => 'dashicons',
+					'choices' => 'dashicons',
 					'guide' => array(
 						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
 	'setting' => array(
 		'default' => 'dashboard',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Icon', 'i18n' ),
 		'type' => 'kkcp_icon',
-		'icons_set' => 'dashicons',
+		'choices' => 'dashicons',
 	),
 ),
 ```",
@@ -2286,13 +2038,11 @@ return array(
 			'dashicons-max' => array(
 				'setting' => array(
 					'default' => array( 'admin-plugins', 'admin-page' ),
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Dashicons (max number of icons)', 'i18n' ),
 					'description' => esc_html__( 'In this example we set the `max` to `3`.', 'i18n' ),
 					'type' => 'kkcp_icon',
-					'icons_set' => 'dashicons',
 					'max' => 3,
 					'guide' => array(
 						'title' => esc_html__( 'See Code', 'i18n' ),
@@ -2300,13 +2050,42 @@ return array(
 'an-id' => array(
 	'setting' => array(
 		'default' => 'dashboard',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'Icon', 'i18n' ),
 		'type' => 'kkcp_icon',
 		'icons_set' => 'dashicons',
-		'multiple' => true,
+		'max' => 3,
+	),
+),
+```",
+					),
+				),
+			),
+			'dashicons-max-from' => array(
+				'setting' => array(
+					'default' => 'admin-users',
+				),
+				'control' => array(
+					'label' => esc_html__( 'Dashicon (among given icons)', 'i18n' ),
+					'description' => __( 'In this example we allow the user to select one icon and we define which icons are selectable with a quick filter instead of a filter by group. This is defined using a comma separated string of values instead of an array and it will get the defined allowed icons from all the set regardless of their group. Nb: `max => 1` is the default value for this control.', 'i18n' ),
+					'type' => 'kkcp_icon',
+					'choices' => array(
+						'dashicons' => 'admin-plugins,admin-users,admin-network',
+					),
+					'guide' => array(
+						'title' => esc_html__( 'See Code', 'i18n' ),
+						'text' => "```php
+'an-id' => array(
+	'setting' => array(
+		'default' => 'dashboard',
+	),
+	'control' => array(
+		'label' => esc_html__( 'Icon', 'i18n' ),
+		'type' => 'kkcp_icon',
+		'choices' => array(
+			'dashicons' => array( 'admin-plugins', 'admin-users', 'admin-network' ),
+		),
 	),
 ),
 ```",
@@ -2317,161 +2096,15 @@ return array(
 	),
 	array(
 		'subject' => 'section',
-		'id' => 'section-others',
-		'title' => esc_html__( 'Other controls', 'i18n' ),
-		'type' => 'kkcp_section',
-		'dashicon' => 322,
-		'fields' => array(
-			'knob' => array(
-				'setting' => array(
-					'default' => 74,
-					'transport' => 'postMessage',
-				),
-				'control' => array(
-					'label' => esc_html__( 'Knob', 'i18n' ),
-					'description' => esc_html__( 'Basically a number input. Uses [jQuery.knob.js](https://github.com/aterrien/jQuery-Knob).', 'i18n' ),
-					'type' => 'kkcp_knob',
-					'guide' => array(
-						'title' => esc_html__( 'See Code', 'i18n' ),
-						'text' => "```php
-'an-id' => array(
-	'setting' => array(
-		'default' => 74,
-		'transport' => 'postMessage',
-	),
-	'control' => array(
-		'label' => esc_html__( 'Knob', 'i18n' ),
-		'description' => esc_html__( '', 'i18n' ),
-		'type' => 'kkcp_knob',
-	),
-),
-```",
-					),
-				),
-			),
-			'knob-options' => array(
-				'setting' => array(
-					'default' => 275,
-					'transport' => 'postMessage',
-				),
-				'control' => array(
-					'label' => esc_html__( 'Knob (with options)', 'i18n' ),
-					'description' => esc_html__( 'It is possible to pass to the `input_attrs` arg some jQuery.knob js options. See a [list here](http://@@todo) of the options allowed.', 'i18n' ),
-					'type' => 'kkcp_knob',
-					'input_attrs' => array(
-						'min' => 30,
-						'step' => 5,
-						'max' => 360,
-						'cursor' => 20,
-					),
-					'guide' => array(
-						'title' => esc_html__( 'See Code', 'i18n' ),
-						'text' => "```php
-'an-id' => array(
-	'default' => 275,
-		'transport' => 'postMessage',
-	),
-	'control' => array(
-		'label' => esc_html__( 'Knob (with options)', 'i18n' ),
-		'description' => esc_html__( '', 'i18n' ),
-		'type' => 'kkcp_knob',
-		'input_attrs' => array(
-			'min' => 30,
-			'step' => 5,
-			'max' => 360,
-			'cursor' => 20,
-		),
-	),
-),
-```",
-					),
-				),
-			),
-			'date' => array(
-				'setting' => array(
-					'default' => '03/09/2015',
-					'transport' => 'postMessage',
-				),
-				'control' => array(
-					'label' => esc_html__( 'Date', 'i18n' ),
-					'description' => esc_html__( 'Focus the input to slide down the [jQuery UI datepicker](https://jqueryui.com/datepicker/)  widget. The date is validated according to the `dateFormat` selected.', 'i18n' ),
-					'type' => 'kkcp_date',
-					'input_attrs' => array(
-						'dateFormat' => 'dd/mm/yy',
-					),
-					'guide' => array(
-						'title' => esc_html__( 'See Code', 'i18n' ),
-						'text' => "```php
-'an-id' => array(
-	'setting' => array(
-		'default' => '03/09/2015',
-		'transport' => 'postMessage',
-	),
-	'control' => array(
-		'label' => esc_html__( 'Date', 'i18n' ),
-		'type' => 'kkcp_date',
-		'input_attrs' => array(
-			'dateFormat' => 'dd/mm/yy',
-		),
-	),
-),
-```",
-					),
-				),
-			),
-			'date-inline' => array(
-				'setting' => array(
-					'default' => '1997-12-24',
-					'transport' => 'postMessage',
-				),
-				'control' => array(
-					'label' => esc_html__( 'Date (`inline` with `input_attrs`)', 'i18n' ),
-					'description' => esc_html__( 'Pass [jQuery UI datepicker](http://api.jqueryui.com/datepicker/) options and `inline` to always show a calendar without text input.', 'i18n' ),
-					'type' => 'kkcp_date',
-					'inline' => true,
-					'input_attrs' => array(
-						'dateFormat' => 'yy-mm-dd',
-						'maxDate' => '+1m +1w',
-						'firstDay' => 0,
-						'showButtonPanel' => true,
-					),
-					'guide' => array(
-						'title' => esc_html__( 'See Code', 'i18n' ),
-						'text' => "```php
-'an-id' => array(
-	'setting' => array(
-		'default' => '1997-12-24',
-		'transport' => 'postMessage',
-	),
-	'control' => array(
-		'label' => esc_html__( 'Date', 'i18n' ),
-		'type' => 'kkcp_date',
-		'inline' => true,
-		'input_attrs' => array(
-			'dateFormat' => 'yy-mm-dd',
-			'maxDate' => '+1m +1w',
-			'firstDay' => 0,
-			'showButtonPanel' => true,
-		),
-	),
-),
-```",
-					),
-				),
-			),
-		),
-	),
-	array(
-		'subject' => 'section',
 		'id' => 'section-presentation',
 		'title' => esc_html__( 'Presentation controls', 'i18n' ),
-		'description' => esc_html__( 'These controls are all tight to a dummy setting, their only purpose is to show some content between a control and the other.', 'i18n' ),
+		'description' => esc_html__( 'These control types are without settings linked, their only purpose is in fact to show some pure presentational content between a control and the other or in a custom section.', 'i18n' ),
 		'dashicon' => 105,
 		'fields' => array(
 			'kkcp-dummy' => array(
 				'control' => array(
-					'label' => esc_html__( 'Dummy', 'i18n' ),
-					'description' => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam consequatur sit fugit mollitia magni similique, nesciunt culpa maxime cupiditate debitis sed, facere odit, optio officiis architecto, ab veritatis id omnis.', 'i18n' ),
+					'label' => esc_html__( 'Content control', 'i18n' ),
+					'description' => esc_html__( 'This control content uses the normal `label` and `description` properties, while the one below uses just the `markdown` property.', 'i18n' ),
 					'type' => 'kkcp_content',
 					'guide' => array(
 						'title' => esc_html__( 'See Code', 'i18n' ),
@@ -2491,42 +2124,35 @@ return array(
 				'control' => array(
 					'type' => 'kkcp_content',
 					'markdown' => "
-# Image
+# Markdown
 
-![sample image](http://lorempixel.com/g/270/180/city/)
+*This control uses [markdown-js](https://github.com/evilstreak/markdown-js).*
 
-## Base
-`kkcp_section`
+![sample image](https://raw.githubusercontent.com/knitkode/ui/master/customize-plus/banner--light.png)
 
-### Features
-- icons for sections, in the same fashion as WordPress native icons for panels.
-- reset all section values to the factory state or to the initial session value, prompt for a confirmation.
+> Blockquote, images and [links](https://knitkode.com/products/customize-plus)
 
-| First Header  | Second Header |
+## Headings
+
+Some `inline code` or a code block
+```
+$ cd customize-plus
+$ ./run
+```
+
+| A table 		  | Example       |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
 
-# Controls
-All controls setting are required by default, set `'optional' => true` to allow a setting to be empty.
+### List
 
-* text / email / url
-* textarea / wp_editor (light)
-* number
-* toggle / switch / checkbox
-* radio / radio image / buttonset
-* multicheck
-* slider
-* color / alpha / palette / transparent
-* font family / font weight
-* select / dropdown / selectize / multiselect
-* sortable (todo)
-* tags / sortable tags
-* dynamic color (**Premium**)
-* dynamic size (**Premium**)
+* **item bold**
+* *item italic*
+	* nested item
+* item normal
 
-### WordPress native controls
-You can use WordPress default controls as you can see in the demo, in this case you are in charge to handle the sanitization, defininig a 'sanitization_callback'
+ecc.
 ",
 					'guide' => array(
 						'title' => esc_html__( 'See Code', 'i18n' ),
@@ -2554,7 +2180,6 @@ You can use WordPress default controls as you can see in the demo, in this case 
 			'wp-text' => array(
 				'setting' => array(
 					'default' => 'Some text',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'WP Text', 'i18n' ),
@@ -2565,7 +2190,6 @@ You can use WordPress default controls as you can see in the demo, in this case 
 'an-id' => array(
 	'setting' => array(
 		'default' => 'Some text',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'WP Text', 'i18n' ),
@@ -2579,7 +2203,6 @@ You can use WordPress default controls as you can see in the demo, in this case 
 			'wp-color' => array(
 				'setting' => array(
 					'default' => '#fc4fd7',
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'WP Color', 'i18n' ),
@@ -2590,7 +2213,6 @@ You can use WordPress default controls as you can see in the demo, in this case 
 'an-id' => array(
 	'setting' => array(
 		'default' => '#fc4fd7',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'WP Color', 'i18n' ),
@@ -2604,7 +2226,6 @@ You can use WordPress default controls as you can see in the demo, in this case 
 			'wp-media' => array(
 				'setting' => array(
 					'default' => 'dummy', // @@todo \\
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'WP Media', 'i18n' ),
@@ -2615,7 +2236,6 @@ You can use WordPress default controls as you can see in the demo, in this case 
 'an-id' => array(
 	'setting' => array(
 		'default' => '@@todo',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'WP Media', 'i18n' ),
@@ -2629,7 +2249,6 @@ You can use WordPress default controls as you can see in the demo, in this case 
 			'wp-image' => array(
 				'setting' => array(
 					'default' => 'dummy', // @@todo \\
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'WP Image', 'i18n' ),
@@ -2640,7 +2259,6 @@ You can use WordPress default controls as you can see in the demo, in this case 
 'an-id' => array(
 	'setting' => array(
 		'default' => '@@todo',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'WP Image', 'i18n' ),
@@ -2654,7 +2272,6 @@ You can use WordPress default controls as you can see in the demo, in this case 
 			'wp-background' => array(
 				'setting' => array(
 					'default' => 'dummy', // @@todo \\
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'WP Background', 'i18n' ),
@@ -2665,7 +2282,6 @@ You can use WordPress default controls as you can see in the demo, in this case 
 'an-id' => array(
 	'setting' => array(
 		'default' => '@@todo',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'WP Background', 'i18n' ),
@@ -2679,7 +2295,6 @@ You can use WordPress default controls as you can see in the demo, in this case 
 			'wp-upload' => array(
 				'setting' => array(
 					'default' => 'dummy', // @@todo \\
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'WP Upload', 'i18n' ),
@@ -2690,7 +2305,6 @@ You can use WordPress default controls as you can see in the demo, in this case 
 'an-id' => array(
 	'setting' => array(
 		'default' => '@@todo',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'WP Upload', 'i18n' ),
@@ -2704,7 +2318,6 @@ You can use WordPress default controls as you can see in the demo, in this case 
 			'wp-cropped-image' => array(
 				'setting' => array(
 					'default' => 'dummy', // @@todo \\
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'WP Cropped Image', 'i18n' ),
@@ -2715,7 +2328,6 @@ You can use WordPress default controls as you can see in the demo, in this case 
 'an-id' => array(
 	'setting' => array(
 		'default' => '@@todo',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'WP Cropped Image', 'i18n' ),
@@ -2729,7 +2341,6 @@ You can use WordPress default controls as you can see in the demo, in this case 
 			'wp-site_icon' => array(
 				'setting' => array(
 					'default' => 'dummy', // @@todo \\
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'WP Site Icon', 'i18n' ),
@@ -2740,7 +2351,6 @@ You can use WordPress default controls as you can see in the demo, in this case 
 'an-id' => array(
 	'setting' => array(
 		'default' => '@@todo',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'WP Site Icon', 'i18n' ),
@@ -2754,7 +2364,6 @@ You can use WordPress default controls as you can see in the demo, in this case 
 			'wp-header' => array(
 				'setting' => array(
 					'default' => 'dummy', // @@todo \\
-					'transport' => 'postMessage',
 				),
 				'control' => array(
 					'label' => esc_html__( 'WP Header', 'i18n' ),
@@ -2765,7 +2374,6 @@ You can use WordPress default controls as you can see in the demo, in this case 
 'an-id' => array(
 	'setting' => array(
 		'default' => '@@todo',
-		'transport' => 'postMessage',
 	),
 	'control' => array(
 		'label' => esc_html__( 'WP Header', 'i18n' ),

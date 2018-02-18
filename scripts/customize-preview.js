@@ -10,6 +10,10 @@
   var $previewsContainer = $('.previews');
   var $toScroll = $('html, body');
 
+  /**
+   * jQuery utility to highlight the just changed setting
+   * @type {Array}
+   */
   $.fn.flash = function (duration) {
 
     this.parent().prependTo($previewsContainer);
@@ -31,6 +35,11 @@
     return this;
   };
 
+  /**
+   * Settings to preview as colors
+   *
+   * @type {Array}
+   */
   var settingsToColor = [
     // Customize Plus controls
     'color',
@@ -40,32 +49,30 @@
     'color-palette2',
     'color-palette3'
   ];
-  _.each(settingsToColor, function (setting) {
-    wpApi(setting, function (value) {
-      value.bind(function (to) {
-        $('#' + setting).css('background', to).flash();
-      });
-    });
-  });
 
+  /**
+   * Settings to preview as sizes
+   *
+   * @type {Array}
+   */
   var settingsToWidth = [
     // Customize Plus controls
     'slider',
     'slider-em',
     'slider-px-percent',
   ];
-  _.each(settingsToWidth, function (setting) {
-    wpApi(setting, function (value) {
-      value.bind(function (to) {
-        $('#' + setting).css('width', to).flash();
-      });
-    });
-  });
 
+  /**
+   * Settings to preview as text
+   *
+   * @type {Array}
+   */
   var settingsToText = [
     // Customize Plus controls
     'api-theme_mod',
-    'api-option',
+    // this is managed not as an `option` instead of as a `theme_mod` therefore
+    // it gets a prefix, see below
+    api.getOptionId('api-option'),
     'radio',
     'buttonset',
     'buttonset-three',
@@ -101,9 +108,12 @@
     'tags-max-items',
     'sortable',
     'font-family',
+    'font-family-with-options',
+    'font-family-just-one-monospace',
     'font-weight',
     'dashicon',
     'dashicons-max',
+    'dashicons-max-from',
     // Customize Plus Premium controls
     'knob',
     'knob-options',
@@ -129,22 +139,43 @@
   ].concat(settingsToColor, settingsToWidth);
 
   /**
-   * Ids of the settings managed by the Options API instead of Theme Mods one
+   * Settings to preview as HMTL
+   *
    * @type {Array}
    */
-  var settingsApiKeys = [
-    'api-option'
+  var settingsToHtml = [
+    'textarea-html',
+    'textarea-wp_editor',
+    'textarea-wp_editor-options',
+    'textarea-wp_editor-no-quicktags'
   ];
 
-  // @@todo, move this to API, like isOptionsApi ? and api.isThemeModsAPI
-  for (var i = settingsApiKeys.length - 1; i >= 0; i--) {
-    var idToChange = settingsApiKeys[i];
-    var indexInSettingsToText = settingsToText.indexOf(idToChange);
-    if (indexInSettingsToText !== -1) {
-      var idChanged = api.getOptionId(idToChange);
-      settingsToText.splice(indexInSettingsToText, 0, idChanged);
-    }
-  }
+  /**
+   * Ids of the settings managed by the Options API instead of Theme Mods one
+   *
+   * @type {object}
+   */
+  var settingsApiKeys = {};
+  settingsApiKeys[ api.getOptionId('api-option') ] = 'api-option';
+
+  /**
+   * Bind live previews for all settings
+   */
+  _.each(settingsToColor, function (setting) {
+    wpApi(setting, function (value) {
+      value.bind(function (to) {
+        $('#' + setting).css('background', to).flash();
+      });
+    });
+  });
+
+  _.each(settingsToWidth, function (setting) {
+    wpApi(setting, function (value) {
+      value.bind(function (to) {
+        $('#' + setting).css('width', to).flash();
+      });
+    });
+  });
 
   _.each(settingsToText, function (setting) {
     wpApi(setting, function (value) {
@@ -152,22 +183,23 @@
         if (_.isArray(to) || _.isObject(to)) {
           to = JSON.stringify(to);
         }
+        if (settingsApiKeys[setting]) {
+          setting = api.getOptionIdAttr(settingsApiKeys[setting]);
+        }
         $('#' + setting).text(to).flash();
       });
     });
   });
 
-  var settingsToHtml = [
-    'textarea-html',
-    'textarea-wp_editor',
-    'textarea-wp_editor-options',
-    'textarea-wp_editor-no-quicktags'
-  ];
   _.each(settingsToHtml, function (setting) {
     wpApi(setting, function (value) {
       value.bind(function (to) {
+      $('#color').text(setting + '....' + to).flash();
         if (_.isArray(to) || _.isObject(to)) {
           to = JSON.stringify(to);
+        }
+        if (settingsApiKeys.indexOf(setting) !== -1) {
+          setting = api.getOptionIdAttr(setting);
         }
         $('#' + setting).html(to).flash();
       });

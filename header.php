@@ -43,7 +43,6 @@
 		<article class="container">
 			<div class="row">
 				<div class="col-12">
-					<p class="text-muted pb-4">Viewing this within the Customizer admin screen you will see a live a preview of each control and its associated settings</p>
+					<p class="text-muted pb-3">Viewing this within the Customizer admin screen you will see a live a preview of each control and its associated settings</p>
 				</div>
 			</div>
-			<div class="row previews">

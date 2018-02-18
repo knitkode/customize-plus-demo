@@ -42,6 +42,8 @@
 	'tags-max-items',
 	'sortable',
 	'font-family',
+	'font-family-with-options',
+	'font-family-just-one-monospace',
 	'font-weight',
 	'text',
 	'text-max-length',
@@ -55,19 +57,20 @@
 	'textarea-wp_editor-no-quicktags',
 	'dashicon',
 	'dashicons-max',
-	// Customize Plus Premium controls
-	'color-dynamic-active',
-	'color-dynamic-passive',
-	'color-dynamic-hidetab-active',
-	'color-dynamic-hidetab-passive',
-	'size-dynamic-active',
-	'size-dynamic-passive',
-	'size-dynamic-hidetab-active',
-	'size-dynamic-hidetab-passive',
-	'knob',
-	'knob-options',
-	'date',
-	'date-inline',
+	'dashicons-max-from',
+	// // Customize Plus Premium controls
+	// 'color-dynamic-active',
+	// 'color-dynamic-passive',
+	// 'color-dynamic-hidetab-active',
+	// 'color-dynamic-hidetab-passive',
+	// 'size-dynamic-active',
+	// 'size-dynamic-passive',
+	// 'size-dynamic-hidetab-active',
+	// 'size-dynamic-hidetab-passive',
+	// 'knob',
+	// 'knob-options',
+	// 'date',
+	// 'date-inline',
 	// WordPress controls
 	'wp-color',
 	'wp-media',
@@ -86,39 +89,54 @@
 		get_footer();
 		return;
 	}
+?>
+<div class="alert alert-info mb-4">
+	<small>For preview purposes values that are saved as <code>array</code>
+		are 'JSONified' with php function <code>json_encode</code> and through
+		JavaScript <code>JSON.stringify()</code>.
+	</small>
+</div>
+<div class="row previews">
+	<?php
+		foreach ( $settings_keys as $key ) {
+			$settings_api_keys = array(
+				'api-option'
+			);
 
-	foreach ( $settings_keys as $key ) {
-		$settings_api_keys = array(
-			'api-option'
-		);
+			$is_jsonified = false;
 
-		$is_jsonified = false;
+			if ( in_array( $key, $settings_api_keys ) ) {
 
-		if ( in_array( $key, $settings_api_keys ) ) {
+				// either use the static method on the theme class:
+				// $value = Customize_Plus_Demo::get_option( $key );
+				// or use the global functions Customize Plus makes available:
+				$value = kk_get_option( $key );
+				$key = kk_get_option_id_attr( $key );
 
-			// $value = Customize_Plus_Demo::get_option( $key );
-			$value = kk_get_option( $key );
-			$key = kk_get_option_id( $key );
+			} else {
 
-		} else {
+				// either use the static method on the theme class:
+				// $value = Customize_Plus_Demo::get_theme_mod( $key );
+				// or use the global functions Customize Plus makes available
+				$value = kk_get_theme_mod( $key );
 
-			// $value = Customize_Plus_Demo::get_theme_mod( $key );
-			$value = kk_get_theme_mod( $key );
+				if ( is_array( $value ) ) {
+					$value = json_encode( $value );
+					$is_jsonified = true;
+				}
 
-			if ( is_array( $value ) ) {
-				$value = json_encode( $value );
-				$is_jsonified = true;
-			}
-
-		} ?>
-		<?php if ( $is_jsonified ) { ?>
-			<div class="col-6 col-sm-4 col-md-4 col-lg-3 col-xl-2" data-toggle="popover" data-content="For preview purposes values that are saved as <code>array</code> are 'JSONified' with php function <code>json_encode</code>">
-		<?php } else { ?>
-			<div class="col-6 col-sm-4 col-md-4 col-lg-3 col-xl-2">
-		<?php } ?>
-			<!-- <div class="alert alert-info">For preview purposes values that are saved as <code>array</code> are 'JSONified' with php function <code>json_encode</code>.</div> -->
-			<?php echo "<div class='setting-name' title='$key'>$key</div>"; ?>
-			<?php echo "<div class='setting-preview' id='$key' title='Setting: $key'>$value</div>"; ?>
-		</div>
-<?php } ?>
+			} ?>
+			<?php if ( $is_jsonified ) { ?>
+				<div class="col-6 col-sm-4 col-md-4 col-lg-3 col-xl-2"
+					data-toggle="popover" data-content="For preview purposes values that are
+					 saved as <code>array</code> are 'JSONified' with php function <code>
+					 json_encode</code>  and through JavaScript <code>JSON.stringify()</code>">
+			<?php } else { ?>
+				<div class="col-6 col-sm-4 col-md-4 col-lg-3 col-xl-2">
+			<?php } ?>
+				<?php echo "<div class='setting-name' title='$key'>$key</div>"; ?>
+				<?php echo "<div class='setting-preview' id='$key' title='Setting: $key'>$value</div>"; ?>
+			</div>
+	<?php } ?>
+</div>
 <?php get_footer();
