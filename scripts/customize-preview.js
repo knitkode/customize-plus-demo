@@ -44,7 +44,7 @@
     // Customize Plus controls
     'color',
     'color-no-transparent',
-    'color-alpha',
+    'color-no-alpha',
     'color-palette1',
     'color-palette2',
     'color-palette3'
@@ -85,6 +85,7 @@
     'text-url',
     'text-email',
     'textarea',
+    'textarea-html-escape',
     'number',
     'number-float',
     'number-min',
@@ -144,7 +145,9 @@
    * @type {Array}
    */
   var settingsToHtml = [
-    'textarea-html',
+    'textarea-html-dangerous',
+    'textarea-html-tags',
+    'textarea-html-context',
     'textarea-wp_editor',
     'textarea-wp_editor-options',
     'textarea-wp_editor-no-quicktags'
@@ -194,11 +197,10 @@
   _.each(settingsToHtml, function (setting) {
     wpApi(setting, function (value) {
       value.bind(function (to) {
-      $('#color').text(setting + '....' + to).flash();
         if (_.isArray(to) || _.isObject(to)) {
           to = JSON.stringify(to);
         }
-        if (settingsApiKeys.indexOf(setting) !== -1) {
+        if (settingsApiKeys[setting]) {
           setting = api.getOptionIdAttr(setting);
         }
         $('#' + setting).html(to).flash();
