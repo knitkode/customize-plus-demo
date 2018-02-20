@@ -7,8 +7,8 @@
  * @since        0.0.1
  * @link         http://homepage.com
  * @author       name <email> (http://url.io)
- * @copyright    2015 | GPL
- * @license      GPL
+ * @copyright    2018 | GPLv3
+ * @license      GPLv3
  */
 
 return array(

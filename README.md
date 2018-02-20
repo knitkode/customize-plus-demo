@@ -44,7 +44,7 @@ Donate
 
 License
 ---------------
- [![License](https://img.shields.io/badge/license-GPL--2.0%2B-blue.svg)](https://github.com/knitkode/customize-plus-demo/blob/master/license.txt) [![KnitKode](https://img.shields.io/badge/%C2%A9KnitKode-2017-blue.svg)](https://knitkode.com)
+ [![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://github.com/knitkode/customize-plus-demo/blob/master/license.txt) [![KnitKode](https://img.shields.io/badge/%C2%A9KnitKode-2017-blue.svg)](https://knitkode.com)
 
 
 ---------------
