@@ -10,7 +10,7 @@
    * Demo custom Control
    *
    * @constructor
-   * @extends api.controls.Base
+   * @extends controls.Base
    * @augments wp.customize.Control
    * @augments wp.customize.Class
    */

@@ -112,6 +112,7 @@ class Customize_Plus_Demo {
 			'customize_tree' => self::get_customize_tree(),
 			'images_base_url' => get_stylesheet_directory_uri() . '/images/',
 			'docs_base_url' => self::DOCS_BASE_URL,
+			'dynamic_controls_rendering' => false,
 
 			// @note this works only with Customize Plus Premium
 			'styles' => array(
@@ -173,7 +174,7 @@ class Customize_Plus_Demo {
 	 */
 	public static function get_customize_tree() {
 		$customize_tree = (array) require( get_stylesheet_directory() . '/options-demo.php' );
-		$customize_tree_premium = (array) require( get_stylesheet_directory() . '/options-demo-premium.php' );
+		// $customize_tree_premium = (array) require( get_stylesheet_directory() . '/options-demo-premium.php' );
 		// return array_merge( $customize_tree_premium, $customize_tree );
 		return $customize_tree;
 	}

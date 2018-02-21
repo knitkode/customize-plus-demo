@@ -54,7 +54,7 @@ return array(
 					'label' => esc_html__( 'Dynamic Color', 'i18n' ),
 					'description' => esc_html__( '(active role)', 'i18n' ),
 					'type' => 'kkcp_color_dynamic',
-					'guide' => array(
+					'info' => array(
 						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
@@ -80,7 +80,7 @@ return array(
 					'label' => esc_html__( 'Dynamic Color', 'i18n' ),
 					'description' => esc_html__( '(passive role)', 'i18n' ),
 					'type' => 'kkcp_color_dynamic',
-					'guide' => array(
+					'info' => array(
 						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
@@ -107,7 +107,7 @@ return array(
 					'description' => esc_html__( '(active role)', 'i18n' ),
 					'type' => 'kkcp_color_dynamic',
 					'hideDynamic' => true,
-					'guide' => array(
+					'info' => array(
 						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
@@ -136,7 +136,7 @@ return array(
 					'description' => esc_html__( '(passive role)', 'i18n' ),
 					'type' => 'kkcp_color_dynamic',
 					'hideDynamic' => true,
-					'guide' => array(
+					'info' => array(
 						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
@@ -164,7 +164,7 @@ return array(
 					'label' => esc_html__( 'Size Dynamic 1', 'i18n' ),
 					'description' => esc_html__( '(active role)', 'i18n' ),
 					'type' => 'kkcp_size_dynamic',
-					'guide' => array(
+					'info' => array(
 						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
@@ -191,7 +191,7 @@ return array(
 					'description' => esc_html__( '(passive role)', 'i18n' ),
 					'type' => 'kkcp_size_dynamic',
 					'units' => array( 'px', '%' ),
-					'guide' => array(
+					'info' => array(
 						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
@@ -219,7 +219,7 @@ return array(
 					'description' => esc_html__( '(active role)', 'i18n' ),
 					'type' => 'kkcp_size_dynamic',
 					'hideDynamic' => true,
-					'guide' => array(
+					'info' => array(
 						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
@@ -247,7 +247,7 @@ return array(
 					'description' => esc_html__( '(passive role)', 'i18n' ),
 					'type' => 'kkcp_size_dynamic',
 					'hideDynamic' => true,
-					'guide' => array(
+					'info' => array(
 						'title' => esc_html__( 'See Code (Premium control)', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
@@ -274,7 +274,7 @@ return array(
 					'label' => esc_html__( 'Knob', 'i18n' ),
 					'description' => esc_html__( 'Basically a number input. Uses [jQuery.knob.js](https://github.com/aterrien/jQuery-Knob).', 'i18n' ),
 					'type' => 'kkcp_knob',
-					'guide' => array(
+					'info' => array(
 						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
@@ -307,7 +307,7 @@ return array(
 						'max' => 360,
 						'cursor' => 20,
 					),
-					'guide' => array(
+					'info' => array(
 						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
@@ -342,7 +342,7 @@ return array(
 					'input_attrs' => array(
 						'dateFormat' => 'dd/mm/yy',
 					),
-					'guide' => array(
+					'info' => array(
 						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(
@@ -378,7 +378,7 @@ return array(
 						'firstDay' => 0,
 						'showButtonPanel' => true,
 					),
-					'guide' => array(
+					'info' => array(
 						'title' => esc_html__( 'See Code', 'i18n' ),
 						'text' => "```php
 'an-id' => array(

@@ -31,9 +31,10 @@ return array(
 							'label' => esc_html__( 'Example control', 'i18n' ),
 							'description' => __( "Just a sample content control to show a control inside a section *inside a panel.*", 'i18n' ),
 							'type' => 'kkcp_content',
-							'guide' => array(
+							'info' => array(
 								'title' => esc_html__( 'See Code', 'i18n' ),
-								'text' => esc_html__( 'Some *help* `text`, [markdown](https://github.com/evilstreak/markdown-js) is **allowed**.', 'i18n' ),
+								'text' => esc_html__( 'Some *info* `text`, [markdown](https://github.com/evilstreak/markdown-js) is **allowed**.', 'i18n' ),
+								'video' => 'uD7_Vt5q2q8',
 							),
 						),
 					),
@@ -91,7 +92,7 @@ return array(
 			),
 			'color-no-transparent' => array(
 				'setting' => array(
-					'default' => 'rgba(0,255,130)',
+					'default' => 'rgba(0,255,130,0.4)',
 				),
 				'control' => array(
 					'label' => esc_html__( 'Disallow Transparent', 'i18n' ),
@@ -182,7 +183,7 @@ return array(
 					'label' => esc_html__( 'Slider (em)', 'i18n' ),
 					'description' => esc_html__( '', 'i18n' ),
 					'type' => 'kkcp_slider',
-					'units' => array( 'em' ),
+					'units' => 'em',
 					'input_attrs' => array(
 						'min' => 0,
 						'max' => 3,
@@ -217,7 +218,7 @@ return array(
 					'units' => array(),
 				),
 			),
-		)
+		),
 	),
 	array(
 		'subject' => 'section',
@@ -236,15 +237,20 @@ return array(
 					'choices' => array(
 						'standard' => array(
 							'label' => esc_html__( 'Standard', 'i18n' ),
-							'help' => 'popover',
-							'help_title' => esc_html__( 'Standard value', 'i18n' ),
-							'help_img' => 'view-skeleton--bootstrap.jpg',
+							'popover' => array(
+								'title' => esc_html__( 'Standard value', 'i18n' ),
+								'img' => 'view-skeleton--bootstrap.jpg'
+							),
 						),
 						'one' => array(
 							'label' => esc_html__( 'Choice one', 'i18n' ),
+							'popover' => array(
+								'video' => 'uD7_Vt5q2q8',
+							),
 						),
 						'two' => array(
 							'label' => esc_html__( 'Choice two', 'i18n' ),
+							'tooltip' => esc_html__( 'A tooltip briefly explaining choice two.', 'i18n' )
 						),
 						'three' => array(
 							'label' => esc_html__( 'Choice three', 'i18n' ),
@@ -259,11 +265,6 @@ return array(
 				'control' => array(
 					'label' => esc_html__( 'Buttonset', 'i18n' ),
 					'type' => 'kkcp_buttonset',
-					'guide' => array(
-						'title' => esc_html__( 'Buttonset guide', 'i18n' ),
-						'text' => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe laboriosam sunt ab, error explicabo cupiditate alias blanditiis minima inventore tempora necessitatibus excepturi mollitia quam laborum unde maxime laudantium! Ratione, impedit!', 'i18n' ),
-						'video' => 'uD7_Vt5q2q8',
-					),
 					'choices' => array(
 						'boxed' => esc_html__( 'Boxed', 'i18n' ),
 						'fluid' => esc_html__( 'Fluid', 'i18n' ),
@@ -277,11 +278,6 @@ return array(
 				'control' => array(
 					'label' => esc_html__( 'Buttonset three', 'i18n' ),
 					'type' => 'kkcp_buttonset',
-					'guide' => array(
-						'title' => esc_html__( 'Buttonset guide', 'i18n' ),
-						'text' => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe laboriosam sunt ab, error explicabo cupiditate alias blanditiis minima inventore tempora necessitatibus excepturi mollitia quam laborum unde maxime laudantium! Ratione, impedit!', 'i18n' ),
-						'video' => 'uD7_Vt5q2q8',
-					),
 					'choices' => array(
 						'may' => esc_html__( 'May', 'i18n' ),
 						'ibanez' => esc_html__( 'Ibanez', 'i18n' ),
@@ -296,11 +292,6 @@ return array(
 				'control' => array(
 					'label' => esc_html__( 'Buttonset three', 'i18n' ),
 					'type' => 'kkcp_buttonset',
-					'guide' => array(
-						'title' => esc_html__( 'Buttonset guide', 'i18n' ),
-						'text' => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe laboriosam sunt ab, error explicabo cupiditate alias blanditiis minima inventore tempora necessitatibus excepturi mollitia quam laborum unde maxime laudantium! Ratione, impedit!', 'i18n' ),
-						'video' => 'uD7_Vt5q2q8',
-					),
 					'choices' => array(
 						'one' => esc_html__( 'One', 'i18n' ),
 						'two' => esc_html__( 'Two', 'i18n' ),
@@ -317,9 +308,6 @@ return array(
 					'label' => esc_html__( 'Radio image', 'i18n' ),
 					'description' => esc_html__( 'Images already in the plugin, just put the image name', 'i18n' ),
 					'type' => 'kkcp_radio_image',
-					'guide' => array(
-						'docs' => 'doc-url/for-this-control/',
-					),
 					'choices' => array(
 						'less' => array(
 							'label' => esc_html__( 'Single column', 'i18n' ),
@@ -544,6 +532,70 @@ return array(
 					),
 				),
 			),
+			'text-tel' => array(
+				'setting' => array(
+					'default' => '09123123123',
+				),
+				'control' => array(
+					'label' => esc_html__( 'Telephone input', 'i18n' ),
+					'description' => esc_html__( 'Just an example for the native `tel` input type. This will mainly affect user interaction on mobile devices.', 'i18n' ),
+					'type' => 'kkcp_text',
+					'input_attrs' => array(
+						'type' => 'tel',
+					),
+				),
+			),
+			'text-pattern' => array(
+				'setting' => array(
+					'default' => '20100',
+				),
+				'control' => array(
+					'label' => esc_html__( 'Text pattern', 'i18n' ),
+					'description' => esc_html__( 'Text controls can have the standard `pattern` HTML attribute containing a Regex expression to validate and sanitize the user input against.', 'i18n' ),
+					'type' => 'kkcp_text',
+					'input_attrs' => array(
+						'pattern' => '[0-9]{5}',
+						'tooltip' => esc_html__( 'Five digit zip code', 'i18n' )
+					),
+				),
+			),
+		),
+	),
+	array(
+		'subject' => 'section',
+		'id' => 'section-passwords',
+		'title' => esc_html__( 'Password controls', 'i18n' ),
+		'type' => 'kkcp_section',
+		'dashicon' => 160,
+		'fields' => array(
+			'password' => array(
+				'setting' => array(
+					'default' => '',
+				),
+				'control' => array(
+					'label' => esc_html__( 'Password', 'i18n' ),
+					'description' => esc_html__( '', 'i18n' ),
+					'type' => 'kkcp_password',
+					'optional' => true,
+					'input_attrs' => array(
+						'placeholder' => esc_html__( 'An optional password' ),
+					),
+				),
+			),
+			'password-visibility' => array(
+				'setting' => array(
+					'default' => '1234567',
+				),
+				'control' => array(
+					'label' => esc_html__( 'Password visiblity', 'i18n' ),
+					'description' => __( 'Here we set `input_attrs` `visibility => true` and `minlength => 6', 'i18n' ),
+					'type' => 'kkcp_password',
+					'input_attrs' => array(
+						'visibility' => true,
+						'minlength' => 6,
+					),
+				),
+			),
 		),
 	),
 	array(
@@ -573,12 +625,12 @@ return array(
 				),
 				'control' => array(
 					'label' => esc_html__( 'Textarea HTML (escape)', 'i18n' ),
-					'description' => __( 'Setting `$html => "escape"` will escape html entities found in the text value with `esc_html`.', 'i18n' ),
+					'description' => __( 'Setting `$html => "escape"` will escape html entities found in the text value with `esc_html` before saving them to the database.', 'i18n' ),
 					'type' => 'kkcp_textarea',
 					'input_attrs' => array(
 						'maxlength' => 300,
 						'rows' => 8,
-						'placeholder' => 'E.g. <b>text</b> will be escaped to &lt;b&gt;text&lt;/b&gt;.'
+						'placeholder' => 'E.g. <b>text</b> will be escaped in the database to &lt;b&gt;text&lt;/b&gt;.'
 					),
 					'html' => 'escape',
 				),
@@ -687,9 +739,12 @@ return array(
 				),
 				'control' => array(
 					'label' => esc_html__( 'Number', 'i18n' ),
-					'description' => esc_html__( 'Default number control, accept both integers and float numbers.', 'i18n' ),
+					'description' => esc_html__( 'Allow float control, accept both integers and float numbers.', 'i18n' ),
 					'type' => 'kkcp_number',
-					'allowFloat' => true,
+					'input_attrs' => array(
+						'float' => true,
+						'tooltip' => esc_html__( 'Maybe say why float numbers are nicer?', 'i18n' ),
+					)
 				),
 			),
 			'number-min' => array(
@@ -746,7 +801,7 @@ return array(
 					'default' => 'orange',
 				),
 				'control' => array(
-					'label' => esc_html__( 'Select', 'i18n' ),
+					'label' => esc_html__( 'Pretty default select', 'i18n' ),
 					'description' => esc_html__( '', 'i18n' ),
 					'type' => 'kkcp_select',
 					'choices' => array(
@@ -754,37 +809,39 @@ return array(
 						'orange' => esc_html__( 'Orange', 'i18n' ),
 						'pineapple' => esc_html__( 'Pineapple', 'i18n' ),
 						'mango' => esc_html__( 'Mango', 'i18n' ),
-					),
-					'selectize' => false,
+						'grape' => esc_html__( 'Grape', 'i18n' ),
+						'apple' => esc_html__( 'Apple', 'i18n' ),
+						'cherry' => esc_html__( 'Cherry', 'i18n' ),
+						'banana' => esc_html__( 'Banana', 'i18n' ),
+					)
 				),
 			),
-			'select-selectize' => array(
+			'select-native' => array(
 				'setting' => array(
 					'default' => 'banana',
 				),
 				'control' => array(
-					'label' => esc_html__( 'Selectize', 'i18n' ),
-					'description' => esc_html__( '', 'i18n' ),
+					'label' => esc_html__( 'Native browser select', 'i18n' ),
+					'description' => __( 'Set `input_attrs => array( native => true )`', 'i18n' ),
 					'type' => 'kkcp_select',
+					'input_attrs' => array(
+						'native' => true,
+					),
 					'choices' => array(
 						'lemon' => esc_html__( 'Lemon', 'i18n' ),
 						'orange' => esc_html__( 'Orange', 'i18n' ),
 						'pineapple' => esc_html__( 'Pineapple', 'i18n' ),
 						'mango' => esc_html__( 'Mango', 'i18n' ),
-						'grape' => esc_html__( 'Grape', 'i18n' ),
-						'apple' => esc_html__( 'Apple', 'i18n' ),
-						'cherry' => esc_html__( 'Cherry', 'i18n' ),
-						'banana' => esc_html__( 'Banana', 'i18n' ),
 					),
 				),
 			),
-			'select-selectize-options' => array(
+			'select-options' => array(
 				'setting' => array(
 					'default' => 'cherry',
 				),
 				'control' => array(
-					'label' => esc_html__( 'Selectize with options', 'i18n' ),
-					'description' => __( 'e.g.: `selectize => array( sortField => text, )`)', 'i18n' ), // @@todo escape? \\
+					'label' => esc_html__( 'Select with options', 'i18n' ),
+					'description' => __( 'e.g.: `input_attrs => array( hide_selected => true, sort => true )`)', 'i18n' ), // @@todo escape? \\
 					'type' => 'kkcp_select',
 					'choices' => array(
 						'lemon' => esc_html__( 'Lemon', 'i18n' ),
@@ -796,17 +853,18 @@ return array(
 						'cherry' => esc_html__( 'Cherry', 'i18n' ),
 						'banana' => esc_html__( 'Banana', 'i18n' ),
 					),
-					'selectize' => array(
-						'sortField' => 'text',
+					'input_attrs' => array(
+						'hide_selected' => true,
+						'sort' => true,
 					),
 				),
 			),
-			'select-selectize-more-items' => array(
+			'select-multiple' => array(
 				'setting' => array(
 					'default' => array( 'IT', 'UK' ),
 				),
 				'control' => array(
-					'label' => esc_html__( 'Selectize with multiple selection', 'i18n' ),
+					'label' => esc_html__( 'Select with multiple selection', 'i18n' ),
 					'description' => __( 'With `max => 3,`', 'i18n' ), // @@todo escape? \\
 					'type' => 'kkcp_select',
 					'choices' => array(
@@ -820,13 +878,13 @@ return array(
 					'max' => 3,
 				),
 			),
-			'select-selectize-tags-plugins' => array(
+			'select-tags' => array(
 				'setting' => array(
 					'default' => array( 'IT', 'NL', 'UK' ),
 				),
 				'control' => array(
-					'label' => esc_html__( 'Selectize with multiple selection and plugins', 'i18n' ),
-					'description' => esc_html__( '', 'i18n' ),
+					'label' => esc_html__( 'Select maximum of tags and let rearrange them', 'i18n' ),
+					'description' => esc_html__( 'Set `max => 4` and set to `true` the `input_attrs`: `removable`, `draggable` and `restore_on_backspace`', 'i18n' ),
 					'type' => 'kkcp_select',
 					'choices' => array(
 						'IT' => esc_html__( 'Italy', 'i18n' ),
@@ -837,9 +895,10 @@ return array(
 						'SP' => esc_html__( 'Spain', 'i18n' ),
 					),
 					'max' => 4,
-					'selectize' => array(
-						'sortField' => 'text',
-						'plugins' => array( 'restore_on_backspace', 'remove_button', 'drag_drop' ),
+					'input_attrs' => array(
+						'removable' => true,
+						'draggable' => true,
+						'restore_on_backspace' => true,
 					),
 				),
 			),
@@ -871,8 +930,8 @@ return array(
 					'description' => esc_html__( 'Tags can be removed clicking the x button close to each of them.', 'i18n' ),
 					'type' => 'kkcp_tags',
 					'max' => 4,
-					'selectize' => array(
-						'plugins' => array( 'restore_on_backspace', 'remove_button' ),
+					'input_attrs' => array(
+						'removable' => true,
 					),
 				),
 			),
@@ -884,8 +943,9 @@ return array(
 					'label' => esc_html__( 'Tags sortable and removable', 'i18n' ),
 					'description' => esc_html__( '', 'i18n' ),
 					'type' => 'kkcp_tags',
-					'selectize' => array(
-						'plugins' => array( 'remove_button', 'drag_drop' )
+					'input_attrs' => array(
+						'removable' => true,
+						'draggable' => true,
 					),
 				),
 			),
@@ -898,8 +958,11 @@ return array(
 					'description' => __( 'Specify a maximum nuber of tags allowed. `max => 3`', 'i18n' ),
 					'type' => 'kkcp_tags',
 					'max' => 3,
-					'selectize' => array(
-						'plugins' => array( 'restore_on_backspace', 'remove_button', 'drag_drop' ),
+					'input_attrs' => array(
+						'persist' => true,
+						'removable' => true,
+						'draggable' => true,
+						'restore_on_backspace' => true,
 					),
 				),
 			),
@@ -1041,20 +1104,59 @@ return array(
 		'description' => esc_html__( 'These control types are without settings linked, their only purpose is in fact to show some pure presentational content between a control and the other or in a custom section.', 'i18n' ),
 		'dashicon' => 105,
 		'fields' => array(
-			'kkcp-dummy' => array(
+			'cntent-alert-info' => array(
+				'control' => array(
+					'description' => esc_html__( 'This control uses the `alert = info` property. Its content is given by the `description` property.', 'i18n' ),
+					'type' => 'kkcp_content',
+					'alert' => 'info'
+				),
+			),
+			'content' => array(
 				'control' => array(
 					'label' => esc_html__( 'Content control', 'i18n' ),
-					'description' => esc_html__( 'This control content uses the normal `label` and `description` properties, while the one below uses just the `markdown` property.', 'i18n' ),
+					'description' => esc_html__( 'This control uses the normal `label` and `description` properties.', 'i18n' ),
 					'type' => 'kkcp_content',
 				),
 			),
-			'kkcp-dummy-markdown' => array(
+			'alert-light' => array(
+				'control' => array(
+					'label' => esc_html__( 'Alert (light)', 'i18n' ),
+					'description' => __( 'A sample message', 'i18n' ),
+					'type' => 'kkcp_content',
+					'alert' => 'light'
+				),
+			),
+			'alert-warning' => array(
+				'control' => array(
+					'label' => esc_html__( 'Alert (warning)', 'i18n' ),
+					'description' => __( 'This control uses the `alert => warning`. Its content is given by the `description` property. No `label` is given here.', 'i18n' ),
+					'type' => 'kkcp_content',
+					'alert' => 'warning'
+				),
+			),
+			'alert-success' => array(
+				'control' => array(
+					'label' => esc_html__( 'Alert (success)', 'i18n' ),
+					'description' => __( 'A sample message', 'i18n' ),
+					'type' => 'kkcp_content',
+					'alert' => 'success'
+				),
+			),
+			'alert-danger' => array(
+				'control' => array(
+					'label' => esc_html__( 'Alert (danger)', 'i18n' ),
+					'description' => __( 'A sample message', 'i18n' ),
+					'type' => 'kkcp_content',
+					'alert' => 'danger'
+				),
+			),
+			'content-markdown' => array(
 				'control' => array(
 					'type' => 'kkcp_content',
 					'markdown' => "
 # Markdown
 
-*This control uses [markdown-js](https://github.com/evilstreak/markdown-js).*
+*This control uses only the `markdown` property. Markdown is rendered with [markdown-js](https://github.com/evilstreak/markdown-js).*
 
 ![sample image](https://raw.githubusercontent.com/knitkode/ui/master/customize-plus/banner--light.png)
 
