@@ -1,4 +1,4 @@
-# Customize Plus Demo [![by KnitKode](https://img.shields.io/badge/by-KnitKode-blue.svg?style=social)]()
+# Customize Plus Demo [![by KnitKode](https://img.shields.io/badge/by-KnitKode-blue.svg?style=social)](https://knitkode.com)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ffca84750b274d139f75a37dc2526f6b)](https://www.codacy.com/app/knitkode/customize-plus-demo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=knitkode/customize-plus-demo&amp;utm_campaign=Badge_Grade)
 
@@ -48,4 +48,4 @@ License
 
 
 ---------------
-:registered: KnitKode 2017 | [knitkode.com](https://knitkode.com) | dev@knitkode.com
+:registered: KnitKode 2018 | [knitkode.com](https://knitkode.com) | dev@knitkode.com
