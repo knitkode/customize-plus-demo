@@ -248,7 +248,7 @@ return array(
 								'video' => 'uD7_Vt5q2q8',
 							),
 						),
-							'two' => array(
+						'two' => array(
 							'label' => esc_html__( 'Choice two', 'i18n' ),
 							'tooltip' => esc_html__( 'A tooltip briefly explaining choice two.', 'i18n' )
 						),
